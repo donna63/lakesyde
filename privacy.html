@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Privacy Policy & Communication Rights | Lakesyde Behavioral Health</title>
+    <meta name="description" content="Privacy policy and communication terms for Lakesyde Behavioral Health. Learn about our HIPAA-compliant messaging practices and your privacy rights.">
+    <meta name="keywords" content="privacy policy, HIPAA compliance, patient rights, secure messaging, mental health privacy, communication terms">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Privacy Policy | Lakesyde Behavioral Health">
+    <meta property="og:description" content="Your privacy matters. Learn about our secure communication practices and your rights as a patient.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://lakesydebehavioralhealth.example.com/privacy-policy">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lakesydebehavioralhealth.example.com/privacy-policy">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Medical blue (trust, calm, professionalism)
+                        'medical-blue': '#0077b6',
+                        'medical-blue-light': '#90e0ef',
+                        'medical-blue-dark': '#023e8a',
+                        
+                        // Healing green (health, growth, balance)
+                        'healing-green': '#2a9d8f',
+                        'healing-green-light': '#a7d9c9',
+                        
+                        // Calming teal (peace, stability)
+                        'calm-teal': '#4a9b9d',
+                        
+                        // Neutral backgrounds
+                        'soft-white': '#f8f9fa',
+                        'warm-gray': '#e9ecef',
+                        
+                        // Accent colors
+                        'soft-coral': '#ff9a8b',
+                        'sunshine-yellow': '#ffd166',
+                        
+                        // Text colors
+                        'text-dark': '#2d3748',
+                        'text-medium': '#4a5568',
+                        'text-light': '#718096',
+                    },
+                    fontFamily: {
+                        'serif': ['Source Serif Pro', 'serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'slide-down': 'slideDown 0.3s ease-out forwards',
+                        'fade-in-down': 'fadeInDown 0.3s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
+                        },
+                        slideUp: {
+                            'from': { opacity: '0', transform: 'translateY(20px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideDown: {
+                            'from': { opacity: '0', transform: 'translateY(-20px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            'from': { opacity: '0', transform: 'translateY(-10px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .font-serif {
+            font-family: 'Source Serif Pro', serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 119, 182, 0.25);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 119, 182, 0.35);
+        }
+        
+        .btn-outline {
+            border: 2px solid #0077b6;
+            color: #0077b6;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: #0077b6;
+            color: white;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        /* Card hover effects */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu.open {
+            display: block;
+            animation: slideDown 0.3s ease-out forwards;
+        }
+        
+        .mobile-menu.closing {
+            animation: fadeOutUp 0.3s ease-out forwards;
+        }
+        
+        @keyframes fadeOutUp {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        
+        /* Sticky navigation */
+        .nav-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .nav-scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Privacy content styles */
+        .privacy-section {
+            scroll-margin-top: 120px;
+        }
+        
+        .privacy-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Text gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #0077b6, #2a9d8f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-soft-white min-h-screen text-text-dark">
+    <!-- Navigation -->
+    <header id="mainHeader">
+        <nav id="mainNav" class="nav-sticky animate-fade-in-down">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="/" class="flex items-center gap-2 z-50">
+                        <img style="width: 120px;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center gap-8">
+                        <a href="/" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group">
+                            Home
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="service.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group">
+                            Services
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="/about" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group">
+                            About
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="/conditions" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group">
+                            Conditions
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="privacy.html" class="text-medical-blue font-medium relative group">
+                            Privacy Policy
+                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-medical-blue"></span>
+                        </a>
+                        
+                        <!-- CTA Button -->
+                        <a href="contact.html" class="btn-primary px-6 py-3 rounded-xl flex items-center gap-2">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            Book Consultation
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button
+                        id="mobileMenuButton"
+                        class="lg:hidden p-2 text-text-medium z-50"
+                        aria-label="Toggle menu"
+                        aria-expanded="false"
+                        aria-controls="mobileMenu"
+                    >
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div
+                id="mobileMenu"
+                class="mobile-menu lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 z-50"
+                role="menu"
+                aria-label="Mobile navigation menu"
+            >
+                <div class="container mx-auto px-4 py-6 space-y-1">
+                    <a href="/" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <!-- <i data-lucide="home" class="h-5 w-5"></i> -->
+                        <span class="font-medium">Home</span>
+                    </a>
+                    <a href="service.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <!-- <i data-lucide="heart" class="h-5 w-5"></i> -->
+                        <span class="font-medium">Services</span>
+                    </a>
+                    <a href="/about" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <!-- <i data-lucide="users" class="h-5 w-5"></i> -->
+                        <span class="font-medium">About</span>
+                    </a>
+                    <a href="/conditions" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <!-- <i data-lucide="activity" class="h-5 w-5"></i> -->
+                        <span class="font-medium">Conditions</span>
+                    </a>
+
+                    
+                    <a href="privacy.html" class="flex items-center gap-3 text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <!-- <i data-lucide="shield" class="h-5 w-5"></i> -->
+                        <span class="font-medium">Privacy Policy</span>
+                    </a>
+                    
+                    <div class="pt-4 border-t border-gray-100 mt-4">
+                        <a href="contact.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                            <!-- <i data-lucide="calendar" class="h-5 w-5"></i> -->
+                            <div>
+                                <div class="font-medium">Book Consultation</div>
+                                <div class="text-sm text-text-light">Schedule your first visit</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="animate-fade-in pt-20">
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 pt-20 bg-gradient-to-r from-medical-blue/5 to-healing-green/10">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="animate-fade-in-up delay-100">
+                        <span class="inline-block text-medical-blue font-medium tracking-wide uppercase text-sm mb-4">
+                            Your Privacy Matters
+                        </span>
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-medical-blue-dark mb-6 animate-fade-in-up delay-200">
+                        Privacy Policy &
+                        <span class="text-gradient">Communication Rights</span>
+                    </h1>
+                    <p class="text-xl text-text-medium mb-8 animate-fade-in-up delay-300">
+                        At Lakesyde Behavioral Health, we are committed to protecting your privacy and ensuring secure communication. This policy outlines how we handle your information and your rights regarding our messaging services.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-400">
+                        <a href="#messaging-terms" class="btn-primary px-8 py-4 rounded-xl inline-block">
+                            <i data-lucide="message-square" class="h-5 w-5 inline mr-2"></i>
+                            Messaging Terms
+                        </a>
+                        <a href="#contact-info" class="btn-outline px-8 py-4 rounded-xl inline-block">
+                            <i data-lucide="phone" class="h-5 w-5 inline mr-2"></i>
+                            Contact Questions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Navigation -->
+        <section class="py-8 bg-white border-b border-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#messaging-terms" class="px-4 py-2 bg-medical-blue/5 hover:bg-medical-blue/10 text-medical-blue rounded-full transition-colors">
+                        Messaging Terms
+                    </a>
+                    <a href="#information-collected" class="px-4 py-2 bg-medical-blue/5 hover:bg-medical-blue/10 text-medical-blue rounded-full transition-colors">
+                        Information Collected
+                    </a>
+                    <a href="#information-use" class="px-4 py-2 bg-medical-blue/5 hover:bg-medical-blue/10 text-medical-blue rounded-full transition-colors">
+                        Use of Information
+                    </a>
+                    <a href="#information-sharing" class="px-4 py-2 bg-medical-blue/5 hover:bg-medical-blue/10 text-medical-blue rounded-full transition-colors">
+                        Information Sharing
+                    </a>
+                    <a href="#hipaa-compliance" class="px-4 py-2 bg-medical-blue/5 hover:bg-medical-blue/10 text-medical-blue rounded-full transition-colors">
+                        HIPAA Compliance
+                    </a>
+                    <a href="#opt-out" class="px-4 py-2 bg-medical-blue/5 hover:bg-medical-blue/10 text-medical-blue rounded-full transition-colors">
+                        Opt-Out Options
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Sections -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Messaging Terms & Conditions -->
+                    <div id="messaging-terms" class="privacy-section mb-16 animate-fade-in-up">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="privacy-icon bg-medical-blue/10">
+                                <i data-lucide="message-square" class="h-8 w-8 text-medical-blue"></i>
+                            </div>
+                            <h2 class="font-serif text-3xl text-medical-blue-dark">Messaging Terms & Conditions</h2>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-medical-blue/5 to-transparent rounded-2xl p-8 mb-8 card-hover">
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Secure Text Communication</h3>
+                            <p class="text-text-medium mb-4">
+                                Lakesyde Behavioral Health uses secure, HIPAA-compliant texting services to communicate with patients as needed. Our messaging system is designed to provide convenient communication while maintaining the highest standards of privacy and security.
+                            </p>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                                <div class="bg-white p-6 rounded-xl border border-gray-200">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <i data-lucide="alert-circle" class="h-5 w-5 text-amber-500"></i>
+                                        <h4 class="font-semibold text-medical-blue-dark">Important Notes</h4>
+                                    </div>
+                                    <ul class="space-y-2 text-sm text-text-light">
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="chevron-right" class="h-4 w-4 text-medical-blue mt-0.5"></i>
+                                            <span>Message frequency may vary based on your treatment needs</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="chevron-right" class="h-4 w-4 text-medical-blue mt-0.5"></i>
+                                            <span>Message and data rates may apply (check with your carrier)</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="chevron-right" class="h-4 w-4 text-medical-blue mt-0.5"></i>
+                                            <span>For help at any time, reply <strong>HELP</strong></span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="chevron-right" class="h-4 w-4 text-medical-blue mt-0.5"></i>
+                                            <span>To opt out at any time, reply <strong>STOP</strong></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-white p-6 rounded-xl border border-gray-200">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <i data-lucide="info" class="h-5 w-5 text-healing-green"></i>
+                                        <h4 class="font-semibold text-medical-blue-dark">Contact Guidelines</h4>
+                                    </div>
+                                    <p class="text-sm text-text-light mb-3">
+                                        For administrative questions or scheduling, feel free to text our administrative line:
+                                    </p>
+                                    <div class="bg-medical-blue/5 p-4 rounded-lg">
+                                        <div class="flex items-center gap-2">
+                                            <i data-lucide="smartphone" class="h-4 w-4 text-medical-blue"></i>
+                                            <span class="font-mono font-medium">792-XXX-XXXX</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-text-light mt-3">
+                                        <strong>Important:</strong> Please avoid sending any clinical or sensitive information via text. For clinical matters, please use our secure patient portal or call our office directly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile SMS Messaging Privacy Policy -->
+                    <div id="mobile-sms-policy" class="privacy-section mb-16 animate-fade-in-up delay-100">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="privacy-icon bg-healing-green/10">
+                                <i data-lucide="shield" class="h-8 w-8 text-healing-green"></i>
+                            </div>
+                            <h2 class="font-serif text-3xl text-medical-blue-dark">Mobile SMS Messaging Privacy Policy</h2>
+                        </div>
+                        
+                        <!-- Information Collected -->
+                        <div id="information-collected" class="mb-12">
+                            <h3 class="font-serif text-2xl text-medical-blue-dark mb-6">Information Collected</h3>
+                            <div class="bg-white p-8 rounded-2xl border border-gray-200 card-hover">
+                                <p class="text-text-medium mb-6">
+                                    To provide you with the best possible care and communication, we may collect the following information:
+                                </p>
+                                
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="space-y-4">
+                                        <div class="flex items-start gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-medical-blue/10 flex items-center justify-center flex-shrink-0">
+                                                <i data-lucide="user" class="h-4 w-4 text-medical-blue"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-medical-blue-dark mb-1">Personal Information</h4>
+                                                <p class="text-text-light text-sm">Name and contact details for identification and communication</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex items-start gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-medical-blue/10 flex items-center justify-center flex-shrink-0">
+                                                <i data-lucide="phone" class="h-4 w-4 text-medical-blue"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-medical-blue-dark mb-1">Contact Information</h4>
+                                                <p class="text-text-light text-sm">Phone number, electronic and physical address for coordination</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="space-y-4">
+                                        <div class="flex items-start gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-medical-blue/10 flex items-center justify-center flex-shrink-0">
+                                                <i data-lucide="clipboard-list" class="h-4 w-4 text-medical-blue"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-medical-blue-dark mb-1">Service Information</h4>
+                                                <p class="text-text-light text-sm">Other relevant contact details and service preferences</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex items-start gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-medical-blue/10 flex items-center justify-center flex-shrink-0">
+                                                <i data-lucide="calendar" class="h-4 w-4 text-medical-blue"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-medical-blue-dark mb-1">Communication Records</h4>
+                                                <p class="text-text-light text-sm">Records of communication for continuity of care</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Use of Information Collected -->
+                        <div id="information-use" class="mb-12">
+                            <h3 class="font-serif text-2xl text-medical-blue-dark mb-6">Use of Information Collected</h3>
+                            <div class="bg-gradient-to-br from-healing-green/5 to-transparent p-8 rounded-2xl card-hover">
+                                <p class="text-text-medium mb-6">
+                                    The information we collect is used exclusively to enhance your care experience and facilitate effective communication:
+                                </p>
+                                
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="bell" class="h-6 w-6 text-healing-green"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-medical-blue-dark mb-2">Service Delivery</h4>
+                                            <p class="text-text-light">To deliver requested services, including appointment reminders, scheduling, and treatment coordination</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="credit-card" class="h-6 w-6 text-healing-green"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-medical-blue-dark mb-2">Administrative Functions</h4>
+                                            <p class="text-text-light">For billing, payment processing, and other administrative operations</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="headphones" class="h-6 w-6 text-healing-green"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-medical-blue-dark mb-2">Customer Service</h4>
+                                            <p class="text-text-light">To provide responsive customer service and address your inquiries</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="activity" class="h-6 w-6 text-healing-green"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-medical-blue-dark mb-2">Care Coordination</h4>
+                                            <p class="text-text-light">To coordinate with other healthcare providers as needed for your comprehensive care</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sharing of Information Collected -->
+                        <div id="information-sharing" class="mb-12">
+                            <h3 class="font-serif text-2xl text-medical-blue-dark mb-6">Sharing of Information Collected</h3>
+                            <div class="bg-white p-8 rounded-2xl border border-gray-200 card-hover">
+                                <div class="flex items-start gap-4 mb-6">
+                                    <i data-lucide="lock" class="h-6 w-6 text-medical-blue mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-medical-blue-dark mb-2">Our Commitment to Your Privacy</h4>
+                                        <p class="text-text-medium">
+                                            We take your privacy seriously and only share information when absolutely necessary for your care or as required by law.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="space-y-4">
+                                        <div class="p-4 bg-medical-blue/5 rounded-lg">
+                                            <h5 class="font-semibold text-medical-blue-dark mb-2">Authorized Service Providers</h5>
+                                            <p class="text-text-light text-sm">
+                                                Information may be shared only with authorized service providers (e.g., secure messaging platforms, payment processing systems) as necessary to perform operational duties.
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="p-4 bg-medical-blue/5 rounded-lg">
+                                            <h5 class="font-semibold text-medical-blue-dark mb-2">Healthcare Coordination</h5>
+                                            <p class="text-text-light text-sm">
+                                                With your consent, information may be shared with other healthcare providers involved in your treatment for coordinated care.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="space-y-4">
+                                        <div class="p-4 bg-red-50 rounded-lg">
+                                            <h5 class="font-semibold text-red-600 mb-2">What We Don't Do</h5>
+                                            <p class="text-red-500 text-sm">
+                                                <strong>We do not sell</strong> your information to third parties.
+                                            </p>
+                                            <p class="text-red-500 text-sm">
+                                                <strong>We do not share</strong> your information with third parties for marketing purposes.
+                                            </p>
+                                            <p class="text-red-500 text-sm">
+                                                <strong>We do not use</strong> your information for any purpose other than your care and administrative needs.
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="p-4 bg-medical-blue/5 rounded-lg">
+                                            <h5 class="font-semibold text-medical-blue-dark mb-2">Legal Requirements</h5>
+                                            <p class="text-text-light text-sm">
+                                                We may disclose information when required by law, such as in response to a court order or legal process.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HIPAA Compliance -->
+                        <div id="hipaa-compliance" class="mb-12">
+                            <h3 class="font-serif text-2xl text-medical-blue-dark mb-6">HIPAA Compliance & Security</h3>
+                            <div class="bg-gradient-to-br from-calm-teal/5 to-transparent p-8 rounded-2xl card-hover">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 rounded-full bg-calm-teal/10 flex items-center justify-center">
+                                        <i data-lucide="shield-check" class="h-8 w-8 text-calm-teal"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-serif text-xl text-medical-blue-dark">HIPAA-Compliant Communication</h4>
+                                        <p class="text-text-light">Your privacy is protected by healthcare privacy laws</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                        <div>
+                                            <p class="text-text-medium">
+                                                Text messages are transmitted through <strong>HIPAA-compliant platforms</strong> designed specifically for healthcare communication.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <i data-lucide="alert-triangle" class="h-5 w-5 text-amber-500 mt-1"></i>
+                                        <div>
+                                            <p class="text-text-medium">
+                                                <strong>Important Security Notice:</strong> For sensitive or clinical matters, we strongly recommend using our secure patient portal or phone communication. While our text platform is secure, it's best to reserve texts for administrative purposes only.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <i data-lucide="file-text" class="h-5 w-5 text-calm-teal mt-1"></i>
+                                        <div>
+                                            <p class="text-text-medium">
+                                                Text messages are primarily limited to administrative purposes unless explicit consent is provided for clinical communication via text.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-white p-6 rounded-xl border border-calm-teal/20 mt-6">
+                                        <h5 class="font-semibold text-medical-blue-dark mb-3">Best Practices for Secure Communication:</h5>
+                                        <ul class="space-y-2 text-sm text-text-light">
+                                            <li class="flex items-start gap-2">
+                                                <i data-lucide="smartphone" class="h-4 w-4 text-calm-teal mt-0.5"></i>
+                                                <span>Use text only for appointment reminders, scheduling, and non-sensitive administrative matters</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <i data-lucide="monitor" class="h-4 w-4 text-calm-teal mt-0.5"></i>
+                                                <span>Use our secure patient portal for clinical questions, medication discussions, and treatment updates</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <i data-lucide="phone" class="h-4 w-4 text-calm-teal mt-0.5"></i>
+                                                <span>Call our office directly for urgent matters or complex clinical discussions</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Opt-Out and Support -->
+                        <div id="opt-out" class="mb-12">
+                            <h3 class="font-serif text-2xl text-medical-blue-dark mb-6">Opt-Out Options & Support</h3>
+                            <div class="bg-white p-8 rounded-2xl border border-gray-200 card-hover">
+                                <div class="grid md:grid-cols-2 gap-8">
+                                    <div>
+                                        <h4 class="font-serif text-xl text-medical-blue-dark mb-4">Control Your Communication Preferences</h4>
+                                        
+                                        <div class="space-y-4">
+                                            <div class="p-4 bg-red-50 rounded-lg">
+                                                <div class="flex items-center gap-3 mb-2">
+                                                    <i data-lucide="slash" class="h-5 w-5 text-red-500"></i>
+                                                    <h5 class="font-semibold text-red-600">To Stop Receiving Texts</h5>
+                                                </div>
+                                                <p class="text-red-500 text-sm">
+                                                    Reply <strong>STOP</strong> at any time to unsubscribe from text messages. You will receive a confirmation text, and no further messages will be sent.
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="p-4 bg-amber-50 rounded-lg">
+                                                <div class="flex items-center gap-3 mb-2">
+                                                    <i data-lucide="help-circle" class="h-5 w-5 text-amber-500"></i>
+                                                    <h5 class="font-semibold text-amber-600">For Assistance</h5>
+                                                </div>
+                                                <p class="text-amber-600 text-sm">
+                                                    Reply <strong>HELP</strong> for instructions on how to use our texting service or to get support with your communication preferences.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <h4 class="font-serif text-xl text-medical-blue-dark mb-4">Additional Support Options</h4>
+                                        
+                                        <div class="space-y-4">
+                                            <div class="p-4 bg-medical-blue/5 rounded-lg">
+                                                <div class="flex items-center gap-3 mb-2">
+                                                    <i data-lucide="phone" class="h-5 w-5 text-medical-blue"></i>
+                                                    <h5 class="font-semibold text-medical-blue-dark">Phone Support</h5>
+                                                </div>
+                                                <p class="text-text-light text-sm">
+                                                    Call our office directly during business hours for immediate assistance with any questions or concerns about your communication preferences.
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="p-4 bg-medical-blue/5 rounded-lg">
+                                                <div class="flex items-center gap-3 mb-2">
+                                                    <i data-lucide="mail" class="h-5 w-5 text-medical-blue"></i>
+                                                    <h5 class="font-semibold text-medical-blue-dark">Email Support</h5>
+                                                </div>
+                                                <p class="text-text-light text-sm">
+                                                    Send us an email through our secure patient portal for non-urgent questions about privacy or communication.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-8 pt-6 border-t border-gray-200">
+                                    <p class="text-text-light text-sm">
+                                        <strong>Note:</strong> Opting out of text messages will not affect your ability to receive care from Lakesyde Behavioral Health. You can still communicate with us via phone, secure patient portal, or in-person visits.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information Section -->
+                    <div id="contact-info" class="privacy-section mb-8 animate-fade-in-up delay-200">
+                        <div class="bg-gradient-to-r from-medical-blue/10 to-healing-green/10 rounded-2xl p-8 text-center">
+                            <h3 class="font-serif text-2xl text-medical-blue-dark mb-4">Questions About Our Privacy Policy?</h3>
+                            <p class="text-text-medium mb-6">
+                                If you have any questions about our privacy practices or would like more information about how we protect your personal information, please don't hesitate to contact us.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="contact.html" class="btn-primary px-8 py-4 rounded-xl inline-block">
+                                    <i data-lucide="mail" class="h-5 w-5 inline mr-2"></i>
+                                    Contact Us
+                                </a>
+                                <a href="/" class="btn-outline px-8 py-4 rounded-xl inline-block">
+                                    <i data-lucide="home" class="h-5 w-5 inline mr-2"></i>
+                                    Return to Home
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Policy Update Notice -->
+                    <div class="mt-12 pt-8 border-t border-gray-200 animate-fade-in-up delay-300">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="clock" class="h-5 w-5 text-text-light mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-medical-blue-dark mb-2">Policy Updates</h4>
+                                <p class="text-text-light text-sm">
+                                    This privacy policy was last updated on December 16, 2025. We may update this policy from time to time to reflect changes in our practices or legal requirements. We encourage you to review this page periodically for the latest information on our privacy practices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-medical-blue-dark text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="/" class="flex items-center gap-2">
+                        <img style="width: 100px; background-color: #f8f9fa;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+                    <p class="text-white/80 mt-2">
+                        Comprehensive, compassionate mental health care for individuals and families.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/services" class="text-white/70 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="/about" class="text-white/70 hover:text-white transition-colors">About</a></li>
+                        <li><a href="/privacy-policy" class="text-white hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Privacy Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#messaging-terms" class="text-white/70 hover:text-white transition-colors">Messaging Terms</a></li>
+                        <li><a href="#hipaa-compliance" class="text-white/70 hover:text-white transition-colors">HIPAA Compliance</a></li>
+                        <li><a href="#opt-out" class="text-white/70 hover:text-white transition-colors">Opt-Out Options</a></li>
+                        <li><a href="#contact-info" class="text-white/70 hover:text-white transition-colors">Contact Questions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Your Privacy Rights</h4>
+                    <p class="text-white/70 mb-4 text-sm">
+                        You have the right to access, correct, or request deletion of your personal information. Contact us to exercise these rights.
+                    </p>
+                    <a href="contact.html" class="btn-primary px-6 py-3 rounded-xl inline-block">
+                        <i data-lucide="shield" class="h-4 w-4 inline mr-2"></i>
+                        Privacy Questions
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-sm">
+                    © <span id="currentYear"></span> Lakesyde Behavioral Health. All rights reserved.
+                </p>
+                <p class="text-white/50 text-sm">
+                    Protecting your privacy is our commitment
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isMobileMenuOpen = false;
+
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            
+            mobileMenuButton.setAttribute('aria-expanded', isMobileMenuOpen);
+            
+            if (isMobileMenuOpen) {
+                mobileMenu.classList.remove('closing');
+                mobileMenu.classList.add('open');
+                mobileMenuButton.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
+                lucide.createIcons();
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('open');
+                mobileMenu.classList.add('closing');
+                
+                setTimeout(() => {
+                    mobileMenu.classList.remove('closing');
+                    mobileMenuButton.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+                    lucide.createIcons();
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+        }
+
+        mobileMenuButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMobileMenuOpen) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (isMobileMenuOpen && 
+                !mobileMenu.contains(e.target) && 
+                !mobileMenuButton.contains(e.target)) {
+                toggleMobileMenu();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isMobileMenuOpen) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Scroll effect for navigation
+        const mainNav = document.getElementById('mainNav');
+        let scrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20 && !scrolled) {
+                mainNav.classList.add('nav-scrolled');
+                scrolled = true;
+            } else if (window.scrollY <= 20 && scrolled) {
+                mainNav.classList.remove('nav-scrolled');
+                scrolled = false;
+            }
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('[class*="animate-"]');
+            animatedElements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.1}s`;
+                el.style.animationPlayState = 'running';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>lakesyde Behavioral Health | Compassionate Mental Health Care & Therapy Services</title>
+    <meta name="description" content="Serenity Health provides personalized behavioral health treatment for depression, anxiety, PTSD, and addiction. Licensed therapists offering individual, group, and family therapy.">
+    <meta name="keywords" content="mental health, therapy, depression treatment, anxiety counseling, PTSD therapy, addiction recovery, behavioral health, licensed therapists">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Serenity Health | Your Journey to Wellness Starts Here">
+    <meta property="og:description" content="Compassionate mental health care with licensed professionals. Get personalized treatment for depression, anxiety, and more.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://serenityhealth.example.com">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Serenity Health | Compassionate Mental Health Care">
+    <meta name="twitter:description" content="Personalized behavioral health treatment with licensed professionals. Get help today.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://serenityhealth.example.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/heart-health.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Medical blue (trust, calm, professionalism)
+                        'medical-blue': '#0077b6',
+                        'medical-blue-light': '#90e0ef',
+                        'medical-blue-dark': '#023e8a',
+                        
+                        // Healing green (health, growth, balance)
+                        'healing-green': '#2a9d8f',
+                        'healing-green-light': '#a7d9c9',
+                        
+                        // Calming teal (peace, stability)
+                        'calm-teal': '#4a9b9d',
+                        
+                        // Neutral backgrounds
+                        'soft-white': '#f8f9fa',
+                        'warm-gray': '#e9ecef',
+                        
+                        // Accent colors
+                        'soft-coral': '#ff9a8b',
+                        'sunshine-yellow': '#ffd166',
+                        
+                        // Text colors
+                        'text-dark': '#2d3748',
+                        'text-medium': '#4a5568',
+                        'text-light': '#718096',
+                    },
+                    fontFamily: {
+                        'serif': ['Source Serif Pro', 'serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'slide-down': 'slideDown 0.6s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-gentle': 'pulseGentle 2s ease-in-out infinite',
+                        'bounce-subtle': 'bounceSubtle 2s infinite',
+                        'menu-enter': 'menuEnter 0.3s ease-out forwards',
+                        'menu-exit': 'menuExit 0.3s ease-out forwards'
+                    },
+                    keyframes: {
+                        slideDown: {
+                            'from': { transform: 'translateY(-100%)', opacity: '0' },
+                            'to': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        fadeInUp: {
+                            'from': { opacity: '0', transform: 'translateY(30px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        pulseGentle: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.7' }
+                        },
+                        bounceSubtle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        menuEnter: {
+                            'from': { opacity: '0', maxHeight: '0' },
+                            'to': { opacity: '1', maxHeight: '500px' }
+                        },
+                        menuExit: {
+                            'from': { opacity: '1', maxHeight: '500px' },
+                            'to': { opacity: '0', maxHeight: '0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalOrganization",
+        "name": "Serenity Health",
+        "description": "Compassionate behavioral health care providing personalized treatment for mental health conditions.",
+        "url": "https://serenityhealth.example.com",
+        "logo": "https://serenityhealth.example.com/logo.png",
+        "telephone": "+1-800-555-0199",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Wellness Avenue",
+            "addressLocality": "San Francisco",
+            "addressRegion": "CA",
+            "postalCode": "94107",
+            "addressCountry": "US"
+        },
+        "medicalSpecialty": "Psychiatric",
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "37.7749",
+                "longitude": "-122.4194"
+            },
+            "geoRadius": "50000"
+        }
+    }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .font-serif {
+            font-family: 'Source Serif Pro', serif;
+        }
+        
+        .btn-hero {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 119, 182, 0.25);
+        }
+        
+        .btn-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 119, 182, 0.35);
+        }
+        
+        .btn-hero-outline {
+            border: 2px solid #0077b6;
+            color: #0077b6;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hero-outline:hover {
+            background-color: #0077b6;
+            color: white;
+        }
+        
+        .btn-xl {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0.85), transparent);
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
+        
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-divider {
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, #f8f9fa);
+        }
+        
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .pulse-gentle {
+            animation: pulseGentle 2s ease-in-out infinite;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #0077b6, #2a9d8f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-soft-white text-text-dark">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="visually-hidden focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-medical-blue text-white p-3 z-50">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <header role="banner">
+        <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-slide-down bg-white/90 backdrop-blur-sm" aria-label="Main navigation">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between h-20">
+                    <!-- Logo -->
+                    <a href="/" class="flex items-center gap-2">
+                        <img style="width: 120px; " src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Serenity Health Logo">
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center gap-8" role="menubar">
+                        <a href="service.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Services
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#conditions" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Conditions
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+
+                        <a href="privacy.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Privacy Policy
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+
+                        <a href="#about" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            About
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#why-choose" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Why Choose Us
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="contact.html" class="text-medical-blue font-medium relative group" role="menuitem">
+                            Contact
+                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-medical-blue"></span>
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button
+                        id="mobileMenuButton"
+                        class="md:hidden p-2 text-text-medium"
+                        aria-label="Toggle menu"
+                        aria-expanded="false"
+                        aria-controls="mobileMenu"
+                    >
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div
+                id="mobileMenu"
+                class="md:hidden bg-white border-t border-gray-100 hidden"
+                role="menu"
+                aria-label="Mobile navigation menu"
+            >
+                <div class="container mx-auto px-4 py-6 space-y-4">
+                    <a href="service.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Services
+                    </a>
+                    <a href="#conditions" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Conditions
+                    </a>
+
+                     <a href="privacy.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Privacy Policy
+                    </a>
+                    <a href="#about" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        About
+                    </a>
+                    <a href="#why-choose" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Why Choose Us
+                    </a>
+                    <a href="contact.html" class="block text-lg text-medical-blue font-medium py-2" role="menuitem">
+                        Contact
+                    </a>
+                    <div class="pt-4 space-y-3">
+                        <button class="btn-hero w-full py-4 rounded-xl">
+                            Get Help Today
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section class="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-title">
+            <!-- Background Image -->
+            <div 
+                class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+                role="img"
+                aria-label="Therapist listening compassionately to a client in a warm, welcoming therapy session" >
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="container mx-auto px-4 pt-64 pb-16 relative z-10">
+                <div class="max-w-3xl">
+                    <div class="animate-fade-in-up delay-200">
+                        <span class="inline-block text-medical-blue font-medium tracking-wide uppercase text-sm mb-4">
+                            Compassionate Mental Health Care
+                        </span>
+                    </div>
+
+                    <h1 id="hero-title" class="font-serif text-5xl md:text-6xl lg:text-7xl text-medical-blue-dark leading-tight mb-6 animate-fade-in-up delay-300">
+                        Your Journey to
+                        <span class="text-gradient">Wellness</span>
+                        Starts Here
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-text-medium leading-relaxed mb-8 max-w-2xl animate-fade-in-up delay-400">
+                        At Lakesyde Behavioral Health, we provide personalized behavioral health treatment 
+                        with compassion and expertise. Our licensed therapists offer evidence-based 
+                        therapies for depression, anxiety, PTSD, and addiction. You don't have to 
+                        face your struggles alone — we're here to support you every step of the way.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up delay-500">
+                        
+
+                        <a href="contact.html" class="btn-hero btn-xl flex items-center justify-center gap-2 pulse-gentle"> Schedule a Consultation
+                            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex flex-wrap gap-8 animate-fade-in-up delay-600">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-medical-blue-light flex items-center justify-center floating-element">
+                                <i data-lucide="shield" class="h-5 w-5 text-medical-blue"></i>
+                            </div>
+                            <span class="text-medical-blue-dark font-medium">Licensed Professionals</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-healing-green-light flex items-center justify-center floating-element" style="animation-delay: 0.5s">
+                                <i data-lucide="users" class="h-5 w-5 text-healing-green"></i>
+                            </div>
+                            <span class="text-medical-blue-dark font-medium">3,000+ Patients Helped</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-calm-teal/20 flex items-center justify-center floating-element" style="animation-delay: 1s">
+                                <i data-lucide="clock" class="h-5 w-5 text-calm-teal"></i>
+                            </div>
+                            <span class="text-medical-blue-dark font-medium">24/7 Support Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gradient-to-b from-soft-white to-white" aria-labelledby="services-title">
+            <div class="container mx-auto px-4">
+                <h2 id="services-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                    Our Mental Health Services
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-100">
+                        <div class="w-16 h-16 rounded-full bg-medical-blue/10 flex items-center justify-center mb-6">
+                            <i data-lucide="brain" class="h-8 w-8 text-medical-blue"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Individual Therapy</h3>
+                        <p class="text-text-light">One-on-one sessions with licensed therapists using CBT, DBT, and other evidence-based approaches tailored to your specific needs.</p>
+                    </div>
+                    <!-- <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-200">
+                        <div class="w-16 h-16 rounded-full bg-healing-green/10 flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="h-8 w-8 text-healing-green"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Group Therapy</h3>
+                        <p class="text-text-light">Supportive group sessions for shared experiences and peer support in a safe, confidential environment.</p>
+                    </div> -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-300">
+                        <div class="w-16 h-16 rounded-full bg-calm-teal/10 flex items-center justify-center mb-6">
+                            <i data-lucide="stethoscope" class="h-8 w-8 text-calm-teal"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3"> Psycho Therapy</h3>
+                        <p class="text-text-light">Comprehensive assessments by board-certified psychiatrists for accurate diagnosis and treatment planning.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-400">
+                        <div class="w-16 h-16 rounded-full bg-soft-coral/20 flex items-center justify-center mb-6">
+                            <i data-lucide="heart" class="h-8 w-8 text-soft-coral"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Family Support</h3>
+                        <p class="text-text-light">Family therapy and education to support loved ones through the recovery journey and improve family dynamics.</p>
+                    </div>
+
+                     <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-300">
+                        <div class="w-16 h-16 rounded-full bg-calm-teal/10 flex items-center justify-center mb-6">
+                            <i data-lucide="stethoscope" class="h-8 w-8 text-calm-teal"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3"> Medication Management</h3>
+                        <p class="text-text-light">Secure platform for managing prescriptions, schedules, and health records.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conditions Section -->
+        <section id="conditions" class="py-20 bg-white" aria-labelledby="conditions-title">
+            <div class="container mx-auto px-4">
+                <h2 id="conditions-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                    Conditions We Treat
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gradient-to-br from-soft-white to-medical-blue/5 border border-gray-200 rounded-2xl p-8 card-hover animate-fade-in-up delay-100">
+                            <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Depression & Mood Disorders</h3>
+                            <p class="text-text-light">Comprehensive treatment for major depression, bipolar disorder, seasonal affective disorder, and other mood-related conditions.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-soft-white to-healing-green/5 border border-gray-200 rounded-2xl p-8 card-hover animate-fade-in-up delay-200">
+                            <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Anxiety Disorders</h3>
+                            <p class="text-text-light">Specialized care for generalized anxiety, panic disorder, social anxiety, phobias, and obsessive-compulsive disorder.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-soft-white to-calm-teal/5 border border-gray-200 rounded-2xl p-8 card-hover animate-fade-in-up delay-300">
+                            <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">PTSD & Trauma</h3>
+                            <p class="text-text-light">Trauma-informed therapy including EMDR, trauma-focused cognitive behavioral therapy, and other evidence-based approaches.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-soft-white to-soft-coral/5 border border-gray-200 rounded-2xl p-8 card-hover animate-fade-in-up delay-400">
+                            <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Addiction Recovery</h3>
+                            <p class="text-text-light">Integrated treatment for substance use disorders with dual diagnosis support and comprehensive recovery planning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gradient-to-br from-soft-white to-medical-blue/5" aria-labelledby="about-title">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-fade-in-up">
+                        <h2 id="about-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark mb-6">
+                            About Lakesyde Behavioral Health
+
+                        </h2>
+                        <p class="text-lg text-text-medium mb-6">
+                             I'm Leke Adedotun, a board-certified psychiatric mental health nurse practitioner 
+                            Serving ages 6+ through telehealth and in person visits
+
+                            I created Lakesyde as a place where patients feel seen, understood, and supported. Every session is calm, respectful, and centered on your story. My goal is to help you build clarity, balance, and emotional strength at a pace that feels right for you.
+                        </p>
+                        <p class="text-lg text-text-medium mb-8">
+                            We believe in treating the whole person, not just the symptoms. Our 
+                            evidence based approaches combined with genuine compassion have helped 
+                            thousands of individuals and families find healing and recovery.
+                        </p>
+                        <!-- <div class="flex items-center gap-8">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-medical-blue animate-count" data-target="15">0+</div>
+                                <div class="text-text-light">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-healing-green animate-count" data-target="50">0+</div>
+                                <div class="text-text-light">Licensed Staff</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-calm-teal animate-count" data-target="10000">0+</div>
+                                <div class="text-text-light">Patients Helped</div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="relative animate-fade-in-up delay-200">
+                        <div class="bg-gradient-to-br from-medical-blue/10 to-healing-green/10 rounded-2xl p-8 lg:p-12 shadow-lg">
+                            <h3 class="font-serif text-2xl font-semibold text-medical-blue-dark mb-6">Our Commitment</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-medical-blue/20 flex items-center justify-center mt-1">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-medical-blue"></i>
+                                    </div>
+                                    <span class="text-text-dark">Personalized treatment plans for every individual</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-healing-green/20 flex items-center justify-center mt-1">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-healing-green"></i>
+                                    </div>
+                                    <span class="text-text-dark">Evidence-based therapies with proven results</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-calm-teal/20 flex items-center justify-center mt-1">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-calm-teal"></i>
+                                    </div>
+                                    <span class="text-text-dark">Confidential and compassionate care</span>
+                                </li>
+                                <!-- <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-soft-coral/20 flex items-center justify-center mt-1">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-soft-coral"></i>
+                                    </div>
+                                    <span class="text-text-dark">Accepting most major insurance plans</span>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-choose" class="py-20 bg-gradient-to-br from-white to-medical-blue-light/10" aria-labelledby="why-choose-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 id="why-choose-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark mb-6 animate-fade-in-up">
+                        Why Choose Lakesyde Behavioral Health
+                    </h2>
+                    <p class="text-xl text-text-medium animate-fade-in-up delay-100">
+                        We combine clinical excellence with genuine compassion to provide 
+                        the highest quality mental health care
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Reason 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-200">
+                        <div class="w-16 h-16 rounded-full bg-medical-blue/10 flex items-center justify-center mb-6 floating-element">
+                            <i data-lucide="shield" class="h-8 w-8 text-medical-blue"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-4">Board-Certified Experts</h3>
+                        <p class="text-text-light">Our team consists of board-certified psychiatrists and licensed clinical psychologists with specialized training in evidence-based therapies.</p>
+                    </div>
+                    
+                    <!-- Reason 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-300">
+                        <div class="w-16 h-16 rounded-full bg-healing-green/10 flex items-center justify-center mb-6 floating-element" style="animation-delay: 0.3s">
+                            <i data-lucide="heart" class="h-8 w-8 text-healing-green"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-4">Personalized Care Plans</h3>
+                        <p class="text-text-light">No two journeys are alike. We create customized treatment plans tailored to your unique needs, goals, and circumstances.</p>
+                    </div>
+                    
+                    <!-- Reason 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-400">
+                        <div class="w-16 h-16 rounded-full bg-calm-teal/10 flex items-center justify-center mb-6 floating-element" style="animation-delay: 0.6s">
+                            <i data-lucide="users" class="h-8 w-8 text-calm-teal"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-4">Holistic Approach</h3>
+                        <p class="text-text-light">We address mental, emotional, and physical wellbeing through integrated therapies that consider all aspects of your health.</p>
+                    </div>
+                    
+                    <!-- Reason 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-500">
+                        <div class="w-16 h-16 rounded-full bg-soft-coral/20 flex items-center justify-center mb-6 floating-element" style="animation-delay: 0.9s">
+                            <i data-lucide="clock" class="h-8 w-8 text-soft-coral"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-4">Flexible Scheduling</h3>
+                        <p class="text-text-light">We offer flexible appointment times, including evenings and weekends, to accommodate your busy schedule and ensure continuity of care.</p>
+                    </div>
+                    
+                    <!-- Reason 5 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-600">
+                        <div class="w-16 h-16 rounded-full bg-sunshine-yellow/20 flex items-center justify-center mb-6 floating-element" style="animation-delay: 1.2s">
+                            <i data-lucide="shield-check" class="h-8 w-8 text-amber-500"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-4">Confidential & Secure</h3>
+                        <p class="text-text-light">Your privacy is our priority. We use HIPAA-compliant systems and maintain strict confidentiality in all aspects of your care.</p>
+                    </div>
+                    
+                    <!-- Reason 6 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-700">
+                        <div class="w-16 h-16 rounded-full bg-medical-blue-light/20 flex items-center justify-center mb-6 floating-element" style="animation-delay: 1.5s">
+                            <i data-lucide="activity" class="h-8 w-8 text-medical-blue-light"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-4">Proven Results</h3>
+                        <p class="text-text-light">Our evidence-based approaches have helped thousands achieve meaningful, lasting improvement in their mental health and quality of life.</p>
+                    </div>
+                </div>
+                
+                <!-- Statistics -->
+                <div class="bg-gradient-to-r from-medical-blue/10 to-healing-green/10 rounded-2xl p-8 lg:p-12 mt-12 animate-fade-in-up delay-800">
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-medical-blue mb-2 animate-count" data-target="98">0%</div>
+                            <div class="text-text-dark font-medium">Patient Satisfaction</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-healing-green mb-2 animate-count" data-target="85">0%</div>
+                            <div class="text-text-dark font-medium">Show Improvement</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-calm-teal mb-2 animate-count" data-target="24">0</div>
+                            <div class="text-text-dark font-medium">Hour Response Time</div>
+                        </div>
+                        <!-- <div class="text-center">
+                            <div class="text-4xl font-bold text-soft-coral mb-2 animate-count" data-target="15">0</div>
+                            <div class="text-text-dark font-medium">Insurance Accepted</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white" aria-labelledby="contact-title">
+            <div class="container mx-auto px-4">
+                <h2 id="contact-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                    Ready to Begin Your Journey?
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <div class="bg-gradient-to-br from-soft-white to-medical-blue/5 p-8 rounded-2xl shadow-lg animate-fade-in-up delay-100">
+                            <h3 class="font-serif text-2xl font-semibold text-medical-blue-dark mb-6">Take the First Step</h3>
+                            <p class="text-text-medium mb-6">
+                                Starting your mental health journey can feel overwhelming, but you don't have to do it alone. 
+                                Our compassionate team is here to guide you every step of the way.
+                            </p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                    <span class="text-text-dark">Free initial consultation</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                    <span class="text-text-dark">Same-week appointments available</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                    <span class="text-text-dark">Insurance verification assistance</span>
+                                </li>
+                            </ul>
+                            <button class="btn-hero w-full py-4 rounded-xl text-lg">
+                                Schedule Your Consultation
+                            </button>
+                        </div>
+                        <div class="bg-gradient-to-br from-medical-blue/5 to-healing-green/5 p-8 rounded-2xl shadow-lg animate-fade-in-up delay-200">
+                            <h3 class="font-serif text-2xl font-semibold text-medical-blue-dark mb-6">What to Expect</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center flex-shrink-0">
+                                        <span class="font-bold text-medical-blue">1</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-medical-blue-dark mb-1">Initial Consultation</h4>
+                                        <p class="text-text-light">A confidential discussion about your concerns and goals</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center flex-shrink-0">
+                                        <span class="font-bold text-healing-green">2</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-medical-blue-dark mb-1">Personalized Plan</h4>
+                                        <p class="text-text-light">A customized treatment plan developed just for you</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-calm-teal/10 flex items-center justify-center flex-shrink-0">
+                                        <span class="font-bold text-calm-teal">3</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-medical-blue-dark mb-1">Begin Treatment</h4>
+                                        <p class="text-text-light">Start your journey toward healing and wellness</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-medical-blue-dark text-white" role="contentinfo">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                     <a href="/" class="flex items-center gap-2">
+                        <img style="width: 100px; background-color: #f8f9fa;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Serenity Health Logo">
+                    </a>
+                    <p class="text-white/80 mb-6 max-w-sm">
+                        Compassionate behavioral health care for individuals and families. 
+                        Your journey to wellness starts with a single step. We provide 
+                        evidence-based treatment for mental health conditions in a safe, 
+                        supportive environment.
+                    </p>
+                    <!-- <div class="flex gap-4">
+                        <a
+                            href="#"
+                            aria-label="Follow us on Facebook"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-healing-green transition-colors"
+                        >
+                            <i data-lucide="facebook" class="h-5 w-5"></i>
+                        </a>
+                        <a
+                            href="#"
+                            aria-label="Follow us on Twitter"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-healing-green transition-colors"
+                        >
+                            <i data-lucide="twitter" class="h-5 w-5"></i>
+                        </a>
+                        <a
+                            href="#"
+                            aria-label="Follow us on Instagram"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-healing-green transition-colors"
+                        >
+                            <i data-lucide="instagram" class="h-5 w-5"></i>
+                        </a>
+                        <a
+                            href="#"
+                            aria-label="Follow us on LinkedIn"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-healing-green transition-colors"
+                        >
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                    </div> -->
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Services</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
+                                Psycho Therapy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
+                                Individual Therapy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
+                                Group Therapy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
+                                Family Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
+                               Medication Management
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Conditions</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors">
+                                Depression
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors">
+                                Anxiety
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors">
+                                PTSD & Trauma
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors">
+                                Addiction
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#about" class="text-white/70 hover:text-white transition-colors">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#why-choose" class="text-white/70 hover:text-white transition-colors">
+                                Why Choose Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-white/70 hover:text-white transition-colors">
+                                Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white/70 hover:text-white transition-colors">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-sm">
+                    © <span id="currentYear"></span> Lakesyde Behavioral Health (LBH)
+. All rights reserved.
+                </p>
+                <!-- <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-white/50 hover:text-white transition-colors">
+                        Privacy Policy
+                    </a>
+                    <a href="#" class="text-white/50 hover:text-white transition-colors">
+                        Terms of Service
+                    </a>
+                    <a href="#" class="text-white/50 hover:text-white transition-colors">
+                        HIPAA Notice
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isMobileMenuOpen = false;
+
+        mobileMenuButton.addEventListener('click', () => {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            
+            // Update aria attributes
+            mobileMenuButton.setAttribute('aria-expanded', isMobileMenuOpen);
+            
+            if (isMobileMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.remove('animate-menu-exit');
+                mobileMenu.classList.add('animate-menu-enter');
+                // Change icon to X
+                mobileMenuButton.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
+                lucide.createIcons();
+            } else {
+                mobileMenu.classList.remove('animate-menu-enter');
+                mobileMenu.classList.add('animate-menu-exit');
+                // Change back to menu icon after animation
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+                    lucide.createIcons();
+                }, 300);
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMobileMenuOpen) {
+                    mobileMenu.classList.remove('animate-menu-enter');
+                    mobileMenu.classList.add('animate-menu-exit');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        isMobileMenuOpen = false;
+                        mobileMenuButton.setAttribute('aria-expanded', false);
+                        mobileMenuButton.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+                        lucide.createIcons();
+                    }, 300);
+                }
+            });
+        });
+
+        // Scroll effect for navigation
+        const mainNav = document.getElementById('mainNav');
+        let scrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20 && !scrolled) {
+                mainNav.classList.add('bg-white', 'shadow-lg');
+                scrolled = true;
+            } else if (window.scrollY <= 20 && scrolled) {
+                mainNav.classList.remove('bg-white', 'shadow-lg');
+                scrolled = false;
+            }
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId === '/') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // CTA button handlers
+        // document.querySelectorAll('.btn-hero').forEach(button => {
+        //     if (!button.hasAttribute('href')) {
+        //         button.addEventListener('click', () => {
+        //             alert('Thank you for your interest in Serenity Health! You will be redirected to our appointment scheduling system.');
+        //             // In production, this would redirect to a booking page
+        //             // window.location.href = '/book-appointment';
+        //         });
+        //     }
+        // });
+
+        // Animated counting for statistics
+        function animateCount(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const suffix = element.textContent.includes('%') ? '%' : element.textContent.includes('+') ? '+' : '';
+            let count = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    count = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(count) + suffix;
+            }, 30);
+        }
+
+        // Initialize animations and counting when elements are in view
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate counting numbers when they come into view
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const countElement = entry.target;
+                        if (countElement.classList.contains('animate-count')) {
+                            animateCount(countElement);
+                            observer.unobserve(countElement);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all counting elements
+            document.querySelectorAll('.animate-count').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Ensure animations trigger
+            const animatedElements = document.querySelectorAll('[class*="animate-"]');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'running';
+            });
+        });
+
+        // Floating elements animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach((el, index) => {
+                // Set staggered animation delays
+                el.style.animationDelay = `${index * 0.3}s`;
+            });
+        });
+    </script>
+</body>
+</html>
