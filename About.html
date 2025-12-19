@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>About Lakesyde Behavioral Health | Our Team & Approach to Mental Health Care</title>
+    <meta name="description" content="Meet Leke Adedotun, Board Certified Psychiatric Mental Health Nurse Practitioner, Army Veteran, and founder of Lakesyde Behavioral Health. Compassionate care for ages 6+.">
+    <meta name="keywords" content="psychiatric nurse practitioner, mental health care, telehealth, veteran care, trauma treatment, family mental health, holistic psychiatry">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About Lakesyde Behavioral Health | Our Compassionate Approach">
+    <meta property="og:description" content="Board Certified Psychiatric Mental Health Nurse Practitioner serving ages 6+ through telehealth and in-person visits. Veteran-led compassionate care.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://lakesydebehavioralhealth.example.com/about">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lakesydebehavioralhealth.example.com/about">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Medical blue (trust, calm, professionalism)
+                        'medical-blue': '#0077b6',
+                        'medical-blue-light': '#90e0ef',
+                        'medical-blue-dark': '#023e8a',
+                        
+                        // Healing green (health, growth, balance)
+                        'healing-green': '#2a9d8f',
+                        'healing-green-light': '#a7d9c9',
+                        
+                        // Calming teal (peace, stability)
+                        'calm-teal': '#4a9b9d',
+                        
+                        // Neutral backgrounds
+                        'soft-white': '#f8f9fa',
+                        'warm-gray': '#e9ecef',
+                        
+                        // Accent colors
+                        'soft-coral': '#ff9a8b',
+                        'sunshine-yellow': '#ffd166',
+                        
+                        // Text colors
+                        'text-dark': '#2d3748',
+                        'text-medium': '#4a5568',
+                        'text-light': '#718096',
+                        
+                        // Military/veteran colors
+                        'army-green': '#4d5d53',
+                        'army-tan': '#b8a179',
+                    },
+                    fontFamily: {
+                        'serif': ['Source Serif Pro', 'serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'slide-down': 'slideDown 0.3s ease-out forwards',
+                        'fade-in-down': 'fadeInDown 0.3s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
+                        },
+                        slideUp: {
+                            'from': { opacity: '0', transform: 'translateY(20px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideDown: {
+                            'from': { opacity: '0', transform: 'translateY(-20px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            'from': { opacity: '0', transform: 'translateY(-10px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .font-serif {
+            font-family: 'Source Serif Pro', serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 119, 182, 0.25);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 119, 182, 0.35);
+        }
+        
+        .btn-outline {
+            border: 2px solid #0077b6;
+            color: #0077b6;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: #0077b6;
+            color: white;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        /* Card hover effects */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu.open {
+            display: block;
+            animation: slideDown 0.3s ease-out forwards;
+        }
+        
+        .mobile-menu.closing {
+            animation: fadeOutUp 0.3s ease-out forwards;
+        }
+        
+        @keyframes fadeOutUp {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        
+        /* Sticky navigation */
+        .nav-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .nav-scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Text gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #0077b6, #2a9d8f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Floating elements */
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Veteran badge */
+        .veteran-badge {
+            background: linear-gradient(135deg, #4d5d53, #b8a179);
+            color: white;
+            border-radius: 9999px;
+            padding: 0.25rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        /* Stat cards */
+        .stat-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Testimonial styles */
+        .testimonial-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: -1rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            color: #90e0ef;
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        /* Certification badges */
+        .cert-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            color: #0369a1;
+        }
+    </style>
+</head>
+<body class="bg-soft-white min-h-screen text-text-dark">
+    <!-- Navigation -->
+    <header id="mainHeader">
+        <nav id="mainNav" class="nav-sticky animate-fade-in-down">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="/" class="flex items-center gap-2 z-50">
+                        <img style="width: 100px;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center gap-8">
+                        <a href="index.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group">
+                            Home
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="service.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group">
+                            Services
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="About.html" class="text-medical-blue font-medium relative group">
+                            About
+                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-medical-blue"></span>
+                        </a>
+                        <!-- <a href="/conditions" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group">
+                            Conditions
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a> -->
+                        <a href="privacy.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group">
+                            Privacy Policy
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        
+                        <!-- CTA Button -->
+                        <a href="contact.html" class="btn-primary px-6 py-3 rounded-xl flex items-center gap-2">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            Book Consultation
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button
+                        id="mobileMenuButton"
+                        class="lg:hidden p-2 text-text-medium z-50"
+                        aria-label="Toggle menu"
+                        aria-expanded="false"
+                        aria-controls="mobileMenu"
+                    >
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div
+                id="mobileMenu"
+                class="mobile-menu lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 z-50"
+                role="menu"
+                aria-label="Mobile navigation menu"
+            >
+                <div class="container mx-auto px-4 py-6 space-y-1">
+                    <a href="/" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <i data-lucide="home" class="h-5 w-5"></i>
+                        <span class="font-medium">Home</span>
+                    </a>
+                    <a href="service.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <i data-lucide="heart" class="h-5 w-5"></i>
+                        <span class="font-medium">Services</span>
+                    </a>
+                    <a href="About.html" class="flex items-center gap-3 text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <i data-lucide="users" class="h-5 w-5"></i>
+                        <span class="font-medium">About</span>
+                    </a>
+                    <!-- <a href="conditions" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <i data-lucide="activity" class="h-5 w-5"></i>
+                        <span class="font-medium">Conditions</span>
+                    </a> -->
+                    <a href="privacy.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <i data-lucide="shield" class="h-5 w-5"></i>
+                        <span class="font-medium">Privacy Policy</span>
+                    </a>
+                    
+                    <div class="pt-4 border-t border-gray-100 mt-4">
+                        <a href="contact.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                            <i data-lucide="calendar" class="h-5 w-5"></i>
+                            <div>
+                                <div class="font-medium">Book Consultation</div>
+                                <div class="text-sm text-text-light">Schedule your first visit</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="animate-fade-in pt-20">
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-r from-medical-blue/5 via-healing-green/5 to-army-green/5">
+            <div class="container mx-auto px-4 ">
+
+                <!-- <img src="WhatsApp_Image_2025-12-18_at_00.18.13-removebg-preview.png" alt=""> -->
+                <div class="max-w-8xl mx-auto">
+                    <div class="grid lg:grid-cols-3 gap-12 items-center">
+
+
+                        <img class="rounded-full" src="WhatsApp_Image_2025-12-18_at_00.18.13-removebg-preview.png" alt="">
+                
+                        <!-- Left Column - Text -->
+                        <div class="animate-fade-in-up">
+                            <div class="flex items-center gap-3 mb-6">
+                                <!-- <span class="veteran-badge">
+                                    <i data-lucide="shield" class="h-4 w-4"></i>
+                                    U.S. Army Veteran
+                                </span> -->
+                                <span class="cert-badge">
+                                    <i data-lucide="badge-check" class="h-4 w-4"></i>
+                                    Board Certified
+                                </span>
+                            </div>
+                            
+                            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-medical-blue-dark mb-6">
+                                Meet Leke Adedotun
+                                <span class="text-gradient block">Founder & Lead Practitioner</span>
+                            </h1>
+                            
+                            <p class="text-xl text-text-medium mb-8">
+                                Board Certified Psychiatric Mental Health Nurse Practitioner serving ages 6+ through telehealth and in-person visits.
+                            </p>
+                            
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#philosophy" class="btn-primary px-8 py-4 rounded-xl inline-block">
+                                    Our Philosophy
+                                    <i data-lucide="arrow-down" class="h-5 w-5 inline ml-2"></i>
+                                </a>
+                                <a href="contact.html" class="btn-outline px-8 py-4 rounded-xl inline-block">
+                                    <i data-lucide="calendar" class="h-5 w-5 inline mr-2"></i>
+                                    Schedule Visit
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column - Image/Graphics -->
+                        <div class="relative animate-fade-in-up delay-100">
+                            <div class="relative">
+                                <!-- Main graphic container -->
+                                <div class="bg-gradient-to-br from-medical-blue/10 to-healing-green/10 rounded-3xl p-8">
+                                    <div class="grid grid-cols-2 gap-6">
+                                        <!-- Veteran Service Badge -->
+                                        <div class="stat-card floating-element" style="animation-delay: 0.2s">
+                                            <div class="text-center">
+                                                <div class="w-16 h-16 rounded-full bg-army-green/10 flex items-center justify-center mx-auto mb-4">
+                                                    <i data-lucide="shield" class="h-8 w-8 text-army-green"></i>
+                                                </div>
+                                                <div class="text-2xl font-bold text-medical-blue-dark">U.S. Army</div>
+                                                <div class="text-sm text-text-light">Veteran</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Years of Experience -->
+                                        <div class="stat-card floating-element" style="animation-delay: 0.4s">
+                                            <div class="text-center">
+                                                <div class="w-16 h-16 rounded-full bg-medical-blue/10 flex items-center justify-center mx-auto mb-4">
+                                                    <i data-lucide="award" class="h-8 w-8 text-medical-blue"></i>
+                                                </div>
+                                                <div class="text-2xl font-bold text-medical-blue-dark">10+</div>
+                                                <div class="text-sm text-text-light">Years Experience</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Patients Served -->
+                                        <div class="stat-card floating-element" style="animation-delay: 0.6s">
+                                            <div class="text-center">
+                                                <div class="w-16 h-16 rounded-full bg-healing-green/10 flex items-center justify-center mx-auto mb-4">
+                                                    <i data-lucide="users" class="h-8 w-8 text-healing-green"></i>
+                                                </div>
+                                                <div class="text-2xl font-bold text-medical-blue-dark">1000+</div>
+                                                <div class="text-sm text-text-light">Patients Helped</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Age Range -->
+                                        <div class="stat-card floating-element" style="animation-delay: 0.8s">
+                                            <div class="text-center">
+                                                <div class="w-16 h-16 rounded-full bg-sunshine-yellow/20 flex items-center justify-center mx-auto mb-4">
+                                                    <i data-lucide="heart" class="h-8 w-8 text-amber-500"></i>
+                                                </div>
+                                                <div class="text-2xl font-bold text-medical-blue-dark">6+</div>
+                                                <div class="text-sm text-text-light">All Ages</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder's Story -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                        My Story & Vision
+                    </h2>
+                    
+                    <div class="bg-gradient-to-br from-soft-white to-medical-blue/5 rounded-2xl p-8 md:p-12 animate-fade-in-up delay-100">
+                        <div class="flex items-start gap-6 mb-8">
+                            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-medical-blue to-healing-green p-1 flex-shrink-0">
+                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+                                    <i data-lucide="star" class="h-10 w-10 text-medical-blue"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl text-medical-blue-dark mb-4">From Service to Healing</h3>
+                                <p class="text-text-medium">
+                                    I'm Leke Adedotun, and I've had the honor of working with diverse populations across Nevada, including veterans, high achieving professionals, young adults, parents, and individuals navigating trauma or major life transitions.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <p class="text-text-medium">
+                                My journey in mental health care began during my service in the U.S. Army, where I witnessed firsthand the profound need for compassionate, understanding mental health support. This experience shaped my approach to care – one that combines clinical expertise with genuine human connection.
+                            </p>
+                            
+                            <div class="bg-medical-blue/5 p-6 rounded-xl border-l-4 border-medical-blue">
+                                <p class="text-text-medium italic">
+                                    "I created Lakesyde as a place where patients feel seen, understood, and supported. Every session is calm, respectful, and centered on your story. My goal is to help you build clarity, balance, and emotional strength at a pace that feels right for you."
+                                </p>
+                                <div class="flex items-center gap-3 mt-4">
+                                    <div class="w-10 h-10 rounded-full bg-medical-blue/10 flex items-center justify-center">
+                                        <i data-lucide="quote" class="h-5 w-5 text-medical-blue"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-medical-blue-dark">Leke Adedotun</div>
+                                        <div class="text-sm text-text-light">Founder & Lead Practitioner</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="text-text-medium">
+                                After completing my advanced nursing education and psychiatric mental health certification, I dedicated myself to serving the Nevada community. I've worked in various clinical settings, from hospital psychiatric units to outpatient clinics, always focusing on building therapeutic relationships based on trust and mutual respect.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Philosophy -->
+        <section id="philosophy" class="py-16 bg-gradient-to-br from-soft-white to-healing-green/10">
+            <div class="container mx-auto px-4">
+                <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                    Our Treatment Philosophy
+                </h2>
+                
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-8 mb-16">
+                        <!-- Philosophy Card -->
+                        <div class="animate-fade-in-up delay-100">
+                            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover h-full">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 rounded-full bg-healing-green/10 flex items-center justify-center">
+                                        <i data-lucide="heart" class="h-8 w-8 text-healing-green"></i>
+                                    </div>
+                                    <h3 class="font-serif text-2xl text-medical-blue-dark">Whole-Person Care</h3>
+                                </div>
+                                <p class="text-text-medium mb-6">
+                                    We believe in treating the whole person, not just the symptoms. Mental health is interconnected with physical health, relationships, work, and overall life satisfaction. Our approach considers all aspects of your wellbeing.
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                        <span class="text-text-medium">Integrated mind-body approach to healing</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                        <span class="text-text-medium">Consideration of lifestyle, nutrition, and environment</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                        <span class="text-text-medium">Collaboration with other healthcare providers when needed</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Evidence-Based Card -->
+                        <div class="animate-fade-in-up delay-200">
+                            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover h-full">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 rounded-full bg-medical-blue/10 flex items-center justify-center">
+                                        <i data-lucide="clipboard-check" class="h-8 w-8 text-medical-blue"></i>
+                                    </div>
+                                    <h3 class="font-serif text-2xl text-medical-blue-dark">Evidence-Based Compassion</h3>
+                                </div>
+                                <p class="text-text-medium mb-6">
+                                    Our evidence-based approaches combined with genuine compassion have helped thousands of individuals and families find healing and recovery. We stay current with the latest research while maintaining the human touch.
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-medical-blue mt-1"></i>
+                                        <span class="text-text-medium">Latest psychiatric research and best practices</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-medical-blue mt-1"></i>
+                                        <span class="text-text-medium">Personalized treatment plans for each patient</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-medical-blue mt-1"></i>
+                                        <span class="text-text-medium">Continuous professional development and training</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Specialized Care Areas -->
+                    <div class="animate-fade-in-up delay-300">
+                        <h3 class="font-serif text-2xl md:text-3xl text-medical-blue-dark text-center mb-8">
+                            Specialized Care for Diverse Populations
+                        </h3>
+                        
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-army-green/10 flex items-center justify-center">
+                                        <i data-lucide="shield" class="h-6 w-6 text-army-green"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-medical-blue-dark">Veterans</h4>
+                                </div>
+                                <p class="text-text-light text-sm">Special understanding of military culture and veteran-specific mental health needs</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center">
+                                        <i data-lucide="briefcase" class="h-6 w-6 text-medical-blue"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-medical-blue-dark">Professionals</h4>
+                                </div>
+                                <p class="text-text-light text-sm">Support for high-achieving individuals managing stress, burnout, and performance</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center">
+                                        <i data-lucide="users" class="h-6 w-6 text-healing-green"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-medical-blue-dark">Families & Parents</h4>
+                                </div>
+                                <p class="text-text-light text-sm">Family-centered care with understanding of parenting challenges and dynamics</p>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-soft-coral/20 flex items-center justify-center">
+                                        <i data-lucide="sparkles" class="h-6 w-6 text-soft-coral"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-medical-blue-dark">Youth & Teens</h4>
+                                </div>
+                                <p class="text-text-light text-sm">Developmentally appropriate care for ages 6+, including school-related issues</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials & Qualifications -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                        Credentials & Qualifications
+                    </h2>
+                    
+                    <div class="bg-gradient-to-br from-medical-blue/5 to-healing-green/5 rounded-2xl p-8 md:p-12 animate-fade-in-up delay-100">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Left Column - Credentials -->
+                            <div>
+                                <h3 class="font-serif text-2xl text-medical-blue-dark mb-6">Professional Credentials</h3>
+                                
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="badge-check" class="h-6 w-6 text-medical-blue"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-medical-blue-dark mb-1">Board Certification</h4>
+                                            <p class="text-text-light">Psychiatric Mental Health Nurse Practitioner (PMHNP-BC)</p>
+                                            <p class="text-text-light text-sm">American Nurses Credentialing Center</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="graduation-cap" class="h-6 w-6 text-healing-green"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-medical-blue-dark mb-1">Advanced Education</h4>
+                                            <p class="text-text-light">Master of Science in Nursing (MSN)</p>
+                                            <p class="text-text-light text-sm">Psychiatric Mental Health Specialty</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-full bg-calm-teal/10 flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="map-pin" class="h-6 w-6 text-calm-teal"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-medical-blue-dark mb-1">Licensure</h4>
+                                            <p class="text-text-light">Licensed in Nevada</p>
+                                            <p class="text-text-light text-sm">Full prescriptive authority</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Column - Approach -->
+                            <div>
+                                <h3 class="font-serif text-2xl text-medical-blue-dark mb-6">Treatment Approach</h3>
+                                
+                                <div class="space-y-4">
+                                    <div class="bg-white p-4 rounded-xl border border-gray-200">
+                                        <h4 class="font-semibold text-medical-blue-dark mb-2">Integrative Psychiatry</h4>
+                                        <p class="text-text-light text-sm">Combining medication management with therapy, lifestyle changes, and holistic approaches</p>
+                                    </div>
+                                    
+                                    <div class="bg-white p-4 rounded-xl border border-gray-200">
+                                        <h4 class="font-semibold text-medical-blue-dark mb-2">Trauma-Informed Care</h4>
+                                        <p class="text-text-light text-sm">Understanding how past experiences affect current mental health</p>
+                                    </div>
+                                    
+                                    <div class="bg-white p-4 rounded-xl border border-gray-200">
+                                        <h4 class="font-semibold text-medical-blue-dark mb-2">Culturally Competent</h4>
+                                        <p class="text-text-light text-sm">Respectful of diverse backgrounds, beliefs, and experiences</p>
+                                    </div>
+                                    
+                                    <div class="bg-white p-4 rounded-xl border border-gray-200">
+                                        <h4 class="font-semibold text-medical-blue-dark mb-2">Strength-Based</h4>
+                                        <p class="text-text-light text-sm">Focusing on your strengths and resilience in the healing process</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="py-16 bg-gradient-to-r from-medical-blue/10 to-healing-green/10">
+            <div class="container mx-auto px-4">
+                <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                    Why Choose Lakesyde Behavioral Health
+                </h2>
+                
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-100">
+                            <div class="w-14 h-14 rounded-full bg-medical-blue/10 flex items-center justify-center mb-6">
+                                <i data-lucide="clock" class="h-7 w-7 text-medical-blue"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Flexible Scheduling</h3>
+                            <p class="text-text-light">Telehealth and in-person visits to accommodate your busy life. Evening and weekend appointments available.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-200">
+                            <div class="w-14 h-14 rounded-full bg-healing-green/10 flex items-center justify-center mb-6">
+                                <i data-lucide="heart" class="h-7 w-7 text-healing-green"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Compassionate Care</h3>
+                            <p class="text-text-light">You're not just a patient - you're a person with a unique story. We listen and care deeply about your journey.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-300">
+                            <div class="w-14 h-14 rounded-full bg-calm-teal/10 flex items-center justify-center mb-6">
+                                <i data-lucide="users" class="h-7 w-7 text-calm-teal"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">All Ages Welcome</h3>
+                            <p class="text-text-light">Serving ages 6+ - children, teens, adults, and seniors. Family-centered care approach.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-400">
+                            <div class="w-14 h-14 rounded-full bg-army-green/10 flex items-center justify-center mb-6">
+                                <i data-lucide="shield" class="h-7 w-7 text-army-green"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Veteran Understanding</h3>
+                            <p class="text-text-light">Special insight into military culture and veteran-specific mental health challenges.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-500">
+                            <div class="w-14 h-14 rounded-full bg-sunshine-yellow/20 flex items-center justify-center mb-6">
+                                <i data-lucide="zap" class="h-7 w-7 text-amber-500"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Evidence-Based</h3>
+                            <p class="text-text-light">Latest psychiatric research combined with years of clinical experience for optimal outcomes.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-600">
+                            <div class="w-14 h-14 rounded-full bg-soft-coral/20 flex items-center justify-center mb-6">
+                                <i data-lucide="target" class="h-7 w-7 text-soft-coral"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Personalized Plans</h3>
+                            <p class="text-text-light">No cookie-cutter approaches. Your treatment plan is tailored to your unique needs and goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-gradient-to-r from-medical-blue/10 to-healing-green/10">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl animate-fade-in-up">
+                        <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark mb-6">
+                            Ready to Begin Your Healing Journey?
+                        </h2>
+                        <p class="text-xl text-text-medium mb-8">
+                            Take the first step toward compassionate, personalized mental health care with a provider who truly understands.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="contact.html" class="btn-primary px-8 py-4 rounded-xl inline-block">
+                                <i data-lucide="calendar" class="h-5 w-5 inline mr-2"></i>
+                                Schedule Your Consultation
+                            </a>
+                            <a href="service.html" class="btn-outline px-8 py-4 rounded-xl inline-block">
+                                <i data-lucide="heart" class="h-5 w-5 inline mr-2"></i>
+                                Explore Our Services
+                            </a>
+                        </div>
+                        <p class="text-text-light text-sm mt-6">
+                            Serving Nevada communities through telehealth and in-person visits
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-medical-blue-dark text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="/" class="flex items-center gap-2">
+                        <img style="width: 100px; background-color: #f8f9fa;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+                    <p class="text-white/80 mt-2">
+                        Compassionate mental health care for individuals and families across Nevada.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="service.html" class="text-white/70 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="About.html" class="text-white hover:text-white transition-colors">About</a></li>
+                        <li><a href="privacy.html" class="text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div>
+                    <h4 class="font-serif text-lg mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/services#psychiatric-evaluations" class="text-white/70 hover:text-white transition-colors">Psychiatric Evaluations</a></li>
+                        <li><a href="/services#medication-management" class="text-white/70 hover:text-white transition-colors">Medication Management</a></li>
+                        <li><a href="/services#therapy" class="text-white/70 hover:text-white transition-colors">Therapy & Counseling</a></li>
+                        <li><a href="/services#child-teen" class="text-white/70 hover:text-white transition-colors">Child & Teen Care</a></li>
+                    </ul>
+                </div> -->
+                
+                <!-- <div>
+                    <h4 class="font-serif text-lg mb-4">Contact & Info</h4>
+                    <ul class="space-y-2 text-white/70">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="h-4 w-4 mt-1"></i>
+                            <span>Serving Nevada Statewide</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="clock" class="h-4 w-4 mt-1"></i>
+                            <span>Telehealth & In-Person</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="shield" class="h-4 w-4 mt-1"></i>
+                            <span>Board Certified PMHNP</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="users" class="h-4 w-4 mt-1"></i>
+                            <span>Ages 6+ Welcome</span>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-sm">
+                    © <span id="currentYear"></span> Lakesyde Behavioral Health. All rights reserved.
+                </p>
+                <div class="flex items-center gap-2 text-white/50 text-sm">
+                    <i data-lucide="badge-check" class="h-4 w-4"></i>
+                    <span>Board Certified Psychiatric Mental Health Nurse Practitioner</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isMobileMenuOpen = false;
+
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            
+            mobileMenuButton.setAttribute('aria-expanded', isMobileMenuOpen);
+            
+            if (isMobileMenuOpen) {
+                mobileMenu.classList.remove('closing');
+                mobileMenu.classList.add('open');
+                mobileMenuButton.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
+                lucide.createIcons();
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('open');
+                mobileMenu.classList.add('closing');
+                
+                setTimeout(() => {
+                    mobileMenu.classList.remove('closing');
+                    mobileMenuButton.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+                    lucide.createIcons();
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+        }
+
+        mobileMenuButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMobileMenuOpen) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (isMobileMenuOpen && 
+                !mobileMenu.contains(e.target) && 
+                !mobileMenuButton.contains(e.target)) {
+                toggleMobileMenu();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isMobileMenuOpen) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Scroll effect for navigation
+        const mainNav = document.getElementById('mainNav');
+        let scrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20 && !scrolled) {
+                mainNav.classList.add('nav-scrolled');
+                scrolled = true;
+            } else if (window.scrollY <= 20 && scrolled) {
+                mainNav.classList.remove('nav-scrolled');
+                scrolled = false;
+            }
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate floating elements with staggered delays
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`;
+            });
+            
+            // Animate slide-up elements
+            const slideUpElements = document.querySelectorAll('.animate-fade-in-up');
+            slideUpElements.forEach((el, index) => {
+                el.style.animationDelay = `${(index + 1) * 0.1}s`;
+            });
+            
+            // Ensure all animations trigger
+            const animatedElements = document.querySelectorAll('[class*="animate-"]');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'running';
+            });
+        });
+    </script>
+</body>
+</html>
