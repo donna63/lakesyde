@@ -72,7 +72,15 @@
                         'pulse-gentle': 'pulseGentle 2s ease-in-out infinite',
                         'bounce-subtle': 'bounceSubtle 2s infinite',
                         'menu-enter': 'menuEnter 0.3s ease-out forwards',
-                        'menu-exit': 'menuExit 0.3s ease-out forwards'
+                        'menu-exit': 'menuExit 0.3s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.5s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
+                        'scale-up': 'scaleUp 0.4s ease-out forwards',
+                        'text-shimmer': 'textShimmer 2s infinite',
+                        'gradient-shift': 'gradientShift 3s ease-in-out infinite',
+                        'parallax': 'parallax 20s linear infinite',
+                        'testimonial-slide': 'testimonialSlide 20s linear infinite',
+                        'card-rotate': 'cardRotate 0.6s ease-out forwards',
                     },
                     keyframes: {
                         slideDown: {
@@ -106,6 +114,40 @@
                         menuExit: {
                             'from': { opacity: '1', maxHeight: '500px' },
                             'to': { opacity: '0', maxHeight: '0' }
+                        },
+                        slideInRight: {
+                            'from': { transform: 'translateX(100%)', opacity: '0' },
+                            'to': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        slideInLeft: {
+                            'from': { transform: 'translateX(-100%)', opacity: '0' },
+                            'to': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        scaleUp: {
+                            'from': { transform: 'scale(0.9)', opacity: '0' },
+                            'to': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        textShimmer: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                            '100%': { backgroundPosition: '0% 50%' }
+                        },
+                        gradientShift: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' }
+                        },
+                        parallax: {
+                            '0%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                            '100%': { transform: 'translateY(0px)' }
+                        },
+                        testimonialSlide: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-100%)' }
+                        },
+                        cardRotate: {
+                            'from': { transform: 'rotateY(90deg)', opacity: '0' },
+                            'to': { transform: 'rotateY(0deg)', opacity: '1' }
                         }
                     }
                 }
@@ -153,6 +195,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
         }
         
         .font-serif {
@@ -206,6 +249,8 @@
         .delay-600 { animation-delay: 0.6s; }
         .delay-700 { animation-delay: 0.7s; }
         .delay-800 { animation-delay: 0.8s; }
+        .delay-900 { animation-delay: 0.9s; }
+        .delay-1000 { animation-delay: 1s; }
         
         .visually-hidden {
             position: absolute;
@@ -221,10 +266,12 @@
         
         .card-hover {
             transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
         
         .card-hover:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) rotateX(2deg);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         
@@ -247,9 +294,113 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        
+        /* Newsletter Styles */
+        .newsletter-box {
+            background: linear-gradient(135deg, #0077b6, #2a9d8f);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            animation: gradientShift 3s ease-in-out infinite;
+            background-size: 200% 200%;
+        }
+        
+        .newsletter-input {
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: white;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .newsletter-btn {
+            background: white;
+            color: #0077b6;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Success message animation */
+        .success-message {
+            animation: slideInRight 0.5s ease-out forwards;
+        }
+        
+        /* Testimonial Styles */
+        .testimonial-card {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .testimonial-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .testimonial-card:hover .testimonial-inner {
+            transform: rotateY(10deg);
+        }
+        
+        .quote-icon {
+            animation: pulseGentle 3s ease-in-out infinite;
+        }
+        
+        .parallax-element {
+            will-change: transform;
+        }
+        
+        /* Animated background elements */
+        .animated-bg-element {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 119, 182, 0.1), rgba(42, 157, 143, 0.1));
+            animation: float 15s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        /* Shimmer effect for text */
+        .shimmer-text {
+            background: linear-gradient(
+                90deg,
+                #0077b6 0%,
+                #2a9d8f 25%,
+                #0077b6 50%,
+                #2a9d8f 75%,
+                #0077b6 100%
+            );
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: textShimmer 2s linear infinite;
+        }
+        
+        /* Glowing effect */
+        .glow {
+            box-shadow: 0 0 20px rgba(0, 119, 182, 0.3);
+            animation: pulseGentle 3s infinite;
+        }
     </style>
 </head>
-<body class="bg-soft-white text-text-dark">
+<body class="bg-soft-white text-text-dark overflow-x-hidden">
+    <!-- Animated background elements -->
+    <div class="animated-bg-element w-64 h-64 top-10 left-5 opacity-10" style="animation-delay: 0s;"></div>
+    <div class="animated-bg-element w-96 h-96 bottom-20 right-10 opacity-5" style="animation-delay: 2s;"></div>
+    <div class="animated-bg-element w-48 h-48 top-1/3 right-1/4 opacity-15" style="animation-delay: 4s;"></div>
+    
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="visually-hidden focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-medical-blue text-white p-3 z-50">Skip to main content</a>
     
@@ -260,7 +411,7 @@
                 <div class="flex items-center justify-between h-20">
                     <!-- Logo -->
                     <a href="index.html" class="flex items-center gap-2">
-                        <img style="width: 120px; " src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Serenity Health Logo">
+                        <img style="width: 120px; " src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Serenity Health Logo" class="hover:scale-105 transition-transform duration-300">
                     </a>
 
                     <!-- Desktop Navigation -->
@@ -287,6 +438,15 @@
                             Why Choose Us
                             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
                         </a>
+                        <a href="#testimonials" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Testimonials
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+
+                        <a href="mental.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Resource
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
                         <a href="contact.html" class="text-medical-blue font-medium relative group" role="menuitem">
                             Contact
                             <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-medical-blue"></span>
@@ -296,7 +456,7 @@
                     <!-- Mobile Menu Button -->
                     <button
                         id="mobileMenuButton"
-                        class="md:hidden p-2 text-text-medium"
+                        class="md:hidden p-2 text-text-medium hover:text-medical-blue transition-colors"
                         aria-label="Toggle menu"
                         aria-expanded="false"
                         aria-controls="mobileMenu"
@@ -314,27 +474,33 @@
                 aria-label="Mobile navigation menu"
             >
                 <div class="container mx-auto px-4 py-6 space-y-4">
-                    <a href="service.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                    <a href="service.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2 animate-fade-in-up delay-100" role="menuitem">
                         Services
                     </a>
-                    <a href="#conditions" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                    <a href="#conditions" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2 animate-fade-in-up delay-200" role="menuitem">
                         Conditions
                     </a>
 
-                     <a href="privacy.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                     <a href="privacy.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2 animate-fade-in-up delay-300" role="menuitem">
                         Privacy Policy
                     </a>
-                    <a href="#about" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                    <a href="#about" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2 animate-fade-in-up delay-400" role="menuitem">
                         About
                     </a>
-                    <a href="#why-choose" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                    <a href="#why-choose" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2 animate-fade-in-up delay-500" role="menuitem">
                         Why Choose Us
                     </a>
-                    <a href="contact.html" class="block text-lg text-medical-blue font-medium py-2" role="menuitem">
+                    <a href="#testimonials" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2 animate-fade-in-up delay-600" role="menuitem">
+                        Testimonials
+                    </a>
+                     <a href="mental.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2 animate-fade-in-up delay-600" role="menuitem">
+                        Resource
+                    </a>
+                    <a href="contact.html" class="block text-lg text-medical-blue font-medium py-2 animate-fade-in-up delay-700" role="menuitem">
                         Contact
                     </a>
-                    <div class="pt-4 space-y-3">
-                        <button class="btn-hero w-full py-4 rounded-xl">
+                    <div class="pt-4 space-y-3 animate-fade-in-up delay-800">
+                        <button class="btn-hero w-full py-4 rounded-xl glow">
                             Get Help Today
                         </button>
                     </div>
@@ -348,38 +514,36 @@
         <section class="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-title">
             <!-- Background Image -->
             <div 
-                class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                class="absolute inset-0 bg-cover bg-center bg-no-repeat parallax-element"
                 style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
                 role="img"
-                aria-label="Therapist listening compassionately to a client in a warm, welcoming therapy session" >
+                aria-label="Calm lakeside view representing peace and tranquility at Lakesyde Behavioral Health" >
                 <div class="hero-overlay"></div>
             </div>
 
             <div class="container mx-auto px-4 pt-64 pb-16 relative z-10">
                 <div class="max-w-3xl">
                     <div class="animate-fade-in-up delay-200">
-                        <span class="inline-block text-medical-blue font-medium tracking-wide uppercase text-sm mb-4">
+                        <span class="inline-block text-medical-blue font-medium tracking-wide uppercase text-sm mb-4 shimmer-text">
                             Compassionate Mental Health Care
                         </span>
                     </div>
 
                     <h1 id="hero-title" class="font-serif text-5xl md:text-6xl lg:text-7xl text-medical-blue-dark leading-tight mb-6 animate-fade-in-up delay-300">
                         Your Journey to
-                        <span class="text-gradient">Wellness</span>
+                        <span class="text-gradient animate-scale-up delay-500">Wellness</span>
                         Starts Here
                     </h1>
 
                     <p class="text-lg md:text-xl text-text-medium leading-relaxed mb-8 max-w-2xl animate-fade-in-up delay-400">
                         At Lakesyde Behavioral Health, we provide personalized behavioral health treatment 
-                        with compassion and expertise. Our licensed therapists offer evidence-based 
-                        therapies for depression, anxiety, PTSD, and addiction. You don't have to 
-                        face your struggles alone — we're here to support you every step of the way.
+                        with compassion and expertise. Our licensed therapists offer evidence based 
+                        therapies for depression, anxiety, PTSD, addiction and more. You don't have to 
+                        face your struggles alone  we're here to support you every step of the way.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up delay-500">
-                        
-
-                        <a href="contact.html" class="btn-hero btn-xl flex items-center justify-center gap-2 pulse-gentle"> Schedule a Consultation
+                        <a href="contact.html" class="btn-hero btn-xl flex items-center justify-center gap-2 pulse-gentle glow"> Schedule a Consultation
                             <i data-lucide="arrow-right" class="h-5 w-5"></i>
                         </a>
                     </div>
@@ -387,19 +551,19 @@
                     <!-- Trust Indicators -->
                     <div class="flex flex-wrap gap-8 animate-fade-in-up delay-600">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-medical-blue-light flex items-center justify-center floating-element">
+                            <div class="w-10 h-10 rounded-full bg-medical-blue-light flex items-center justify-center floating-element glow">
                                 <i data-lucide="shield" class="h-5 w-5 text-medical-blue"></i>
                             </div>
                             <span class="text-medical-blue-dark font-medium">Licensed Professionals</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-healing-green-light flex items-center justify-center floating-element" style="animation-delay: 0.5s">
+                            <div class="w-10 h-10 rounded-full bg-healing-green-light flex items-center justify-center floating-element glow" style="animation-delay: 0.5s">
                                 <i data-lucide="users" class="h-5 w-5 text-healing-green"></i>
                             </div>
                             <span class="text-medical-blue-dark font-medium">3,000+ Patients Helped</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-calm-teal/20 flex items-center justify-center floating-element" style="animation-delay: 1s">
+                            <div class="w-10 h-10 rounded-full bg-calm-teal/20 flex items-center justify-center floating-element glow" style="animation-delay: 1s">
                                 <i data-lucide="clock" class="h-5 w-5 text-calm-teal"></i>
                             </div>
                             <span class="text-medical-blue-dark font-medium">24/7 Support Available</span>
@@ -412,46 +576,34 @@
         <!-- Services Section -->
         <section id="services" class="py-20 bg-gradient-to-b from-soft-white to-white" aria-labelledby="services-title">
             <div class="container mx-auto px-4">
-                <h2 id="services-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                <h2 id="services-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark text-center mb-12 animate-fade-in-up font-bold">
                     Our Mental Health Services
                 </h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-100">
-                        <div class="w-16 h-16 rounded-full bg-medical-blue/10 flex items-center justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-medical-blue/10 flex items-center justify-center mb-6 floating-element">
                             <i data-lucide="brain" class="h-8 w-8 text-medical-blue"></i>
                         </div>
-                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Individual Therapy</h3>
-                        <p class="text-text-light">One-on-one sessions with licensed therapists using CBT, DBT, and other evidence-based approaches tailored to your specific needs.</p>
-                    </div>
-                    <!-- <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-200">
-                        <div class="w-16 h-16 rounded-full bg-healing-green/10 flex items-center justify-center mb-6">
-                            <i data-lucide="users" class="h-8 w-8 text-healing-green"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Group Therapy</h3>
-                        <p class="text-text-light">Supportive group sessions for shared experiences and peer support in a safe, confidential environment.</p>
-                    </div> -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-300">
-                        <div class="w-16 h-16 rounded-full bg-calm-teal/10 flex items-center justify-center mb-6">
-                            <i data-lucide="stethoscope" class="h-8 w-8 text-calm-teal"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3"> Psycho Therapy</h3>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Psycho Therapy</h3>
                         <p class="text-text-light">Comprehensive assessments by board-certified psychiatrists for accurate diagnosis and treatment planning.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-400">
-                        <div class="w-16 h-16 rounded-full bg-soft-coral/20 flex items-center justify-center mb-6">
-                            <i data-lucide="heart" class="h-8 w-8 text-soft-coral"></i>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-200">
+                        <div class="w-16 h-16 rounded-full bg-healing-green/10 flex items-center justify-center mb-6 floating-element" style="animation-delay: 0.2s">
+                            <i data-lucide="heart" class="h-8 w-8 text-healing-green"></i>
                         </div>
                         <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Family Support</h3>
                         <p class="text-text-light">Family therapy and education to support loved ones through the recovery journey and improve family dynamics.</p>
                     </div>
-
-                     <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-300">
-                        <div class="w-16 h-16 rounded-full bg-calm-teal/10 flex items-center justify-center mb-6">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-300">
+                        <div class="w-16 h-16 rounded-full bg-calm-teal/10 flex items-center justify-center mb-6 floating-element" style="animation-delay: 0.4s">
                             <i data-lucide="stethoscope" class="h-8 w-8 text-calm-teal"></i>
                         </div>
-                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3"> Medication Management</h3>
+                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-3">Medication Management</h3>
                         <p class="text-text-light">Secure platform for managing prescriptions, schedules, and health records.</p>
                     </div>
+                     <a href="service.html" class="btn-hero btn-xl flex items-center justify-center gap-2 pulse-gentle glow animate-fade-in-up delay-400"> Learn More
+                            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                        </a>
                 </div>
             </div>
         </section>
@@ -459,7 +611,7 @@
         <!-- Conditions Section -->
         <section id="conditions" class="py-20 bg-white" aria-labelledby="conditions-title">
             <div class="container mx-auto px-4">
-                <h2 id="conditions-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                <h2 id="conditions-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark text-center mb-12 animate-fade-in-up font-bold">
                     Conditions We Treat
                 </h2>
                 <div class="max-w-4xl mx-auto">
@@ -490,73 +642,45 @@
             <div class="container mx-auto px-4">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="animate-fade-in-up">
-                        <h2 id="about-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark mb-6">
+                        <h2 id="about-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark mb-6 font-bold">
                             About Lakesyde Behavioral Health
-
                         </h2>
                         <p class="text-lg text-text-medium mb-6">
-                             I'm Leke Adedotun, 
-                            
-
-                            I'm a Board Certified Psychiatric Mental Health Nurse Practitioner, U.S. Army Veteran, Serving ages 6+ through telehealth and in person visits and founder of Lakesyde Behavioral Health .
-
-                            I’ve had the honor of working with diverse populations across Nevada, including veterans, high achieving professionals, young adults, parents, and individuals navigating trauma or major life transitions.
-
-                            I created Lakesyde as a place where patients feel seen, understood, and supported. Every session is calm, respectful, and centered on your story. My goal is to help you build clarity, balance, and emotional strength at a pace that feels right for you.
+                            Lakesyde Behavioral Health was founded by Leke Adedotun, MSN, APRN, PMHNP-BC, a Board-Certified Psychiatric Mental Health Nurse Practitioner and U.S. Army Veteran. The practice provides compassionate, high-quality mental health care to individuals ages 6 and older through both telehealth and in-person services.
+                        </p>
+                        <p class="text-lg text-text-medium mb-6">
+                            Mr. Adedotun has extensive experience working with diverse populations throughout Nevada, including veterans, high-achieving professionals, young adults, parents, and individuals navigating trauma or significant life transitions. Lakesyde Behavioral Health was created to be a safe, supportive space where every patient feels seen, heard, and respected.
                         </p>
                         <p class="text-lg text-text-medium mb-8">
-                            We believe in treating the whole person, not just the symptoms. Our 
-                            evidence based approaches combined with genuine compassion have helped 
-                            thousands of individuals and families find healing and recovery.
+                            Each session is approached with calm professionalism and genuine care, ensuring treatment is centered on the individual's unique experiences and goals. The mission of Lakesyde Behavioral Health is to help patients develop clarity, balance, and emotional resilience at a pace that feels comfortable and empowering.
                         </p>
 
-                         <a href="About.html" class="btn-hero btn-xl flex items-center justify-center gap-2 pulse-gentle"> Learn More
+                         <a href="About.html" class="btn-hero btn-xl flex items-center justify-center gap-2 pulse-gentle glow animate-fade-in-up delay-100"> Learn More
                             <i data-lucide="arrow-right" class="h-5 w-5"></i>
                         </a>
-
-                        <!-- <div class="flex items-center gap-8">
-                            <div class="text-center">
-                                <div class="text-4xl font-bold text-medical-blue animate-count" data-target="15">0+</div>
-                                <div class="text-text-light">Years Experience</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-4xl font-bold text-healing-green animate-count" data-target="50">0+</div>
-                                <div class="text-text-light">Licensed Staff</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-4xl font-bold text-calm-teal animate-count" data-target="10000">0+</div>
-                                <div class="text-text-light">Patients Helped</div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="relative animate-fade-in-up delay-200">
-                        <div class="bg-gradient-to-br from-medical-blue/10 to-healing-green/10 rounded-2xl p-8 lg:p-12 shadow-lg">
-                            <h3 class="font-serif text-2xl font-semibold text-medical-blue-dark mb-6">Our Commitment</h3>
+                        <div class="bg-gradient-to-br from-medical-blue/10 to-healing-green/10 rounded-2xl p-8 lg:p-12 shadow-lg card-hover">
+                            <h3 class="font-serif text-2xl font-semibold text-medical-blue-dark mb-6 font-bold">Our Commitment</h3>
                             <ul class="space-y-4">
-                                <li class="flex items-start gap-3">
-                                    <div class="w-8 h-8 rounded-full bg-medical-blue/20 flex items-center justify-center mt-1">
+                                <li class="flex items-start gap-3 animate-fade-in-up delay-100">
+                                    <div class="w-8 h-8 rounded-full bg-medical-blue/20 flex items-center justify-center mt-1 floating-element">
                                         <i data-lucide="check-circle" class="h-5 w-5 text-medical-blue"></i>
                                     </div>
                                     <span class="text-text-dark">Personalized treatment plans for every individual</span>
                                 </li>
-                                <li class="flex items-start gap-3">
-                                    <div class="w-8 h-8 rounded-full bg-healing-green/20 flex items-center justify-center mt-1">
+                                <li class="flex items-start gap-3 animate-fade-in-up delay-200">
+                                    <div class="w-8 h-8 rounded-full bg-healing-green/20 flex items-center justify-center mt-1 floating-element" style="animation-delay: 0.2s">
                                         <i data-lucide="check-circle" class="h-5 w-5 text-healing-green"></i>
                                     </div>
                                     <span class="text-text-dark">Evidence-based therapies with proven results</span>
                                 </li>
-                                <li class="flex items-start gap-3">
-                                    <div class="w-8 h-8 rounded-full bg-calm-teal/20 flex items-center justify-center mt-1">
+                                <li class="flex items-start gap-3 animate-fade-in-up delay-300">
+                                    <div class="w-8 h-8 rounded-full bg-calm-teal/20 flex items-center justify-center mt-1 floating-element" style="animation-delay: 0.4s">
                                         <i data-lucide="check-circle" class="h-5 w-5 text-calm-teal"></i>
                                     </div>
                                     <span class="text-text-dark">Confidential and compassionate care</span>
                                 </li>
-                                <!-- <li class="flex items-start gap-3">
-                                    <div class="w-8 h-8 rounded-full bg-soft-coral/20 flex items-center justify-center mt-1">
-                                        <i data-lucide="check-circle" class="h-5 w-5 text-soft-coral"></i>
-                                    </div>
-                                    <span class="text-text-dark">Accepting most major insurance plans</span>
-                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -568,7 +692,7 @@
         <section id="why-choose" class="py-20 bg-gradient-to-br from-white to-medical-blue-light/10" aria-labelledby="why-choose-title">
             <div class="container mx-auto px-4">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 id="why-choose-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark mb-6 animate-fade-in-up">
+                    <h2 id="why-choose-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark mb-6 animate-fade-in-up font-bold shimmer-text">
                         Why Choose Lakesyde Behavioral Health
                     </h2>
                     <p class="text-xl text-text-medium animate-fade-in-up delay-100">
@@ -637,21 +761,252 @@
                 <div class="bg-gradient-to-r from-medical-blue/10 to-healing-green/10 rounded-2xl p-8 lg:p-12 mt-12 animate-fade-in-up delay-800">
                     <div class="grid md:grid-cols-4 gap-8">
                         <div class="text-center">
-                            <div class="text-4xl font-bold text-medical-blue mb-2 animate-count" data-target="98">0%</div>
+                            <div class="text-4xl font-bold text-medical-blue mb-2 animate-count shimmer-text" data-target="98">0%</div>
                             <div class="text-text-dark font-medium">Patient Satisfaction</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-4xl font-bold text-healing-green mb-2 animate-count" data-target="85">0%</div>
+                            <div class="text-4xl font-bold text-healing-green mb-2 animate-count shimmer-text" data-target="85">0%</div>
                             <div class="text-text-dark font-medium">Show Improvement</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-4xl font-bold text-calm-teal mb-2 animate-count" data-target="24">0</div>
+                            <div class="text-4xl font-bold text-calm-teal mb-2 animate-count shimmer-text" data-target="24">0</div>
                             <div class="text-text-dark font-medium">Hour Response Time</div>
                         </div>
-                        <!-- <div class="text-center">
-                            <div class="text-4xl font-bold text-soft-coral mb-2 animate-count" data-target="15">0</div>
-                            <div class="text-text-dark font-medium">Insurance Accepted</div>
-                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gradient-to-br from-medical-blue-light/5 to-healing-green/5" aria-labelledby="testimonials-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 id="testimonials-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark mb-6 animate-fade-in-up font-bold">
+                        Stories of Healing & Hope
+                    </h2>
+                    <p class="text-xl text-text-medium animate-fade-in-up delay-100">
+                        Hear from individuals who have found support, healing, and transformation at Lakesyde Behavioral Health
+                    </p>
+                </div>
+
+                <!-- Testimonial Cards -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card animate-fade-in-up delay-200">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg h-full testimonial-inner">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-16 h-16 rounded-full bg-medical-blue/10 flex items-center justify-center floating-element">
+                                    <i data-lucide="user" class="h-8 w-8 text-medical-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-lg font-semibold text-medical-blue-dark">Sarah M.</h4>
+                                    <p class="text-text-light text-sm">Anxiety Treatment</p>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="flex text-amber-400 mb-2">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                                <div class="text-6xl text-medical-blue/20 font-serif absolute top-4 right-6 quote-icon">"</div>
+                            </div>
+                            <p class="text-text-medium italic relative z-10">
+                                "After struggling with anxiety for years, Lakesyde provided me with tools that actually work. The compassionate care and personalized approach helped me regain control of my life. I'm forever grateful."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card animate-fade-in-up delay-300">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg h-full testimonial-inner">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-16 h-16 rounded-full bg-healing-green/10 flex items-center justify-center floating-element" style="animation-delay: 0.3s">
+                                    <i data-lucide="user" class="h-8 w-8 text-healing-green"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-lg font-semibold text-medical-blue-dark">James R.</h4>
+                                    <p class="text-text-light text-sm">Depression Recovery</p>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="flex text-amber-400 mb-2">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                                <div class="text-6xl text-healing-green/20 font-serif absolute top-4 right-6 quote-icon">"</div>
+                            </div>
+                            <p class="text-text-medium italic relative z-10">
+                                "The team at Lakesyde saved my life. Their holistic approach to depression treatment, combining therapy and medication management, gave me hope when I had none. I finally feel like myself again."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card animate-fade-in-up delay-400">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg h-full testimonial-inner">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-16 h-16 rounded-full bg-calm-teal/10 flex items-center justify-center floating-element" style="animation-delay: 0.6s">
+                                    <i data-lucide="user" class="h-8 w-8 text-calm-teal"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-lg font-semibold text-medical-blue-dark">Maria G.</h4>
+                                    <p class="text-text-light text-sm">Family Therapy</p>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="flex text-amber-400 mb-2">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                                <div class="text-6xl text-calm-teal/20 font-serif absolute top-4 right-6 quote-icon">"</div>
+                            </div>
+                            <p class="text-text-medium italic relative z-10">
+                                "Family therapy at Lakesyde helped us heal together. The therapist created a safe space for everyone to express themselves. We've learned to communicate better and support each other."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 animate-fade-in-up delay-600">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-medical-blue mb-2 animate-count shimmer-text" data-target="98">0%</div>
+                            <p class="text-text-light">Would Recommend</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-healing-green mb-2 animate-count shimmer-text" data-target="96">0%</div>
+                            <p class="text-text-light">Satisfaction Rate</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-calm-teal mb-2 animate-count shimmer-text" data-target="94">0%</div>
+                            <p class="text-text-light">Report Progress</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-soft-coral mb-2 animate-count shimmer-text" data-target="89">0%</div>
+                            <p class="text-text-light">Improved Quality of Life</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="text-center mt-12 animate-fade-in-up delay-700">
+                    <a href="contact.html" class="btn-hero btn-xl inline-flex items-center justify-center gap-2 pulse-gentle glow">
+                        <i data-lucide="message-circle" class="h-5 w-5"></i>
+                        Share Your Story
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="py-20 bg-gradient-to-br from-medical-blue/5 to-healing-green/5" aria-labelledby="newsletter-title">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="newsletter-box p-8 md:p-12 animate-fade-in-up">
+                        <div class="grid lg:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h2 id="newsletter-title" class="font-serif text-3xl md:text-4xl text-white mb-4">
+                                    Stay Connected With Your Mental Wellness Journey
+                                </h2>
+                                <p class="text-white/80 mb-6">
+                                    Subscribe to our monthly newsletter for mental health tips, wellness resources, and updates from Lakesyde Behavioral Health.
+                                </p>
+                                <div class="flex items-center gap-3 text-white/70 animate-fade-in-up delay-100">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green-light"></i>
+                                    <span class="text-sm">No spam, unsubscribe anytime</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-white/70 mt-2 animate-fade-in-up delay-200">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green-light"></i>
+                                    <span class="text-sm">HIPAA-compliant and confidential</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-white/70 mt-2 animate-fade-in-up delay-300">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green-light"></i>
+                                    <span class="text-sm">Monthly mental wellness tips</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div id="newsletterForm" class="space-y-4">
+                                    <div class="animate-fade-in-up delay-400">
+                                        <label for="newsletterEmail" class="sr-only">Email Address</label>
+                                        <input
+                                            type="email"
+                                            id="newsletterEmail"
+                                            name="email"
+                                            placeholder="Enter your email address"
+                                            class="w-full px-6 py-4 rounded-xl newsletter-input placeholder-white/60"
+                                            required
+                                            aria-required="true"
+                                            aria-label="Enter your email address for newsletter subscription"
+                                        >
+                                    </div>
+                                    <div class="animate-fade-in-up delay-500">
+                                        <label for="newsletterName" class="sr-only">Your Name (Optional)</label>
+                                        <input
+                                            type="text"
+                                            id="newsletterName"
+                                            name="name"
+                                            placeholder="Your name (optional)"
+                                            class="w-full px-6 py-4 rounded-xl newsletter-input placeholder-white/60"
+                                            aria-label="Your name (optional)"
+                                        >
+                                    </div>
+                                    <div class="flex items-center gap-3 animate-fade-in-up delay-600">
+                                        <input
+                                            type="checkbox"
+                                            id="privacyConsent"
+                                            name="privacy"
+                                            class="w-5 h-5 rounded"
+                                            required
+                                            aria-required="true"
+                                        >
+                                        <label for="privacyConsent" class="text-white/80 text-sm">
+                                            I agree to receive emails and confirm I have read the 
+                                            <a href="privacy.html" class="text-white underline hover:no-underline">Privacy Policy</a>
+                                        </label>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        id="newsletterSubmit"
+                                        class="w-full py-4 rounded-xl newsletter-btn flex items-center justify-center gap-2 animate-fade-in-up delay-700"
+                                        aria-label="Subscribe to newsletter"
+                                    >
+                                        <i data-lucide="mail" class="h-5 w-5"></i>
+                                        Subscribe to Newsletter
+                                    </button>
+                                    <p class="text-white/60 text-xs text-center animate-fade-in-up delay-800">
+                                        You can unsubscribe at any time. We respect your privacy.
+                                    </p>
+                                </div>
+                                
+                                <!-- Success Message (Hidden by default) -->
+                                <div id="newsletterSuccess" class="hidden success-message bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="w-12 h-12 rounded-full bg-healing-green/20 flex items-center justify-center floating-element">
+                                            <i data-lucide="check-circle" class="h-6 w-6 text-healing-green-light"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-serif text-xl text-white font-semibold">Thank You for Subscribing!</h3>
+                                            <p class="text-white/80 text-sm">You'll receive a confirmation email shortly.</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/80 text-sm">
+                                        Check your inbox for our welcome email with mental wellness resources. 
+                                        If you don't see it, please check your spam folder.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -660,40 +1015,36 @@
         <!-- Contact Section -->
         <section id="contact" class="py-20 bg-white" aria-labelledby="contact-title">
             <div class="container mx-auto px-4">
-                <h2 id="contact-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
+                <h2 id="contact-title" class="font-serif text-4xl md:text-5xl text-medical-blue-dark text-center mb-12 animate-fade-in-up font-bold">
                     Ready to Begin Your Journey?
                 </h2>
                 <div class="max-w-4xl mx-auto">
                     <div class="grid lg:grid-cols-2 gap-8">
-                        <div class="bg-gradient-to-br from-soft-white to-medical-blue/5 p-8 rounded-2xl shadow-lg animate-fade-in-up delay-100">
+                        <div class="bg-gradient-to-br from-soft-white to-medical-blue/5 p-8 rounded-2xl shadow-lg animate-fade-in-up delay-100 card-hover">
                             <h3 class="font-serif text-2xl font-semibold text-medical-blue-dark mb-6">Take the First Step</h3>
                             <p class="text-text-medium mb-6">
                                 Starting your mental health journey can feel overwhelming, but you don't have to do it alone. 
                                 Our compassionate team is here to guide you every step of the way.
                             </p>
                             <ul class="space-y-4 mb-8">
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
-                                    <span class="text-text-dark">Free initial consultation</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                <li class="flex items-start gap-3 animate-fade-in-up delay-200">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1 floating-element"></i>
                                     <span class="text-text-dark">Same-week appointments available</span>
                                 </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                <li class="flex items-start gap-3 animate-fade-in-up delay-300">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1 floating-element" style="animation-delay: 0.2s"></i>
                                     <span class="text-text-dark">Insurance verification assistance</span>
                                 </li>
                             </ul>
-                            <button class="btn-hero w-full py-4 rounded-xl text-lg">
+                            <a href="contact.html" class="btn-hero w-full py-4 rounded-xl text-lg block text-center glow animate-fade-in-up delay-400">
                                 Schedule Your Consultation
-                            </button>
+                            </a>
                         </div>
-                        <div class="bg-gradient-to-br from-medical-blue/5 to-healing-green/5 p-8 rounded-2xl shadow-lg animate-fade-in-up delay-200">
+                        <div class="bg-gradient-to-br from-medical-blue/5 to-healing-green/5 p-8 rounded-2xl shadow-lg animate-fade-in-up delay-200 card-hover">
                             <h3 class="font-serif text-2xl font-semibold text-medical-blue-dark mb-6">What to Expect</h3>
                             <div class="space-y-6">
-                                <div class="flex items-start gap-4">
-                                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center flex-shrink-0">
+                                <div class="flex items-start gap-4 animate-fade-in-up delay-300">
+                                    <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center flex-shrink-0 floating-element">
                                         <span class="font-bold text-medical-blue">1</span>
                                     </div>
                                     <div>
@@ -701,8 +1052,8 @@
                                         <p class="text-text-light">A confidential discussion about your concerns and goals</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center flex-shrink-0">
+                                <div class="flex items-start gap-4 animate-fade-in-up delay-400">
+                                    <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center flex-shrink-0 floating-element" style="animation-delay: 0.3s">
                                         <span class="font-bold text-healing-green">2</span>
                                     </div>
                                     <div>
@@ -710,8 +1061,8 @@
                                         <p class="text-text-light">A customized treatment plan developed just for you</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="w-12 h-12 rounded-full bg-calm-teal/10 flex items-center justify-center flex-shrink-0">
+                                <div class="flex items-start gap-4 animate-fade-in-up delay-500">
+                                    <div class="w-12 h-12 rounded-full bg-calm-teal/10 flex items-center justify-center flex-shrink-0 floating-element" style="animation-delay: 0.6s">
                                         <span class="font-bold text-calm-teal">3</span>
                                     </div>
                                     <div>
@@ -734,7 +1085,7 @@
                 <!-- Brand -->
                 <div class="lg:col-span-2">
                      <a href="/" class="flex items-center gap-2">
-                        <img style="width: 100px; background-color: #f8f9fa;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Serenity Health Logo">
+                        <img style="width: 100px; background-color: #f8f9fa;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Serenity Health Logo" class="hover:scale-105 transition-transform duration-300">
                     </a>
                     <p class="text-white/80 mb-6 max-w-sm">
                         Compassionate behavioral health care for individuals and families. 
@@ -742,36 +1093,33 @@
                         evidence-based treatment for mental health conditions in a safe, 
                         supportive environment.
                     </p>
-                    <!-- <div class="flex gap-4">
-                        <a
-                            href="#"
-                            aria-label="Follow us on Facebook"
-                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-healing-green transition-colors"
-                        >
-                            <i data-lucide="facebook" class="h-5 w-5"></i>
-                        </a>
-                        <a
-                            href="#"
-                            aria-label="Follow us on Twitter"
-                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-healing-green transition-colors"
-                        >
-                            <i data-lucide="twitter" class="h-5 w-5"></i>
-                        </a>
-                        <a
-                            href="#"
-                            aria-label="Follow us on Instagram"
-                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-healing-green transition-colors"
-                        >
-                            <i data-lucide="instagram" class="h-5 w-5"></i>
-                        </a>
-                        <a
-                            href="#"
-                            aria-label="Follow us on LinkedIn"
-                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-healing-green transition-colors"
-                        >
-                            <i data-lucide="linkedin" class="h-5 w-5"></i>
-                        </a>
-                    </div> -->
+                    
+                    <!-- Newsletter Mini Version in Footer -->
+                    <div class="mt-8">
+                        <h4 class="font-serif text-lg mb-4">Stay Updated</h4>
+                        <form id="footerNewsletter" class="space-y-3">
+                            <div class="flex gap-2">
+                                <input
+                                    type="email"
+                                    placeholder="Your email"
+                                    class="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 text-sm hover:border-white/30 transition-colors"
+                                    aria-label="Email for newsletter subscription"
+                                    required
+                                >
+                                <button
+                                    type="button"
+                                    class="px-4 py-3 bg-white text-medical-blue rounded-lg font-medium text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300"
+                                    aria-label="Subscribe"
+                                    onclick="subscribeFooter()"
+                                >
+                                    Subscribe
+                                </button>
+                            </div>
+                            <p class="text-white/60 text-xs">
+                                Monthly wellness tips and updates
+                            </p>
+                        </form>
+                    </div>
                 </div>
 
                 <!-- Links -->
@@ -779,54 +1127,54 @@
                     <h4 class="font-serif text-lg mb-4">Services</h4>
                     <ul class="space-y-3">
                         <li>
-                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 Psycho Therapy
                             </a>
                         </li>
                         <li>
-                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 Individual Therapy
                             </a>
                         </li>
                         <li>
-                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 Group Therapy
                             </a>
                         </li>
                         <li>
-                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 Family Support
                             </a>
                         </li>
                         <li>
-                            <a href="#services" class="text-white/70 hover:text-white transition-colors">
-                               Medication Management
+                            <a href="#services" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
+                               Medication Management and more
                             </a>
                         </li>
                     </ul>
                 </div>
-
+                
                 <div>
                     <h4 class="font-serif text-lg mb-4">Conditions</h4>
                     <ul class="space-y-3">
                         <li>
-                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 Depression
                             </a>
                         </li>
                         <li>
-                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 Anxiety
                             </a>
                         </li>
                         <li>
-                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 PTSD & Trauma
                             </a>
                         </li>
                         <li>
-                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors">
-                                Addiction
+                            <a href="#conditions" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
+                                Addiction and more
                             </a>
                         </li>
                     </ul>
@@ -836,22 +1184,27 @@
                     <h4 class="font-serif text-lg mb-4">Company</h4>
                     <ul class="space-y-3">
                         <li>
-                            <a href="#about" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#about" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 About Us
                             </a>
                         </li>
                         <li>
-                            <a href="#why-choose" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#why-choose" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 Why Choose Us
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html" class="text-white/70 hover:text-white transition-colors">
+                            <a href="#testimonials" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
+                                Testimonials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 Contact
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="text-white/70 hover:text-white transition-colors">
+                            <a href="privacy.html" class="text-white/70 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
                                 Privacy Policy
                             </a>
                         </li>
@@ -861,20 +1214,8 @@
 
             <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-white/50 text-sm">
-                    © <span id="currentYear"></span> Lakesyde Behavioral Health (LBH)
-. All rights reserved.
+                    © <span id="currentYear"></span> Lakesyde Behavioral Health (LBH). All rights reserved.
                 </p>
-                <!-- <div class="flex gap-6 text-sm">
-                    <a href="#" class="text-white/50 hover:text-white transition-colors">
-                        Privacy Policy
-                    </a>
-                    <a href="#" class="text-white/50 hover:text-white transition-colors">
-                        Terms of Service
-                    </a>
-                    <a href="#" class="text-white/50 hover:text-white transition-colors">
-                        HIPAA Notice
-                    </a>
-                </div> -->
             </div>
         </div>
     </footer>
@@ -900,10 +1241,12 @@
                 mobileMenu.classList.add('animate-menu-enter');
                 // Change icon to X
                 mobileMenuButton.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
+                mobileMenuButton.classList.add('rotate-180', 'transition-transform', 'duration-300');
                 lucide.createIcons();
             } else {
                 mobileMenu.classList.remove('animate-menu-enter');
                 mobileMenu.classList.add('animate-menu-exit');
+                mobileMenuButton.classList.remove('rotate-180');
                 // Change back to menu icon after animation
                 setTimeout(() => {
                     mobileMenu.classList.add('hidden');
@@ -943,6 +1286,14 @@
                 mainNav.classList.remove('bg-white', 'shadow-lg');
                 scrolled = false;
             }
+            
+            // Parallax effect for hero background
+            const parallaxElement = document.querySelector('.parallax-element');
+            if (parallaxElement) {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                parallaxElement.style.transform = `translateY(${rate}px)`;
+            }
         });
 
         // Set current year in footer
@@ -965,28 +1316,167 @@
             });
         });
 
-        // CTA button handlers
-        // document.querySelectorAll('.btn-hero').forEach(button => {
-        //     if (!button.hasAttribute('href')) {
-        //         button.addEventListener('click', () => {
-        //             alert('Thank you for your interest in Serenity Health! You will be redirected to our appointment scheduling system.');
-        //             // In production, this would redirect to a booking page
-        //             // window.location.href = '/book-appointment';
-        //         });
-        //     }
-        // });
+        // Newsletter functionality
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterSubmit = document.getElementById('newsletterSubmit');
+        const newsletterSuccess = document.getElementById('newsletterSuccess');
 
-        // Animated counting for statistics
+        function subscribeToNewsletter() {
+            const email = document.getElementById('newsletterEmail').value;
+            const name = document.getElementById('newsletterName').value;
+            const consent = document.getElementById('privacyConsent').checked;
+            
+            // Basic validation
+            if (!email || !email.includes('@') || !consent) {
+                showToast('Please enter a valid email address and agree to the privacy policy.', 'error');
+                return;
+            }
+            
+            // Simulate form submission
+            newsletterSubmit.innerHTML = '<i data-lucide="loader-circle" class="h-5 w-5 animate-spin"></i> Subscribing...';
+            newsletterSubmit.disabled = true;
+            newsletterSubmit.classList.add('opacity-70');
+            
+            // Simulate API delay
+            setTimeout(() => {
+                // Hide form and show success message
+                newsletterForm.classList.add('hidden');
+                newsletterSuccess.classList.remove('hidden');
+                newsletterSuccess.classList.add('block');
+                
+                // Add animation to success message
+                newsletterSuccess.classList.add('animate-scale-up');
+                
+                // Reset form
+                document.getElementById('newsletterEmail').value = '';
+                document.getElementById('newsletterName').value = '';
+                document.getElementById('privacyConsent').checked = false;
+                
+                // Log subscription
+                console.log('Newsletter subscription:', { email, name });
+                
+                // Show success toast
+                showToast('Successfully subscribed to newsletter!');
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    newsletterSubmit.innerHTML = '<i data-lucide="mail" class="h-5 w-5"></i> Subscribe to Newsletter';
+                    newsletterSubmit.disabled = false;
+                    newsletterSubmit.classList.remove('opacity-70');
+                }, 3000);
+            }, 1500);
+        }
+
+        // Footer newsletter function
+        function subscribeFooter() {
+            const footerEmail = document.querySelector('#footerNewsletter input[type="email"]').value;
+            
+            if (!footerEmail || !footerEmail.includes('@')) {
+                showToast('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            // Simulate subscription
+            const button = document.querySelector('#footerNewsletter button');
+            const originalText = button.textContent;
+            button.innerHTML = '<i data-lucide="loader-circle" class="h-4 w-4 animate-spin"></i>';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = '<i data-lucide="check" class="h-4 w-4"></i> Subscribed!';
+                button.classList.add('bg-healing-green', 'text-white');
+                button.classList.add('animate-pulse');
+                
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('bg-healing-green', 'text-white', 'animate-pulse');
+                    button.disabled = false;
+                    document.querySelector('#footerNewsletter input[type="email"]').value = '';
+                    
+                    // Scroll to main newsletter section
+                    window.scrollTo({
+                        top: document.getElementById('newsletter').offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }, 3000);
+                
+                showToast('Thank you for subscribing!');
+            }, 1000);
+        }
+
+        // Enhanced toast notification function
+        function showToast(message, type = 'success') {
+            // Create toast element
+            const toast = document.createElement('div');
+            const bgColor = type === 'error' ? 'bg-soft-coral' : 'bg-medical-blue';
+            const icon = type === 'error' ? 'alert-circle' : 'check-circle';
+            const iconColor = type === 'error' ? 'text-red-300' : 'text-healing-green-light';
+            
+            toast.className = `fixed bottom-4 right-4 ${bgColor} text-white px-6 py-3 rounded-xl shadow-lg animate-fade-in-up z-50 transform transition-transform duration-300`;
+            toast.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <i data-lucide="${icon}" class="h-5 w-5 ${iconColor}"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(toast);
+            lucide.createIcons();
+            
+            // Add hover effect
+            toast.addEventListener('mouseenter', () => {
+                toast.style.transform = 'translateY(-2px)';
+            });
+            
+            toast.addEventListener('mouseleave', () => {
+                toast.style.transform = 'translateY(0)';
+            });
+            
+            // Remove toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        document.body.removeChild(toast);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Event listeners for newsletter
+        newsletterSubmit.addEventListener('click', subscribeToNewsletter);
+        
+        // Allow Enter key to submit newsletter form
+        document.getElementById('newsletterEmail').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                subscribeToNewsletter();
+            }
+        });
+
+        // Enhanced animated counting for statistics
         function animateCount(element) {
             const target = parseInt(element.getAttribute('data-target'));
             const suffix = element.textContent.includes('%') ? '%' : element.textContent.includes('+') ? '+' : '';
             let count = 0;
             const increment = target / 50;
+            
+            // Add a class to show it's animating
+            element.classList.add('counting');
+            
             const timer = setInterval(() => {
                 count += increment;
                 if (count >= target) {
                     count = target;
                     clearInterval(timer);
+                    element.classList.remove('counting');
+                    
+                    // Add a subtle pulse when complete
+                    element.classList.add('animate-pulse');
+                    setTimeout(() => {
+                        element.classList.remove('animate-pulse');
+                    }, 1000);
                 }
                 element.textContent = Math.floor(count) + suffix;
             }, 30);
@@ -1008,6 +1498,11 @@
                             animateCount(countElement);
                             observer.unobserve(countElement);
                         }
+                        
+                        // Add animation classes to testimonial cards
+                        if (countElement.classList.contains('testimonial-card')) {
+                            countElement.classList.add('animate-card-rotate');
+                        }
                     }
                 });
             }, observerOptions);
@@ -1017,20 +1512,59 @@
                 observer.observe(el);
             });
 
+            // Observe testimonial cards
+            document.querySelectorAll('.testimonial-card').forEach(el => {
+                observer.observe(el);
+            });
+
             // Ensure animations trigger
             const animatedElements = document.querySelectorAll('[class*="animate-"]');
             animatedElements.forEach(el => {
                 el.style.animationPlayState = 'running';
             });
-        });
-
-        // Floating elements animation
-        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Initialize floating elements animation delays
             const floatingElements = document.querySelectorAll('.floating-element');
             floatingElements.forEach((el, index) => {
-                // Set staggered animation delays
                 el.style.animationDelay = `${index * 0.3}s`;
             });
+            
+            // Add hover effect to cards
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px) rotateX(2deg)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0) rotateX(0)';
+                });
+            });
+            
+            // Add scroll animation to testimonials
+            window.addEventListener('scroll', () => {
+                const testimonials = document.querySelectorAll('.testimonial-card');
+                testimonials.forEach((testimonial, index) => {
+                    const rect = testimonial.getBoundingClientRect();
+                    if (rect.top < window.innerHeight * 0.8) {
+                        testimonial.style.animationDelay = `${index * 0.1}s`;
+                        testimonial.classList.add('animate-fade-in-up');
+                    }
+                });
+            });
+            
+            // Trigger initial scroll check
+            setTimeout(() => {
+                window.dispatchEvent(new Event('scroll'));
+            }, 100);
+        });
+
+        // Add keyboard navigation for accessibility
+        document.addEventListener('keydown', (e) => {
+            // Focus trap for mobile menu
+            if (isMobileMenuOpen && e.key === 'Escape') {
+                mobileMenuButton.click();
+            }
         });
     </script>
 </body>

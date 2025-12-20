@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Mental Health Resource Center | Lakesyde Behavioral Health</title>
+    <meta name="description" content="Comprehensive mental health resource center with trusted organizations, support networks, and educational materials for various mental health conditions.">
+    <meta name="keywords" content="mental health resources, support groups, mental health organizations, mental health information, mental wellness tools">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mental Health Resource Center | Lakesyde Behavioral Health">
+    <meta property="og:description" content="Access trusted mental health resources, support organizations, and educational materials curated by Lakesyde Behavioral Health.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://lakesydebh.com/resources">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mental Health Resource Center">
+    <meta name="twitter:description" content="Curated mental health resources and support organizations for individuals and families.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lakesydebh.com/resources">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/heart-health.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Medical blue (trust, calm, professionalism)
+                        'medical-blue': '#0077b6',
+                        'medical-blue-light': '#90e0ef',
+                        'medical-blue-dark': '#023e8a',
+                        
+                        // Healing green (health, growth, balance)
+                        'healing-green': '#2a9d8f',
+                        'healing-green-light': '#a7d9c9',
+                        
+                        // Calming teal (peace, stability)
+                        'calm-teal': '#4a9b9d',
+                        
+                        // Neutral backgrounds
+                        'soft-white': '#f8f9fa',
+                        'warm-gray': '#e9ecef',
+                        
+                        // Accent colors
+                        'soft-coral': '#ff9a8b',
+                        'sunshine-yellow': '#ffd166',
+                        
+                        // Text colors
+                        'text-dark': '#2d3748',
+                        'text-medium': '#4a5568',
+                        'text-light': '#718096',
+                        
+                        // Resource page specific colors
+                        'wood-light': '#d4a574',
+                        'wood-medium': '#8b5a2b',
+                        'wood-dark': '#5d4037',
+                        'paper-beige': '#f5f1e8',
+                        'ink-blue': '#2c3e50',
+                        'accent-green': '#27ae60',
+                        'accent-teal': '#16a085',
+                        'accent-purple': '#8e44ad',
+                        'accent-orange': '#e67e22',
+                        'accent-pink': '#e84393',
+                    },
+                    fontFamily: {
+                        'serif': ['Source Serif Pro', 'serif'],
+                        'sans': ['Poppins', 'sans-serif'],
+                        'handwriting': ['Caveat', 'cursive']
+                    },
+                    animation: {
+                        'slide-down': 'slideDown 0.6s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-gentle': 'pulseGentle 2s ease-in-out infinite',
+                        'bounce-subtle': 'bounceSubtle 2s infinite',
+                        'menu-enter': 'menuEnter 0.3s ease-out forwards',
+                        'menu-exit': 'menuExit 0.3s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.5s ease-out forwards',
+                        'page-turn': 'pageTurn 0.8s ease-out forwards',
+                        'book-open': 'bookOpen 1s ease-out forwards',
+                        'text-appear': 'textAppear 0.6s ease-out forwards',
+                        'shelf-glow': 'shelfGlow 3s ease-in-out infinite',
+                        'float-up': 'floatUp 2s ease-in-out infinite',
+                        'scale-up': 'scaleUp 0.4s ease-out forwards',
+                        'text-shimmer': 'textShimmer 2s infinite',
+                        'gradient-shift': 'gradientShift 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        slideDown: {
+                            'from': { transform: 'translateY(-100%)', opacity: '0' },
+                            'to': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        fadeInUp: {
+                            'from': { opacity: '0', transform: 'translateY(30px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        pulseGentle: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.7' }
+                        },
+                        bounceSubtle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        menuEnter: {
+                            'from': { opacity: '0', maxHeight: '0' },
+                            'to': { opacity: '1', maxHeight: '500px' }
+                        },
+                        menuExit: {
+                            'from': { opacity: '1', maxHeight: '500px' },
+                            'to': { opacity: '0', maxHeight: '0' }
+                        },
+                        slideInRight: {
+                            'from': { transform: 'translateX(100%)', opacity: '0' },
+                            'to': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        pageTurn: {
+                            '0%': { transform: 'rotateY(90deg)', opacity: '0' },
+                            '100%': { transform: 'rotateY(0deg)', opacity: '1' }
+                        },
+                        bookOpen: {
+                            '0%': { transform: 'scaleX(0.1)', opacity: '0' },
+                            '100%': { transform: 'scaleX(1)', opacity: '1' }
+                        },
+                        textAppear: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        shelfGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(139, 90, 43, 0.1)' },
+                            '50%': { boxShadow: '0 0 40px rgba(139, 90, 43, 0.2)' }
+                        },
+                        floatUp: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        scaleUp: {
+                            'from': { transform: 'scale(0.9)', opacity: '0' },
+                            'to': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        textShimmer: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                            '100%': { backgroundPosition: '0% 50%' }
+                        },
+                        gradientShift: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .font-serif {
+            font-family: 'Source Serif Pro', serif;
+        }
+        
+        .btn-hero {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 119, 182, 0.25);
+        }
+        
+        .btn-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 119, 182, 0.35);
+        }
+        
+        .btn-xl {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
+        .delay-900 { animation-delay: 0.9s; }
+        .delay-1000 { animation-delay: 1s; }
+        
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .pulse-gentle {
+            animation: pulseGentle 2s ease-in-out infinite;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #0077b6, #2a9d8f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Resource page specific styles */
+        .wood-shelf {
+            background: linear-gradient(to bottom, #8b5a2b, #5d4037);
+            border-radius: 8px;
+            box-shadow: 
+                0 10px 30px rgba(91, 60, 9, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+        }
+        
+        .resource-card {
+            background: white;
+            border: 1px solid #e2d9c9;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: #d4a574;
+        }
+        
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #d4a574, #8b5a2b);
+        }
+        
+        .category-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .search-highlight {
+            background: linear-gradient(120deg, #ffec8b 0%, #ffec8b 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.4em;
+            background-position: 0 88%;
+        }
+        
+        .sticky-note {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            border-radius: 4px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            transform: rotate(1deg);
+            position: relative;
+            padding: 1rem;
+            border-left: 4px solid #fbc02d;
+        }
+        
+        .book-decoration {
+            position: absolute;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            border-radius: 4px;
+            transform: rotate(-2deg);
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .wood-texture {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%235d4037' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .glow {
+            box-shadow: 0 0 20px rgba(0, 119, 182, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-soft-white text-text-dark">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="visually-hidden focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-medical-blue text-white p-3 z-50">Skip to main content</a>
+    
+    <!-- Navigation - Same as original site -->
+    <header role="banner">
+        <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-slide-down bg-white/90 backdrop-blur-sm" aria-label="Main navigation">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between h-20">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img style="width: 120px; " src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center gap-8" role="menubar">
+
+                         <a href="index.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Home
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="service.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Services
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="index.html#conditions" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Conditions
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="privacy.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Privacy Policy
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="index.html#about" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            About
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="index.html#why-choose" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Why Choose Us
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="resources.html" class="text-medical-blue font-medium relative group" role="menuitem">
+                            Resources
+                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-medical-blue"></span>
+                        </a>
+                        <a href="contact.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium relative group" role="menuitem">
+                            Contact
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button
+                        id="mobileMenuButton"
+                        class="md:hidden p-2 text-text-medium"
+                        aria-label="Toggle menu"
+                        aria-expanded="false"
+                        aria-controls="mobileMenu"
+                    >
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div
+                id="mobileMenu"
+                class="md:hidden bg-white border-t border-gray-100 hidden"
+                role="menu"
+                aria-label="Mobile navigation menu"
+            >
+                <div class="container mx-auto px-4 py-6 space-y-4">
+                    <a href="index.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Home
+                    </a>
+                    <a href="service.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Services
+                    </a>
+                    <a href="index.html#conditions" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Conditions
+                    </a>
+                    <a href="privacy.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Privacy Policy
+                    </a>
+                    <a href="index.html#about" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        About
+                    </a>
+                    <a href="index.html#why-choose" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Why Choose Us
+                    </a>
+                    <a href="resources.html" class="block text-lg text-medical-blue font-medium py-2" role="menuitem">
+                        Resources
+                    </a>
+                    <a href="contact.html" class="block text-lg text-text-medium hover:text-medical-blue transition-colors py-2" role="menuitem">
+                        Contact
+                    </a>
+                    <div class="pt-4 space-y-3">
+                        <a href="contact.html" class="btn-hero w-full py-4 rounded-xl block text-center">
+                            Get Help Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden" aria-labelledby="resource-title">
+            <!-- Background with bookshelf elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-0 left-0 right-0 h-64 wood-shelf wood-texture animate-book-open"></div>
+                <div class="absolute top-16 left-10 w-32 h-8 book-decoration animate-float-up" style="animation-delay: 0.2s;"></div>
+                <div class="absolute top-20 right-20 w-40 h-8 book-decoration" style="background: linear-gradient(45deg, #e74c3c, #c0392b); animation-delay: 0.4s;"></div>
+                <div class="absolute top-24 left-1/3 w-24 h-8 book-decoration" style="background: linear-gradient(45deg, #9b59b6, #8e44ad); animation-delay: 0.6s;"></div>
+                <div class="absolute top-32 right-40 w-40 h-8 book-decoration" style="background: linear-gradient(45deg, #2ecc71, #27ae60); animation-delay: 0.8s;"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-soft-white/90 via-soft-white/70 to-soft-white"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="mb-6 animate-fade-in-up">
+                        <span class="inline-block px-4 py-2 bg-medical-blue/10 text-medical-blue rounded-full text-sm font-semibold border border-medical-blue/20">
+                            Knowledge Library
+                        </span>
+                    </div>
+                    
+                    <h1 id="resource-title" class="font-serif text-5xl md:text-6xl lg:text-7xl text-medical-blue-dark mb-6 animate-fade-in-up delay-200">
+                        Mental Health
+                        <span class="block text-gradient">Resource Center</span>
+                    </h1>
+                    
+                    <p class="text-xl text-text-medium mb-8 max-w-3xl mx-auto animate-fade-in-up delay-400">
+                        An expansive library with curated resources, symbolizing lifelong learning, insight, 
+                        and the layered complexity of the mind. Find trusted organizations, support networks, 
+                        and educational materials to support your mental wellness journey.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-600">
+                        <a href="#general" class="px-6 py-3 bg-medical-blue text-white rounded-lg hover:bg-medical-blue-dark transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="book-open"></i>
+                            General Resources
+                        </a>
+                        <a href="#condition-specific" class="px-6 py-3 border-2 border-medical-blue text-medical-blue rounded-lg hover:bg-medical-blue/10 transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="heart-pulse"></i>
+                            Condition-Specific
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="py-8 bg-gradient-to-b from-soft-white to-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-lg p-4 md:p-6 animate-fade-in-up">
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <div class="flex-1">
+                                <div class="relative">
+                                    <i data-lucide="search" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-text-light h-5 w-5"></i>
+                                    <input 
+                                        type="text" 
+                                        id="resourceSearch"
+                                        placeholder="Search resources by keyword, condition, or organization..."
+                                        class="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:border-medical-blue focus:ring-2 focus:ring-medical-blue/20 transition-all"
+                                    >
+                                </div>
+                            </div>
+                            <select id="categoryFilter" class="px-4 py-3 border border-gray-200 rounded-lg focus:border-medical-blue focus:ring-2 focus:ring-medical-blue/20 transition-all">
+                                <option value="all">All Categories</option>
+                                <option value="general">General Mental Health</option>
+                                <option value="condition">Condition-Specific</option>
+                                <option value="youth">Youth & Families</option>
+                                <option value="legal">Legal Rights & Disability</option>
+                            </select>
+                        </div>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <button class="filter-tag px-3 py-1 bg-medical-blue/10 text-medical-blue rounded-full text-sm hover:bg-medical-blue/20 transition-colors" data-category="general">General</button>
+                            <button class="filter-tag px-3 py-1 bg-healing-green/10 text-healing-green rounded-full text-sm hover:bg-healing-green/20 transition-colors" data-category="condition">Condition-Specific</button>
+                            <button class="filter-tag px-3 py-1 bg-soft-coral/20 text-soft-coral rounded-full text-sm hover:bg-soft-coral/30 transition-colors" data-category="youth">Youth & Families</button>
+                            <button class="filter-tag px-3 py-1 bg-accent-purple/20 text-accent-purple rounded-full text-sm hover:bg-accent-purple/30 transition-colors" data-category="legal">Legal Rights</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resource Categories -->
+        <section class="py-16 bg-gradient-to-b from-white to-soft-white">
+            <div class="container mx-auto px-4">
+                <!-- General Mental Health -->
+                <section id="general" class="mb-20 scroll-mt-20">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-lg bg-medical-blue/10 flex items-center justify-center floating-element">
+                            <i data-lucide="book-open" class="h-6 w-6 text-medical-blue"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark">General Mental Health</h2>
+                            <p class="text-text-light">Educational articles, support groups, and advocacy resources</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- NAMI -->
+                        <div class="resource-card animate-page-turn card-hover" data-categories="general" data-keywords="nami alliance support groups advocacy education">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-medical-blue/10 text-medical-blue">General Support</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">National Alliance on Mental Illness (NAMI)</h3>
+                                <p class="text-text-light mb-4">Educational articles, support groups, and advocacy resources for mental health awareness and support.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.nami.org" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.nami.org
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="nami">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- MHA -->
+                        <div class="resource-card animate-page-turn delay-100 card-hover" data-categories="general" data-keywords="mha screenings wellness tools public">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-medical-blue/10 text-medical-blue">Wellness Tools</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">Mental Health America (MHA)</h3>
+                                <p class="text-text-light mb-4">Mental health screenings, wellness tools, and public resources for mental health awareness and early intervention.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.mhanational.org" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.mhanational.org
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="mha">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Psycom -->
+                        <div class="resource-card animate-page-turn delay-200 card-hover" data-categories="general" data-keywords="psycom articles treatments medications">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-medical-blue/10 text-medical-blue">Educational</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">Psycom</h3>
+                                <p class="text-text-light mb-4">Reliable articles on mental health conditions, treatments, medications, and self-care strategies.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.psycom.net" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.psycom.net
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="psycom">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Condition-Specific Resources -->
+                <section id="condition-specific" class="mb-20 scroll-mt-20">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-lg bg-healing-green/10 flex items-center justify-center floating-element">
+                            <i data-lucide="heart-pulse" class="h-6 w-6 text-healing-green"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark">Condition-Specific Resources</h2>
+                            <p class="text-text-light">Specialized information and support for specific mental health conditions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+                        <!-- ADAA -->
+                        <div class="resource-card animate-page-turn delay-300 card-hover" data-categories="condition" data-keywords="adaa anxiety depression ptsd disorders">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-healing-green/10 text-healing-green">Anxiety & Depression</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">Anxiety and Depression Association of America (ADAA)</h3>
+                                <p class="text-text-light mb-4">Comprehensive information on anxiety, depression, PTSD, OCD, and related disorders with evidence-based resources.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.adaa.org" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.adaa.org
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="adaa">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- DBSA -->
+                        <div class="resource-card animate-page-turn delay-400 card-hover" data-categories="condition" data-keywords="dbsa depression bipolar mood disorders">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-healing-green/10 text-healing-green">Mood Disorders</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">Depression and Bipolar Support Alliance (DBSA)</h3>
+                                <p class="text-text-light mb-4">Education and peer-led support groups for individuals living with depression and bipolar disorder.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.dbsalliance.org" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.dbsalliance.org
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="dbsa">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- IOCDF -->
+                        <div class="resource-card animate-page-turn delay-500 card-hover" data-categories="condition" data-keywords="iocdf ocd obsessive compulsive">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-calm-teal/10 text-calm-teal">OCD</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">International OCD Foundation (IOCDF)</h3>
+                                <p class="text-text-light mb-4">Comprehensive information about Obsessive-Compulsive Disorder (OCD) and related conditions, treatment options, and support.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.iocdf.org" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.iocdf.org
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="iocdf">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CHADD -->
+                        <div class="resource-card animate-page-turn delay-600 card-hover" data-categories="condition" data-keywords="chadd adhd attention deficit hyperactivity">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-sunshine-yellow/20 text-amber-600">ADHD</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">CHADD (Children and Adults with ADHD)</h3>
+                                <p class="text-text-light mb-4">Science-based resources on ADHD across the lifespan, including diagnosis, treatment, and management strategies.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.chadd.org" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.chadd.org
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="chadd">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Youth and Families -->
+                <section id="youth-families" class="mb-20 scroll-mt-20">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-lg bg-soft-coral/20 flex items-center justify-center floating-element">
+                            <i data-lucide="users" class="h-6 w-6 text-soft-coral"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark">Youth and Families</h2>
+                            <p class="text-text-light">Resources for children, teens, families, and specialized populations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Trevor Project -->
+                        <div class="resource-card animate-page-turn delay-700 card-hover" data-categories="youth" data-keywords="trevor project lgbtq crisis intervention">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-soft-coral/20 text-soft-coral">LGBTQ+ Youth</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">The Trevor Project</h3>
+                                <p class="text-text-light mb-4">Crisis intervention and suicide prevention services for LGBTQ+ youth, including 24/7 support via phone, text, and chat.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.thetrevorproject.org" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.thetrevorproject.org
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="trevor">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Child Mind Institute -->
+                        <div class="resource-card animate-page-turn delay-800 card-hover" data-categories="youth" data-keywords="child mind institute children teens family">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-soft-coral/20 text-soft-coral">Children & Teens</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">Child Mind Institute</h3>
+                                <p class="text-text-light mb-4">Mental health information and resources for children, teens, and families, including guides, videos, and expert advice.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.childmind.org" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.childmind.org
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="childmind">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Legal Rights & Disability -->
+                <section id="legal-rights" class="scroll-mt-20">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-lg bg-accent-purple/20 flex items-center justify-center floating-element">
+                            <i data-lucide="scale" class="h-6 w-6 text-accent-purple"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark">Legal Rights & Disability</h2>
+                            <p class="text-text-light">Guidance on treatment access, insurance, housing, workplace protections, and legal rights</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- SAMHSA -->
+                        <div class="resource-card animate-page-turn delay-900 card-hover" data-categories="legal" data-keywords="samhsa rights insurance housing workplace">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-accent-purple/20 text-accent-purple">Legal Rights</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">SAMHSA: Know Your Rights</h3>
+                                <p class="text-text-light mb-4">Guidance on treatment access, insurance coverage, housing accommodations, and workplace protections for individuals with mental health conditions.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.samhsa.gov" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.samhsa.gov
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="samhsa">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Disability Rights PA -->
+                        <div class="resource-card animate-page-turn delay-1000 card-hover" data-categories="legal" data-keywords="disability rights pennsylvania advocacy legal">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <span class="category-tag bg-accent-purple/20 text-accent-purple">Pennsylvania</span>
+                                    <div class="text-amber-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-text-dark mb-3">Disability Rights Pennsylvania</h3>
+                                <p class="text-text-light mb-4">Advocacy and legal rights resources for Pennsylvanians with disabilities, including mental health conditions.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="https://www.disabilityrightspa.org" target="_blank" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2 group">
+                                        www.disabilityrightspa.org
+                                        <i data-lucide="external-link" class="h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                    <button class="bookmark-btn text-gray-400 hover:text-medical-blue transition-colors" data-resource="drpa">
+                                        <i data-lucide="bookmark" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Reflection Section -->
+        <section class="py-16 bg-gradient-to-br from-medical-blue/5 to-healing-green/5">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-gradient-to-b from-medical-blue to-medical-blue-dark p-8 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i data-lucide="keyboard" class="h-16 w-16 text-white mb-4"></i>
+                                    <h3 class="font-serif text-2xl text-white">Reflection & Journaling</h3>
+                                </div>
+                            </div>
+                            <div class="md:w-2/3 p-8">
+                                <div class="sticky-note mb-6">
+                                    <h4 class="font-serif text-lg font-semibold text-wood-dark mb-2">Therapeutic Writing</h4>
+                                    <p class="text-text-medium">Hands typing on a laptop, representing reflection, journaling, and the therapeutic power of writing and communication.</p>
+                                </div>
+                                <p class="text-text-medium mb-6">
+                                    Writing can be a powerful tool for mental wellness. Consider keeping a journal to:
+                                </p>
+                                <ul class="space-y-3 mb-8">
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                        <span class="text-text-dark">Process emotions and experiences</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                        <span class="text-text-dark">Track patterns and triggers</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                        <span class="text-text-dark">Practice gratitude and positive reframing</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1"></i>
+                                        <span class="text-text-dark">Prepare for therapy sessions</span>
+                                    </li>
+                                </ul>
+                                <button id="downloadPrompts" class="inline-flex items-center gap-2 text-medical-blue hover:text-medical-blue-dark font-medium">
+                                    <i data-lucide="download"></i>
+                                    Download Journaling Prompts
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-20 bg-gradient-to-br from-medical-blue/5 to-healing-green/5">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-r from-medical-blue to-healing-green rounded-2xl p-8 md:p-12 animate-fade-in-up" style="animation: gradientShift 3s ease-in-out infinite; background-size: 200% 200%;">
+                        <div class="grid lg:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">
+                                    Stay Connected With Your Mental Wellness Journey
+                                </h2>
+                                <p class="text-white/80 mb-6">
+                                    Subscribe to our monthly newsletter for mental health tips, wellness resources, and updates from Lakesyde Behavioral Health.
+                                </p>
+                                <div class="flex items-center gap-3 text-white/70">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green-light"></i>
+                                    <span class="text-sm">No spam, unsubscribe anytime</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-white/70 mt-2">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green-light"></i>
+                                    <span class="text-sm">HIPAA-compliant and confidential</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-white/70 mt-2">
+                                    <i data-lucide="check-circle" class="h-5 w-5 text-healing-green-light"></i>
+                                    <span class="text-sm">Monthly mental wellness tips</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="space-y-4">
+                                    <div>
+                                        <label for="newsletterEmail" class="sr-only">Email Address</label>
+                                        <input
+                                            type="email"
+                                            id="newsletterEmail"
+                                            name="email"
+                                            placeholder="Enter your email address"
+                                            class="w-full px-6 py-4 rounded-xl border-2 border-white/20 bg-white/10 text-white placeholder-white/60"
+                                            required
+                                            aria-required="true"
+                                        >
+                                    </div>
+                                    <button
+                                        type="button"
+                                        class="w-full py-4 rounded-xl bg-white text-medical-blue font-semibold hover:bg-gray-100 transition-colors"
+                                        aria-label="Subscribe to newsletter"
+                                    >
+                                        Subscribe to Newsletter
+                                    </button>
+                                    <p class="text-white/60 text-xs text-center">
+                                        You can unsubscribe at any time. We respect your privacy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Same as original site -->
+    <footer class="bg-medical-blue-dark text-white" role="contentinfo">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                     <a href="index.html" class="flex items-center gap-2">
+                        <img style="width: 100px; background-color: #f8f9fa;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+                    <p class="text-white/80 mb-6 max-w-sm">
+                        Compassionate behavioral health care for individuals and families. 
+                        Your journey to wellness starts with a single step. We provide 
+                        evidence-based treatment for mental health conditions in a safe, 
+                        supportive environment.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Services</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="service.html" class="text-white/70 hover:text-white transition-colors">
+                                Psycho Therapy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="service.html" class="text-white/70 hover:text-white transition-colors">
+                                Individual Therapy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="service.html" class="text-white/70 hover:text-white transition-colors">
+                                Family Support
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Conditions</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="index.html#conditions" class="text-white/70 hover:text-white transition-colors">
+                                Depression
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#conditions" class="text-white/70 hover:text-white transition-colors">
+                                Anxiety
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#conditions" class="text-white/70 hover:text-white transition-colors">
+                                PTSD & Trauma
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="index.html#about" class="text-white/70 hover:text-white transition-colors">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#why-choose" class="text-white/70 hover:text-white transition-colors">
+                                Why Choose Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="resources.html" class="text-white/70 hover:text-white transition-colors">
+                                Resources
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-white/70 hover:text-white transition-colors">
+                                Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mental.html" class="text-white/70 hover:text-white transition-colors">
+                                Resource
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-sm">
+                    © <span id="currentYear"></span> Lakesyde Behavioral Health (LBH). All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="privacy.html" class="text-white/50 hover:text-white transition-colors">
+                        Privacy Policy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu functionality - Same as original site
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isMobileMenuOpen = false;
+
+        mobileMenuButton.addEventListener('click', () => {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            
+            // Update aria attributes
+            mobileMenuButton.setAttribute('aria-expanded', isMobileMenuOpen);
+            
+            if (isMobileMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.remove('animate-menu-exit');
+                mobileMenu.classList.add('animate-menu-enter');
+                // Change icon to X
+                mobileMenuButton.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
+                lucide.createIcons();
+            } else {
+                mobileMenu.classList.remove('animate-menu-enter');
+                mobileMenu.classList.add('animate-menu-exit');
+                // Change back to menu icon after animation
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+                    lucide.createIcons();
+                }, 300);
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMobileMenuOpen) {
+                    mobileMenu.classList.remove('animate-menu-enter');
+                    mobileMenu.classList.add('animate-menu-exit');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        isMobileMenuOpen = false;
+                        mobileMenuButton.setAttribute('aria-expanded', false);
+                        mobileMenuButton.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+                        lucide.createIcons();
+                    }, 300);
+                }
+            });
+        });
+
+        // Scroll effect for navigation
+        const mainNav = document.getElementById('mainNav');
+        let scrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20 && !scrolled) {
+                mainNav.classList.add('bg-white', 'shadow-lg');
+                scrolled = true;
+            } else if (window.scrollY <= 20 && scrolled) {
+                mainNav.classList.remove('bg-white', 'shadow-lg');
+                scrolled = false;
+            }
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId === '/') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Resource page functionality
+        const searchInput = document.getElementById('resourceSearch');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const resourceCards = document.querySelectorAll('.resource-card');
+        const bookmarkButtons = document.querySelectorAll('.bookmark-btn');
+        const downloadPromptsBtn = document.getElementById('downloadPrompts');
+        
+        let savedResources = JSON.parse(localStorage.getItem('savedResources')) || [];
+        
+        // Search function
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedCategory = categoryFilter.value;
+            
+            resourceCards.forEach(card => {
+                const categories = card.dataset.categories;
+                const keywords = card.dataset.keywords || '';
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                const matchesSearch = searchTerm === '' || 
+                    title.includes(searchTerm) || 
+                    description.includes(searchTerm) ||
+                    keywords.includes(searchTerm);
+                
+                const matchesCategory = selectedCategory === 'all' || 
+                    categories.includes(selectedCategory);
+                
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = 'block';
+                    card.classList.add('animate-fade-in');
+                    
+                    // Highlight search term
+                    if (searchTerm) {
+                        highlightText(card, searchTerm);
+                    }
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        // Highlight search terms
+        function highlightText(element, searchTerm) {
+            const textElements = element.querySelectorAll('h3, p');
+            textElements.forEach(el => {
+                const html = el.innerHTML;
+                const regex = new RegExp(`(${searchTerm})`, 'gi');
+                const highlighted = html.replace(regex, '<span class="search-highlight">$1</span>');
+                el.innerHTML = highlighted;
+            });
+        }
+        
+        // Filter by tag
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const category = tag.dataset.category;
+                categoryFilter.value = category;
+                performSearch();
+                
+                // Highlight active tag
+                filterTags.forEach(t => t.classList.remove('bg-medical-blue', 'text-white'));
+                tag.classList.add('bg-medical-blue', 'text-white');
+            });
+        });
+        
+        // Bookmark functionality
+        bookmarkButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const resourceId = this.dataset.resource;
+                const card = this.closest('.resource-card');
+                const title = card.querySelector('h3').textContent;
+                const url = card.querySelector('a').href;
+                const description = card.querySelector('p').textContent;
+                
+                const resource = {
+                    id: resourceId,
+                    title: title,
+                    url: url,
+                    description: description,
+                    date: new Date().toLocaleDateString()
+                };
+                
+                // Check if already saved
+                const existingIndex = savedResources.findIndex(r => r.id === resourceId);
+                
+                if (existingIndex > -1) {
+                    // Remove from saved
+                    savedResources.splice(existingIndex, 1);
+                    this.innerHTML = '<i data-lucide="bookmark" class="h-5 w-5"></i>';
+                    showToast('Resource removed from saved');
+                } else {
+                    // Add to saved
+                    savedResources.push(resource);
+                    this.innerHTML = '<i data-lucide="bookmark" class="h-5 w-5 fill-current text-medical-blue"></i>';
+                    showToast('Resource saved to your collection');
+                }
+                
+                // Save to localStorage
+                localStorage.setItem('savedResources', JSON.stringify(savedResources));
+            });
+            
+            // Set initial bookmark state
+            const resourceId = button.dataset.resource;
+            const isSaved = savedResources.some(r => r.id === resourceId);
+            if (isSaved) {
+                button.innerHTML = '<i data-lucide="bookmark" class="h-5 w-5 fill-current text-medical-blue"></i>';
+            }
+        });
+        
+        // Download prompts
+        downloadPromptsBtn?.addEventListener('click', () => {
+            showToast('Journaling prompts downloaded!');
+            
+            // Create and download a simple text file
+            const prompts = [
+                "What emotions am I feeling right now?",
+                "What am I grateful for today?",
+                "What challenges did I face today and how did I handle them?",
+                "What self-care activities did I practice today?",
+                "What am I looking forward to?",
+                "What boundaries do I need to set or maintain?",
+                "How have I grown or changed recently?",
+                "What brings me peace and calm?"
+            ];
+            
+            const content = prompts.join('\n\n');
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'journaling-prompts.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+        
+        // Toast notification
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-4 right-4 bg-medical-blue text-white px-6 py-3 rounded-lg shadow-lg animate-fade-in-up z-50';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        document.body.removeChild(toast);
+                    }
+                }, 300);
+            }, 3000);
+        }
+        
+        // Newsletter subscription
+        const newsletterBtn = document.querySelector('button[aria-label="Subscribe to newsletter"]');
+        newsletterBtn?.addEventListener('click', () => {
+            const email = document.getElementById('newsletterEmail').value;
+            
+            if (!email || !email.includes('@')) {
+                showToast('Please enter a valid email address.');
+                return;
+            }
+            
+            newsletterBtn.innerHTML = '<i data-lucide="loader-circle" class="h-5 w-5 animate-spin mx-auto"></i>';
+            newsletterBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                newsletterBtn.innerHTML = 'Subscribed!';
+                newsletterBtn.classList.add('bg-healing-green', 'text-white');
+                showToast('Thank you for subscribing to our newsletter!');
+                
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    newsletterBtn.innerHTML = 'Subscribe to Newsletter';
+                    newsletterBtn.classList.remove('bg-healing-green', 'text-white');
+                    newsletterBtn.disabled = false;
+                    document.getElementById('newsletterEmail').value = '';
+                }, 3000);
+            }, 1500);
+        });
+        
+        // Event listeners
+        searchInput?.addEventListener('input', performSearch);
+        categoryFilter?.addEventListener('change', performSearch);
+        
+        // Initialize animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        resourceCards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
