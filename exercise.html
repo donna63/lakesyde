@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>The Powerful Connection Between Exercise and Mental Health | Lakesyde Behavioral Health</title>
+    <meta name="description" content="Discover how regular exercise impacts mental health: Learn about the science behind exercise as therapy, practical strategies to get started, and how physical activity reduces anxiety and depression.">
+    <meta name="keywords" content="exercise and mental health, physical activity benefits, exercise therapy, workout for anxiety, depression and exercise, mental wellness, fitness for mental health">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="The Powerful Connection Between Exercise and Mental Health">
+    <meta property="og:description" content="Evidence-based guide to using exercise as a powerful tool for improving mental health, reducing anxiety, and managing depression.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://lakesydebh.com/blog/exercise-mental-health.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lakesydebh.com/blog/exercise-mental-health.html">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'medical-blue': '#0077b6',
+                        'medical-blue-light': '#90e0ef',
+                        'medical-blue-dark': '#023e8a',
+                        'healing-green': '#2a9d8f',
+                        'healing-green-light': '#a7d9c9',
+                        'calm-teal': '#4a9b9d',
+                        'soft-white': '#f8f9fa',
+                        'warm-gray': '#e9ecef',
+                        'soft-coral': '#ff9a8b',
+                        'sunshine-yellow': '#ffd166',
+                        'text-dark': '#2d3748',
+                        'text-medium': '#4a5568',
+                        'text-light': '#718096',
+                    },
+                    fontFamily: {
+                        'serif': ['Source Serif Pro', 'serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
+                        },
+                        slideUp: {
+                            'from': { opacity: '0', transform: 'translateY(20px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .font-serif {
+            font-family: 'Source Serif Pro', serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 119, 182, 0.25);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 119, 182, 0.35);
+        }
+        
+        .article-image {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+            border-left: 4px solid #2a9d8f;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .benefit-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .benefit-list li:before {
+            content: "✓";
+            color: #2a9d8f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+        }
+        
+        .exercise-card {
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .exercise-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .exercise-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .back-to-blog {
+            color: #0077b6;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-blog:hover {
+            text-decoration: underline;
+        }
+        
+        .nav-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .nav-scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #90e0ef, #0077b6);
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .quote-box:before {
+            content: '"';
+            font-size: 6rem;
+            color: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            top: -1rem;
+            left: 1rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+    </style>
+</head>
+<body class="bg-soft-white text-text-dark min-h-screen">
+    <!-- Navigation -->
+    <header id="mainHeader">
+        <nav id="mainNav" class="nav-sticky">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center gap-2 z-50">
+                        <img style="width: 120px;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center gap-8">
+                        <a href="index.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium">Home</a>
+                        <a href="service.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium">Services</a>
+                        <a href="About.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium">About</a>
+                        <a href="blog.html" class="text-medical-blue font-medium">Blog</a>
+                        <a href="contact.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium">Contact</a>
+                        
+                        <!-- CTA Button -->
+                        <a href="contact.html" class="btn-primary px-6 py-3 rounded-xl flex items-center gap-2">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            Book Consultation
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button
+                        id="mobileMenuButton"
+                        class="lg:hidden p-2 text-text-medium z-50"
+                        aria-label="Toggle menu"
+                    >
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="animate-fade-in pt-24">
+        <!-- Article Header -->
+        <section class="py-8">
+            <div class="container mx-auto px-4">
+                <div class="content-section">
+                    <!-- Back to Blog Link -->
+                    <a href="blog.html" class="back-to-blog animate-fade-in">
+                        <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                        Back to All Articles
+                    </a>
+                    
+                    <!-- Article Metadata -->
+                    <div class="mb-6 animate-fade-in delay-100">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="px-4 py-2 bg-healing-green/10 text-healing-green rounded-full text-sm font-semibold">Wellness</span>
+                            <span class="px-4 py-2 bg-soft-coral/10 text-soft-coral rounded-full text-sm font-semibold">Exercise</span>
+                            <span class="px-4 py-2 bg-sunshine-yellow/10 text-sunshine-yellow rounded-full text-sm font-semibold">Self-Care</span>
+                            <!-- <span class="text-text-light text-sm">10 min read • Updated Dec 15, 2023</span> -->
+                        </div>
+                        
+                        <!-- Author Info -->
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center">
+                                <span class="font-bold text-medical-blue">LA</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-text-dark">Leke Adedotun, PMHNP-BC</p>
+                                <p class="text-text-light text-sm">Board-Certified Psychiatric Mental Health Nurse Practitioner</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Article Title -->
+                    <h1 class="font-serif text-4xl md:text-5xl text-medical-blue-dark mb-6 animate-fade-in delay-200">
+                        The Powerful Connection Between Exercise and Mental Health
+                    </h1>
+                    
+                    <!-- Featured Image -->
+                    <div class="article-image mb-8 animate-fade-in delay-300" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <section class="py-8 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="content-section">
+                    <!-- Introduction -->
+                    <div class="prose prose-lg max-w-none mb-12">
+                        <p class="text-xl text-text-medium mb-6">
+                            Many people view exercise as a purely physical activity—a way to lose weight, build muscle, or improve cardiovascular health. However, research increasingly shows that <strong>regular physical activity is one of the most powerful tools we have for maintaining and improving mental health</strong>.
+                        </p>
+                        
+                        <p class="text-text-medium mb-8">
+                            In this comprehensive guide, we'll explore the scientific evidence linking exercise to mental wellness, practical strategies for incorporating movement into your routine (even with depression or anxiety), and how exercise can complement professional mental health treatment.
+                        </p>
+                    </div>
+                    
+                    <!-- Key Benefits Section -->
+                    <div class="mb-12 animate-slide-up">
+                        <h2 class="font-serif text-3xl text-medical-blue-dark mb-6">The Science Behind Exercise and Mental Health</h2>
+                        
+                        <div class="quote-box mb-8">
+                            <p class="text-xl italic mb-4">"Exercise is medicine for the mind. The psychological benefits are just as significant as the physical ones, if not more so for many people."</p>
+                            <p class="font-semibold">— American Psychological Association</p>
+                        </div>
+                        
+                        <p class="text-text-medium mb-6">
+                            When you exercise, your body undergoes a series of biochemical changes that directly impact your brain and mental state:
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <!-- Benefit 1 -->
+                            <div class="exercise-card p-6">
+                                <div class="exercise-icon bg-medical-blue/10">
+                                    <i data-lucide="brain" class="h-8 w-8 text-medical-blue"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Neurotransmitter Regulation</h3>
+                                <p class="text-text-light">Exercise increases endorphins ("feel-good" chemicals), serotonin (mood regulation), and dopamine (pleasure/reward), which are often imbalanced in depression and anxiety.</p>
+                            </div>
+                            
+                            <!-- Benefit 2 -->
+                            <div class="exercise-card p-6">
+                                <div class="exercise-icon bg-healing-green/10">
+                                    <i data-lucide="activity" class="h-8 w-8 text-healing-green"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Stress Reduction</h3>
+                                <p class="text-text-light">Physical activity lowers cortisol (the stress hormone) and adrenaline levels, helping your body's relaxation response to activate more effectively.</p>
+                            </div>
+                            
+                            <!-- Benefit 3 -->
+                            <div class="exercise-card p-6">
+                                <div class="exercise-icon bg-calm-teal/10">
+                                    <i data-lucide="zap" class="h-8 w-8 text-calm-teal"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Neurogenesis</h3>
+                                <p class="text-text-light">Exercise stimulates the growth of new brain cells (particularly in the hippocampus) and improves neural connections, which can improve cognitive function and resilience to stress.</p>
+                            </div>
+                            
+                            <!-- Benefit 4 -->
+                            <div class="exercise-card p-6">
+                                <div class="exercise-icon bg-sunshine-yellow/10">
+                                    <i data-lucide="moon" class="h-8 w-8 text-sunshine-yellow"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Sleep Improvement</h3>
+                                <p class="text-text-light">Regular physical activity helps regulate sleep patterns, which is crucial for emotional regulation and mental health maintenance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Evidence-Based Benefits -->
+                    <div class="mb-12 animate-slide-up">
+                        <h2 class="font-serif text-3xl text-medical-blue-dark mb-6">Evidence-Based Mental Health Benefits of Exercise</h2>
+                        
+                        <div class="info-box">
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Research-Backed Improvements</h3>
+                            <p class="text-text-medium mb-4">
+                                Multiple studies have demonstrated that regular exercise can:
+                            </p>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-semibold text-medical-blue-dark mb-2">For Depression</h4>
+                                    <ul class="benefit-list">
+                                        <li>Reduce depressive symptoms by 30-50%</li>
+                                        <li>Be as effective as antidepressant medication for mild to moderate depression</li>
+                                        <li>Prevent relapse when maintained regularly</li>
+                                        <li>Improve energy levels and motivation</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-medical-blue-dark mb-2">For Anxiety</h4>
+                                    <ul class="benefit-list">
+                                        <li>Reduce anxiety sensitivity</li>
+                                        <li>Decrease muscle tension and physical anxiety symptoms</li>
+                                        <li>Improve stress tolerance</li>
+                                        <li>Provide a healthy distraction from anxious thoughts</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 p-4 bg-white/50 rounded-lg">
+                                <p class="text-text-medium text-sm">
+                                    <strong>Note:</strong> While exercise is a powerful complementary treatment, it should not replace professional mental health care for moderate to severe conditions. It works best as part of a comprehensive treatment plan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Practical Guide -->
+                    <div class="mb-12 animate-slide-up">
+                        <h2 class="font-serif text-3xl text-medical-blue-dark mb-6">Getting Started: A Practical Guide</h2>
+                        
+                        <p class="text-text-medium mb-6">
+                            One of the biggest challenges with mental health conditions is finding the motivation to start exercising. Here's a realistic, step-by-step approach:
+                        </p>
+                        
+                        <div class="bg-gradient-to-br from-healing-green/5 to-calm-teal/5 p-8 rounded-2xl mb-8">
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-healing-green text-white flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="font-bold">1</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-dark mb-2">Start Small (Really Small)</h3>
+                                        <p class="text-text-medium">When depressed or anxious, even getting out of bed can feel monumental. Start with 5 minutes of gentle movement. A short walk around your home or some light stretching counts.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-healing-green text-white flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="font-bold">2</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-dark mb-2">Focus on Enjoyment, Not Intensity</h3>
+                                        <p class="text-text-medium">Choose activities you might actually enjoy—dancing to music, gentle yoga, gardening, or walking in nature. The goal is consistency, not pushing yourself to exhaustion.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-healing-green text-white flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="font-bold">3</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-dark mb-2">Incorporate Movement Naturally</h3>
+                                        <p class="text-text-medium">Take the stairs instead of the elevator, park farther away, do chair exercises while watching TV, or take short movement breaks during work.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-healing-green text-white flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="font-bold">4</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-text-dark mb-2">Use the "10-Minute Rule"</h3>
+                                        <p class="text-text-medium">Commit to just 10 minutes of activity. Often, once you start, you'll want to continue longer. But if not, 10 minutes still provides mental health benefits.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Exercise Types -->
+                    <div class="mb-12 animate-slide-up">
+                        <h2 class="font-serif text-3xl text-medical-blue-dark mb-6">Best Types of Exercise for Mental Health</h2>
+                        
+                        <div class="grid md:grid-cols-3 gap-6 mb-8">
+                            <div class="bg-soft-white p-6 rounded-xl border border-gray-200">
+                                <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center mb-4">
+                                    <i data-lucide="walking" class="h-6 w-6 text-medical-blue"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Aerobic Exercise</h3>
+                                <p class="text-text-light mb-3">Walking, jogging, swimming, cycling, dancing</p>
+                                <p class="text-sm text-text-medium"><strong>Benefits:</strong> Excellent for releasing endorphins, improving cardiovascular health, and reducing anxiety.</p>
+                            </div>
+                            
+                            <div class="bg-soft-white p-6 rounded-xl border border-gray-200">
+                                <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center mb-4">
+                                    <i data-lucide="dumbbell" class="h-6 w-6 text-healing-green"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Strength Training</h3>
+                                <p class="text-text-light mb-3">Weight lifting, resistance bands, bodyweight exercises</p>
+                                <p class="text-sm text-text-medium"><strong>Benefits:</strong> Builds confidence, improves body image, and provides a sense of accomplishment.</p>
+                            </div>
+                            
+                            <div class="bg-soft-white p-6 rounded-xl border border-gray-200">
+                                <div class="w-12 h-12 rounded-full bg-calm-teal/10 flex items-center justify-center mb-4">
+                                    <i data-lucide="leaf" class="h-6 w-6 text-calm-teal"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Mind-Body Practices</h3>
+                                <p class="text-text-light mb-3">Yoga, Tai Chi, Qigong, mindful walking</p>
+                                <p class="text-sm text-text-medium"><strong>Benefits:</strong> Combines movement with mindfulness, excellent for anxiety and stress reduction.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="alert-circle" class="h-6 w-6 text-yellow-600 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-yellow-800 mb-2">Important Considerations</h4>
+                                    <p class="text-yellow-700 text-sm">
+                                        Always consult with a healthcare provider before starting a new exercise program, especially if you have pre-existing health conditions. Start slowly and listen to your body. The goal is sustainable mental health benefits, not pushing through pain or exhaustion.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Integrating with Treatment -->
+                    <div class="mb-12 animate-slide-up">
+                        <h2 class="font-serif text-3xl text-medical-blue-dark mb-6">Integrating Exercise with Professional Treatment</h2>
+                        
+                        <p class="text-text-medium mb-6">
+                            At Lakesyde Behavioral Health, we often incorporate exercise recommendations into our treatment plans because:
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-gradient-to-r from-medical-blue/5 to-medical-blue-light/5 p-6 rounded-xl">
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Synergy with Therapy</h3>
+                                <p class="text-text-medium">Exercise can enhance the benefits of psychotherapy by improving mood regulation, increasing energy for therapy work, and providing practical coping skills.</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-healing-green/5 to-healing-green-light/5 p-6 rounded-xl">
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Complement to Medication</h3>
+                                <p class="text-text-medium">For those taking psychiatric medications, exercise can help manage side effects like weight gain, improve sleep, and potentially allow for lower medication doses over time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Section -->
+                    <div class="bg-gradient-to-r from-medical-blue/10 to-healing-green/10 p-8 rounded-2xl animate-slide-up">
+                        <div class="text-center">
+                            <h2 class="font-serif text-2xl text-medical-blue-dark mb-4">Need Personalized Guidance?</h2>
+                            <p class="text-text-medium mb-6 max-w-2xl mx-auto">
+                                If you're struggling with mental health challenges and want to learn how to safely incorporate exercise into your treatment plan, our team can help create a personalized approach that works for your unique situation.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="contact.html" class="btn-primary px-8 py-4 rounded-xl inline-block">
+                                    <i data-lucide="calendar" class="h-5 w-5 inline mr-2"></i>
+                                    Schedule a Consultation
+                                </a>
+                                <a href="service.html" class="px-8 py-4 border-2 border-medical-blue text-medical-blue rounded-xl inline-block hover:bg-medical-blue/10 transition-colors">
+                                    <i data-lucide="heart" class="h-5 w-5 inline mr-2"></i>
+                                    View Our Wellness Services
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Share & Navigation -->
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-12 pt-8 border-t border-gray-200">
+                        <a href="blog.html" class="text-medical-blue hover:text-medical-blue-dark font-medium flex items-center gap-2">
+                            <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                            Back to All Articles
+                        </a>
+                        
+                        <div class="flex items-center gap-4">
+                            <span class="text-text-light text-sm">Share this article:</span>
+                            <div class="flex gap-2">
+                                <button class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                                    <i data-lucide="facebook" class="h-4 w-4 text-blue-600"></i>
+                                </button>
+                                <button class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                                    <i data-lucide="twitter" class="h-4 w-4 text-blue-400"></i>
+                                </button>
+                                <button class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                                    <i data-lucide="linkedin" class="h-4 w-4 text-blue-700"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-medical-blue-dark text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                     <a href="index.html" class="flex items-center gap-2">
+                        <img style="width: 100px; background-color: #f8f9fa;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+                    <p class="text-white/80 mt-3 text-sm">
+                        Compassionate, evidence-based mental health care for individuals and families in Pennsylvania and beyond.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="service.html" class="text-white/70 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="blog.html" class="text-white hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="About.html" class="text-white/70 hover:text-white transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-white/70 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div>
+                    <h4 class="font-serif text-lg mb-4">Emergency Resources</h4>
+                    <div class="space-y-2">
+                        <p class="text-white/70 text-sm">
+                            If you're experiencing a crisis, please contact:
+                        </p>
+                        <div class="bg-white/10 p-3 rounded-lg">
+                            <p class="font-semibold">National Suicide Prevention Lifeline</p>
+                            <p class="text-white/80 text-lg">988</p>
+                        </div>
+                        <p class="text-white/70 text-sm mt-2">
+                            Available 24/7 for immediate support
+                        </p>
+                    </div>
+                </div> -->
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Get Professional Help</h4>
+                    <p class="text-white/70 mb-4 text-sm">
+                        Insurance accepted through Headway. Private pay options also available.
+                    </p>
+                    <a href="contact.html" class="btn-primary px-6 py-3 rounded-xl inline-block w-full text-center">
+                        <i data-lucide="calendar" class="h-4 w-4 inline mr-2"></i>
+                        Book Consultation
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-sm">
+                    © <span id="currentYear"></span> Lakesyde Behavioral Health. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="privacy.html" class="text-white/50 hover:text-white transition-colors">
+                        Privacy Policy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isMobileMenuOpen = false;
+
+        // Simple toggle function
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            
+            // Update aria attributes
+            mobileMenuButton.setAttribute('aria-expanded', isMobileMenuOpen);
+            
+            if (isMobileMenuOpen) {
+                // Create mobile menu if it doesn't exist
+                if (!mobileMenu) {
+                    const menuHTML = `
+                        <div id="mobileMenu" class="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 z-50">
+                            <div class="container mx-auto px-4 py-6 space-y-1">
+                                <a href="index.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">Home</span>
+                                </a>
+                                <a href="service.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">Services</span>
+                                </a>
+                                <a href="About.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">About</span>
+                                </a>
+                                <a href="blog.html" class="flex items-center gap-3 text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">Blog</span>
+                                </a>
+                                <a href="contact.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">Contact</span>
+                                </a>
+                                <div class="pt-4 border-t border-gray-100 mt-4">
+                                    <a href="contact.html" class="btn-primary w-full py-3 rounded-xl flex items-center justify-center gap-2">
+                                        <i data-lucide="calendar" class="h-4 w-4"></i>
+                                        Book Consultation
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    document.querySelector('nav').insertAdjacentHTML('beforeend', menuHTML);
+                    lucide.createIcons();
+                } else {
+                    mobileMenu.style.display = 'block';
+                }
+                
+                // Change icon to X
+                mobileMenuButton.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
+                lucide.createIcons();
+            } else {
+                if (mobileMenu) {
+                    mobileMenu.style.display = 'none';
+                }
+                
+                // Change back to menu icon
+                mobileMenuButton.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+                lucide.createIcons();
+            }
+        }
+
+        // Add click event to mobile menu button
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Scroll effect for navigation
+        const mainNav = document.getElementById('mainNav');
+        let scrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20 && !scrolled) {
+                mainNav.classList.add('nav-scrolled');
+                scrolled = true;
+            } else if (window.scrollY <= 20 && scrolled) {
+                mainNav.classList.remove('nav-scrolled');
+                scrolled = false;
+            }
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Share buttons functionality
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                if (icon && icon.getAttribute('data-lucide')) {
+                    const platform = icon.getAttribute('data-lucide');
+                    const url = window.location.href;
+                    const title = document.title;
+                    
+                    let shareUrl = '';
+                    switch(platform) {
+                        case 'facebook':
+                            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                            break;
+                        case 'twitter':
+                            shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+                            break;
+                        case 'linkedin':
+                            shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+                            break;
+                    }
+                    
+                    if (shareUrl) {
+                        window.open(shareUrl, '_blank', 'width=600,height=400');
+                    }
+                }
+            });
+        });
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ensure all animations trigger
+            const animatedElements = document.querySelectorAll('[class*="animate-"]');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'running';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Understanding Anxiety Disorders | Lakesyde Behavioral Health</title>
+    <meta name="description" content="Comprehensive guide to anxiety disorders: Learn about different types, recognize symptoms, and understand when professional help is needed for effective treatment.">
+    <meta name="keywords" content="anxiety disorders, anxiety symptoms, types of anxiety, panic disorder, social anxiety, treatment for anxiety, mental health, anxiety therapy, anxiety medication, GAD">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Understanding Anxiety Disorders: Types, Symptoms, and When to Seek Help">
+    <meta property="og:description" content="Expert guide to recognizing and understanding anxiety disorders with evidence-based information from Lakesyde Behavioral Health professionals.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://lakesydebh.com/articles/anxiety-disorders.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lakesydebh.com/articles/anxiety-disorders.html">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'medical-blue': '#0077b6',
+                        'medical-blue-light': '#90e0ef',
+                        'medical-blue-dark': '#023e8a',
+                        'healing-green': '#2a9d8f',
+                        'healing-green-light': '#a7d9c9',
+                        'calm-teal': '#4a9b9d',
+                        'soft-white': '#f8f9fa',
+                        'warm-gray': '#e9ecef',
+                        'soft-coral': '#ff9a8b',
+                        'sunshine-yellow': '#ffd166',
+                        'text-dark': '#2d3748',
+                        'text-medium': '#4a5568',
+                        'text-light': '#718096',
+                    },
+                    fontFamily: {
+                        'serif': ['Source Serif Pro', 'serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
+                        },
+                        slideUp: {
+                            'from': { opacity: '0', transform: 'translateY(20px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .font-serif {
+            font-family: 'Source Serif Pro', serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 119, 182, 0.25);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 119, 182, 0.35);
+        }
+        
+        .article-image {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+            border-left: 4px solid #2a9d8f;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .symptom-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .symptom-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .symptom-list li:before {
+            content: "•";
+            color: #0077b6;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+        }
+        
+        .back-to-blog {
+            color: #0077b6;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-blog:hover {
+            text-decoration: underline;
+        }
+        
+        .nav-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .nav-scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .disorder-card {
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            height: 100%;
+        }
+        
+        .disorder-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .treatment-step {
+            counter-increment: step-counter;
+            padding-left: 4rem;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .treatment-step:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #90e0ef, #0077b6);
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .quote-box:before {
+            content: '"';
+            font-size: 6rem;
+            color: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            top: -1rem;
+            left: 1rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2a9d8f, #4a9b9d);
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+        
+        .tab-button {
+            padding: 1rem 2rem;
+            border: none;
+            background: none;
+            color: #4a5568;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button.active {
+            color: #0077b6;
+            border-bottom: 3px solid #0077b6;
+        }
+        
+        .tab-button:hover:not(.active) {
+            color: #023e8a;
+            border-bottom: 3px solid #90e0ef;
+        }
+    </style>
+</head>
+<body class="bg-soft-white text-text-dark min-h-screen">
+    <!-- Navigation -->
+    <header id="mainHeader">
+        <nav id="mainNav" class="nav-sticky">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center gap-2 z-50">
+                        <img style="width: 120px;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center gap-8">
+                        <a href="index.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium">Home</a>
+                        <a href="service.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium">Services</a>
+                        <a href="About.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium">About</a>
+                        <a href="blog.html" class="text-medical-blue font-medium">Blog</a>
+                        <a href="contact.html" class="text-text-medium hover:text-medical-blue transition-colors font-medium">Contact</a>
+                        
+                        <!-- CTA Button -->
+                        <a href="contact.html" class="btn-primary px-6 py-3 rounded-xl flex items-center gap-2">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            Book Consultation
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button
+                        id="mobileMenuButton"
+                        class="lg:hidden p-2 text-text-medium z-50"
+                        aria-label="Toggle menu"
+                    >
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="animate-fade-in pt-24">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden py-12">
+            <div class="absolute inset-0 bg-gradient-to-r from-medical-blue/5 to-healing-green/5"></div>
+            <div class="container mx-auto px-4 relative">
+                <div class="max-w-4xl mx-auto text-center">
+                    <!-- Breadcrumb -->
+                    <nav class="mb-6 animate-fade-in">
+                        <ol class="flex items-center justify-center gap-2 text-sm">
+                            <li><a href="index.html" class="text-text-light hover:text-medical-blue transition-colors">Home</a></li>
+                            <li><i data-lucide="chevron-right" class="h-4 w-4 text-text-light"></i></li>
+                            <li><a href="blog.html" class="text-text-light hover:text-medical-blue transition-colors">Blog</a></li>
+                            <li><i data-lucide="chevron-right" class="h-4 w-4 text-text-light"></i></li>
+                            <li class="text-medical-blue font-medium">Anxiety Disorders Guide</li>
+                        </ol>
+                    </nav>
+                    
+                    <!-- Title -->
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-medical-blue-dark mb-6 animate-fade-in delay-100">
+                        Understanding Anxiety Disorders
+                    </h1>
+                    
+                    <!-- Subtitle -->
+                    <p class="text-xl text-text-medium mb-8 max-w-3xl mx-auto animate-fade-in delay-200">
+                        A Comprehensive Guide to Types, Symptoms, and When to Seek Professional Help
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 animate-fade-in delay-300">
+                        <div class="stat-card text-center">
+                            <p class="text-2xl font-bold">31%</p>
+                            <p class="text-sm opacity-90">of adults affected</p>
+                        </div>
+                        <div class="stat-card text-center">
+                            <p class="text-2xl font-bold">75%</p>
+                            <p class="text-sm opacity-90">experience onset by age 21</p>
+                        </div>
+                        <div class="stat-card text-center">
+                            <p class="text-2xl font-bold">60%</p>
+                            <p class="text-sm opacity-90">with anxiety also have depression</p>
+                        </div>
+                        <div class="stat-card text-center">
+                            <p class="text-2xl font-bold">80%</p>
+                            <p class="text-sm opacity-90">can improve with treatment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Navigation -->
+        <section class="sticky top-20 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 py-4">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap gap-2 justify-center">
+                    <a href="#types" class="tab-button" onclick="scrollToSection('types')">Types</a>
+                    <a href="#symptoms" class="tab-button" onclick="scrollToSection('symptoms')">Symptoms</a>
+                    <a href="#causes" class="tab-button" onclick="scrollToSection('causes')">Causes & Risk Factors</a>
+                    <a href="#treatment" class="tab-button" onclick="scrollToSection('treatment')">Treatment</a>
+                    <a href="#when-to-seek-help" class="tab-button" onclick="scrollToSection('when-to-seek-help')">When to Seek Help</a>
+                    <a href="#faq" class="tab-button" onclick="scrollToSection('faq')">FAQ</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="max-w-4xl mx-auto">
+                <!-- Introduction -->
+                <section class="mb-16 animate-fade-in">
+                    <div class="article-image mb-8" style="background-image: url('https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+                    
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-xl text-text-medium mb-6">
+                            Anxiety is more than just feeling stressed or worried. While anxiety and worry are normal human experiences that everyone encounters, <strong>anxiety disorders</strong> involve excessive fear or anxiety that significantly interferes with daily activities and persists over time.
+                        </p>
+                        
+                        <div class="quote-box my-8">
+                            <p class="text-xl italic mb-4">"Anxiety disorders are among the most common mental health conditions worldwide, yet they're also among the most treatable with proper care and support."</p>
+                            <p class="font-semibold">— World Health Organization</p>
+                        </div>
+                        
+                        <p class="text-text-medium mb-6">
+                            In this comprehensive guide, we'll explore the different types of anxiety disorders, help you recognize their symptoms, understand their causes, and provide clear guidance on when and how to seek professional help for effective treatment.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Types of Anxiety Disorders -->
+                <section id="types" class="mb-16 scroll-mt-24">
+                    <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark mb-8 flex items-center gap-3">
+                        <i data-lucide="layers" class="h-8 w-8 text-medical-blue"></i>
+                        Types of Anxiety Disorders
+                    </h2>
+                    
+                    <p class="text-text-medium mb-8">
+                        Anxiety disorders come in various forms, each with distinct characteristics. Understanding these differences is crucial for proper diagnosis and treatment.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <!-- GAD Card -->
+                        <div class="disorder-card p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="font-serif text-xl text-medical-blue-dark">Generalized Anxiety Disorder (GAD)</h3>
+                                <span class="px-3 py-1 bg-medical-blue/10 text-medical-blue text-xs font-semibold rounded-full">Most Common</span>
+                            </div>
+                            <p class="text-text-light mb-4">
+                                Characterized by persistent and excessive worry about various aspects of life (work, health, family), even when there's little or nothing to provoke it.
+                            </p>
+                            <div class="mt-4">
+                                <p class="text-sm font-semibold text-medical-blue-dark mb-2">Key Characteristics:</p>
+                                <ul class="space-y-1 text-sm text-text-medium">
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-healing-green"></i> Worry is difficult to control</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-healing-green"></i> Lasts 6 months or longer</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-healing-green"></i> Accompanied by physical symptoms</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Panic Disorder Card -->
+                        <div class="disorder-card p-6">
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Panic Disorder</h3>
+                            <p class="text-text-light mb-4">
+                                Involves recurrent, unexpected panic attacks and fear of future attacks, often leading to avoidance behaviors.
+                            </p>
+                            <div class="mt-4">
+                                <p class="text-sm font-semibold text-medical-blue-dark mb-2">Panic Attack Symptoms:</p>
+                                <ul class="space-y-1 text-sm text-text-medium">
+                                    <li class="flex items-center gap-2"><i data-lucide="alert-circle" class="h-4 w-4 text-soft-coral"></i> Heart palpitations</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="alert-circle" class="h-4 w-4 text-soft-coral"></i> Shortness of breath</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="alert-circle" class="h-4 w-4 text-soft-coral"></i> Feeling of losing control</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Anxiety Card -->
+                        <div class="disorder-card p-6">
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Social Anxiety Disorder</h3>
+                            <p class="text-text-light mb-4">
+                                Intense fear of social situations and being judged, embarrassed, or humiliated in front of others.
+                            </p>
+                            <div class="mt-4">
+                                <p class="text-sm font-semibold text-medical-blue-dark mb-2">Common Triggers:</p>
+                                <ul class="space-y-1 text-sm text-text-medium">
+                                    <li class="flex items-center gap-2"><i data-lucide="users" class="h-4 w-4 text-calm-teal"></i> Public speaking</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="users" class="h-4 w-4 text-calm-teal"></i> Meeting new people</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="users" class="h-4 w-4 text-calm-teal"></i> Eating in public</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Specific Phobias Card -->
+                        <div class="disorder-card p-6">
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Specific Phobias</h3>
+                            <p class="text-text-light mb-4">
+                                Irrational fear and avoidance of specific objects or situations, such as heights, flying, animals, or needles.
+                            </p>
+                            <div class="mt-4">
+                                <p class="text-sm font-semibold text-medical-blue-dark mb-2">Common Phobias:</p>
+                                <ul class="space-y-1 text-sm text-text-medium">
+                                    <li class="flex items-center gap-2"><i data-lucide="spider" class="h-4 w-4 text-medical-blue"></i> Animals (spiders, dogs)</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="plane" class="h-4 w-4 text-medical-blue"></i> Situations (flying, elevators)</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="droplet" class="h-4 w-4 text-medical-blue"></i> Natural environment (heights, storms)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="disorder-card p-6">
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Agoraphobia</h3>
+                            <p class="text-text-light">Fear of situations where escape might be difficult or help unavailable if panic symptoms occur.</p>
+                        </div>
+                        <div class="disorder-card p-6">
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Separation Anxiety</h3>
+                            <p class="text-text-light">Excessive fear or anxiety about separation from attachment figures.</p>
+                        </div>
+                        <div class="disorder-card p-6">
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Selective Mutism</h3>
+                            <p class="text-text-light">Consistent failure to speak in specific social situations despite speaking in others.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Symptoms Section -->
+                <section id="symptoms" class="mb-16 scroll-mt-24">
+                    <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark mb-8 flex items-center gap-3">
+                        <i data-lucide="activity" class="h-8 w-8 text-medical-blue"></i>
+                        Recognizing Anxiety Symptoms
+                    </h2>
+                    
+                    <p class="text-text-medium mb-8">
+                        Anxiety symptoms can manifest in multiple ways—physically, emotionally, cognitively, and behaviorally. Recognizing these signs is the first step toward getting help.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <!-- Physical Symptoms -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center">
+                                    <i data-lucide="heart" class="h-6 w-6 text-medical-blue"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark">Physical Symptoms</h3>
+                            </div>
+                            <ul class="symptom-list">
+                                <li>Rapid heartbeat or palpitations</li>
+                                <li>Shortness of breath or hyperventilation</li>
+                                <li>Sweating, trembling, or shaking</li>
+                                <li>Muscle tension and aches</li>
+                                <li>Fatigue and insomnia</li>
+                                <li>Gastrointestinal issues (nausea, diarrhea)</li>
+                                <li>Dizziness or lightheadedness</li>
+                                <li>Headaches or migraines</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Emotional/Cognitive Symptoms -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center">
+                                    <i data-lucide="brain" class="h-6 w-6 text-healing-green"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark">Emotional & Cognitive Symptoms</h3>
+                            </div>
+                            <ul class="symptom-list">
+                                <li>Excessive worry and fear</li>
+                                <li>Irritability and restlessness</li>
+                                <li>Difficulty concentrating or mind going blank</li>
+                                <li>Catastrophic thinking (expecting the worst)</li>
+                                <li>Feeling "on edge" constantly</li>
+                                <li>Sense of impending danger or doom</li>
+                                <li>Difficulty controlling worry</li>
+                                <li>Overthinking and rumination</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Behavioral Symptoms -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-calm-teal/10 flex items-center justify-center">
+                                <i data-lucide="user" class="h-6 w-6 text-calm-teal"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark">Behavioral Symptoms</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <ul class="symptom-list">
+                                <li>Avoidance of anxiety-provoking situations</li>
+                                <li>Procrastination or difficulty completing tasks</li>
+                                <li>Seeking constant reassurance</li>
+                                <li>Perfectionism and over-preparation</li>
+                            </ul>
+                            <ul class="symptom-list">
+                                <li>Restlessness or inability to relax</li>
+                                <li>Changes in sleep patterns</li>
+                                <li>Social withdrawal or isolation</li>
+                                <li>Substance use to cope with anxiety</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Causes & Risk Factors -->
+                <section id="causes" class="mb-16 scroll-mt-24">
+                    <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark mb-8 flex items-center gap-3">
+                        <i data-lucide="search" class="h-8 w-8 text-medical-blue"></i>
+                        Causes & Risk Factors
+                    </h2>
+                    
+                    <p class="text-text-medium mb-8">
+                        Anxiety disorders typically result from a combination of genetic, environmental, psychological, and developmental factors. Understanding these can help reduce stigma and guide effective treatment.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-gradient-to-br from-medical-blue/5 to-medical-blue-light/5 p-6 rounded-xl">
+                            <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center mb-4">
+                                <i data-lucide="dna" class="h-6 w-6 text-medical-blue"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Genetic Factors</h3>
+                            <p class="text-text-medium">Anxiety disorders tend to run in families. Having a first-degree relative with an anxiety disorder increases your risk.</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-healing-green/5 to-healing-green-light/5 p-6 rounded-xl">
+                            <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center mb-4">
+                                <i data-lucide="brain" class="h-6 w-6 text-healing-green"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Brain Chemistry</h3>
+                            <p class="text-text-medium">Imbalances in neurotransmitters like serotonin, norepinephrine, and GABA can contribute to anxiety disorders.</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-calm-teal/5 to-calm-teal/10 p-6 rounded-xl">
+                            <div class="w-12 h-12 rounded-full bg-calm-teal/10 flex items-center justify-center mb-4">
+                                <i data-lucide="zap" class="h-6 w-6 text-calm-teal"></i>
+                            </div>
+                            <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Environmental Stress</h3>
+                            <p class="text-text-medium">Traumatic events, ongoing stress, childhood adversity, or major life changes can trigger anxiety disorders.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3 class="font-serif text-xl text-medical-blue-dark mb-4">Additional Risk Factors</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-healing-green"></i> Personality traits (perfectionism, shyness)</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-healing-green"></i> Other mental health conditions</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-healing-green"></i> Chronic medical conditions</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-healing-green"></i> Substance use or withdrawal</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-healing-green"></i> Certain medications</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-healing-green"></i> Gender (women are twice as likely)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Treatment Section -->
+                <section id="treatment" class="mb-16 scroll-mt-24">
+                    <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark mb-8 flex items-center gap-3">
+                        <i data-lucide="heart" class="h-8 w-8 text-medical-blue"></i>
+                        Effective Treatment Approaches
+                    </h2>
+                    
+                    <p class="text-text-medium mb-8">
+                        The good news is that anxiety disorders are highly treatable. Most people experience significant improvement with professional treatment. Here are the most effective approaches:
+                    </p>
+                    
+                    <!-- Treatment Options -->
+                    <div class="mb-12">
+                        <div class="grid md:grid-cols-3 gap-6 mb-8">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                <div class="w-12 h-12 rounded-full bg-medical-blue/10 flex items-center justify-center mb-4">
+                                    <i data-lucide="message-circle" class="h-6 w-6 text-medical-blue"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Psychotherapy</h3>
+                                <p class="text-text-light mb-4">Cognitive Behavioral Therapy (CBT) is the gold standard for treating anxiety disorders. It helps identify and change thought patterns and behaviors contributing to anxiety.</p>
+                                <ul class="space-y-1 text-sm text-text-medium">
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="h-4 w-4 text-healing-green"></i> Exposure Therapy</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="h-4 w-4 text-healing-green"></i> Acceptance and Commitment Therapy (ACT)</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="h-4 w-4 text-healing-green"></i> Dialectical Behavior Therapy (DBT)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                <div class="w-12 h-12 rounded-full bg-healing-green/10 flex items-center justify-center mb-4">
+                                    <i data-lucide="pill" class="h-6 w-6 text-healing-green"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Medication Management</h3>
+                                <p class="text-text-light mb-4">When appropriate, medications can help regulate brain chemistry and reduce anxiety symptoms, especially when combined with therapy.</p>
+                                <ul class="space-y-1 text-sm text-text-medium">
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="h-4 w-4 text-healing-green"></i> SSRIs (Selective Serotonin Reuptake Inhibitors)</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="h-4 w-4 text-healing-green"></i> SNRIs (Serotonin-Norepinephrine Reuptake Inhibitors)</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="h-4 w-4 text-healing-green"></i> Benzodiazepines (short-term use)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                <div class="w-12 h-12 rounded-full bg-calm-teal/10 flex items-center justify-center mb-4">
+                                    <i data-lucide="leaf" class="h-6 w-6 text-calm-teal"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark mb-3">Lifestyle Approaches</h3>
+                                <p class="text-text-light mb-4">Complementary strategies that support overall mental health and enhance the effectiveness of other treatments.</p>
+                                <ul class="space-y-1 text-sm text-text-medium">
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="h-4 w-4 text-healing-green"></i> Regular exercise and physical activity</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="h-4 w-4 text-healing-green"></i> Mindfulness and meditation</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="h-4 w-4 text-healing-green"></i> Stress management techniques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Treatment Success Rates -->
+                    <div class="bg-gradient-to-r from-medical-blue/10 to-healing-green/10 p-8 rounded-2xl mb-8">
+                        <h3 class="font-serif text-2xl text-medical-blue-dark mb-6 text-center">Treatment Success Rates</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold text-medical-blue-dark">Cognitive Behavioral Therapy (CBT)</span>
+                                    <span class="font-bold text-healing-green">70-80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold text-medical-blue-dark">Medication (SSRIs/SNRIs)</span>
+                                    <span class="font-bold text-healing-green">60-70%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold text-medical-blue-dark">Combined Therapy + Medication</span>
+                                    <span class="font-bold text-healing-green">85-90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- When to Seek Help -->
+                <section id="when-to-seek-help" class="mb-16 scroll-mt-24">
+                    <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark mb-8 flex items-center gap-3">
+                        <i data-lucide="alert-circle" class="h-8 w-8 text-medical-blue"></i>
+                        When to Seek Professional Help
+                    </h2>
+                    
+                    <p class="text-text-medium mb-8">
+                        It's important to recognize when anxiety has crossed from normal concern into a disorder that requires professional attention. Here are clear indicators that it's time to seek help:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-soft-coral/10 flex items-center justify-center">
+                                    <i data-lucide="calendar" class="h-6 w-6 text-soft-coral"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark">Time-Based Indicators</h3>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="h-5 w-5 text-healing-green mt-1 flex-shrink-0"></i>
+                                    <span><strong>Persistent symptoms</strong> lasting more than two weeks that interfere with daily functioning</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="h-5 w-5 text-healing-green mt-1 flex-shrink-0"></i>
+                                    <span><strong>Worsening symptoms</strong> over time despite self-help efforts</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="h-5 w-5 text-healing-green mt-1 flex-shrink-0"></i>
+                                    <span><strong>Chronic physical symptoms</strong> without clear medical cause</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-sunshine-yellow/10 flex items-center justify-center">
+                                    <i data-lucide="target" class="h-6 w-6 text-sunshine-yellow"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-medical-blue-dark">Impact-Based Indicators</h3>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="h-5 w-5 text-healing-green mt-1 flex-shrink-0"></i>
+                                    <span><strong>Avoidance behaviors</strong> that limit work, social, or normal activities</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="h-5 w-5 text-healing-green mt-1 flex-shrink-0"></i>
+                                    <span><strong>Relationship problems</strong> due to anxiety symptoms</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="h-5 w-5 text-healing-green mt-1 flex-shrink-0"></i>
+                                    <span><strong>Work or academic performance</strong> significantly affected</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Emergency Warning Signs -->
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="alert-triangle" class="h-6 w-6 text-red-600 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-red-800 mb-2">Seek Immediate Help If You Experience:</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="x-circle" class="h-4 w-4 text-red-600 mt-1 flex-shrink-0"></i>
+                                            <span class="text-red-700">Thoughts of self-harm or suicide</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="x-circle" class="h-4 w-4 text-red-600 mt-1 flex-shrink-0"></i>
+                                            <span class="text-red-700">Inability to perform basic self-care</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="x-circle" class="h-4 w-4 text-red-600 mt-1 flex-shrink-0"></i>
+                                            <span class="text-red-700">Substance abuse to cope with anxiety</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i data-lucide="x-circle" class="h-4 w-4 text-red-600 mt-1 flex-shrink-0"></i>
+                                            <span class="text-red-700">Feeling completely hopeless or trapped</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- <div class="mt-4 p-3 bg-white rounded-lg">
+                                    <p class="text-red-700 text-sm font-semibold">
+                                        <i data-lucide="phone" class="h-4 w-4 inline mr-2"></i>
+                                        Emergency Contact: Call 911 or go to your nearest emergency room
+                                    </p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-text-medium mb-6">
+                            <strong>Remember:</strong> Seeking help is a sign of strength, not weakness. Early intervention can lead to more effective treatment outcomes and prevent symptoms from worsening.
+                        </p>
+                        <a href="contact.html" class="btn-primary px-8 py-4 rounded-xl inline-block text-lg">
+                            <i data-lucide="calendar" class="h-5 w-5 inline mr-2"></i>
+                            Schedule a Consultation Today
+                        </a>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section id="faq" class="mb-16 scroll-mt-24">
+                    <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark mb-8 flex items-center gap-3">
+                        <i data-lucide="help-circle" class="h-8 w-8 text-medical-blue"></i>
+                        Frequently Asked Questions
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <!-- FAQ Item 1 -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <button class="flex items-center justify-between w-full text-left" onclick="toggleFAQ(1)">
+                                <h3 class="font-serif text-lg text-medical-blue-dark">What's the difference between normal anxiety and an anxiety disorder?</h3>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-medical-blue flex-shrink-0"></i>
+                            </button>
+                            <div id="faq-answer-1" class="mt-4 hidden">
+                                <p class="text-text-medium">
+                                    Normal anxiety is a temporary response to a specific stressor and doesn't significantly interfere with daily life. Anxiety disorders involve excessive, persistent fear or worry that lasts for months, causes significant distress, and impairs social, occupational, or other important areas of functioning.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <button class="flex items-center justify-between w-full text-left" onclick="toggleFAQ(2)">
+                                <h3 class="font-serif text-lg text-medical-blue-dark">Can anxiety disorders be cured?</h3>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-medical-blue flex-shrink-0"></i>
+                            </button>
+                            <div id="faq-answer-2" class="mt-4 hidden">
+                                <p class="text-text-medium">
+                                    While anxiety disorders may not have a permanent "cure" in all cases, they are highly treatable. Most people with anxiety disorders can achieve significant symptom relief and learn to manage their anxiety effectively with proper treatment. Many people achieve full remission of symptoms and maintain their progress long-term with continued use of coping skills.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 3 -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <button class="flex items-center justify-between w-full text-left" onclick="toggleFAQ(3)">
+                                <h3 class="font-serif text-lg text-medical-blue-dark">How long does treatment typically take?</h3>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-medical-blue flex-shrink-0"></i>
+                            </button>
+                            <div id="faq-answer-3" class="mt-4 hidden">
+                                <p class="text-text-medium">
+                                    The duration of treatment varies depending on the type and severity of the anxiety disorder, individual factors, and the treatment approach. Many people notice improvement within 6-8 weeks of starting treatment. Cognitive Behavioral Therapy typically involves 12-20 weekly sessions. Medication may take 4-6 weeks to show full effects. Long-term management strategies help maintain progress.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 4 -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <button class="flex items-center justify-between w-full text-left" onclick="toggleFAQ(4)">
+                                <h3 class="font-serif text-lg text-medical-blue-dark">What should I expect during my first appointment?</h3>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-medical-blue flex-shrink-0"></i>
+                            </button>
+                            <div id="faq-answer-4" class="mt-4 hidden">
+                                <p class="text-text-medium">
+                                    Your first appointment will typically involve a comprehensive assessment where your provider will ask about your symptoms, medical history, family history, and how anxiety affects your daily life. This helps in making an accurate diagnosis and creating a personalized treatment plan. It's a collaborative process where you can ask questions and discuss your treatment preferences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Final CTA -->
+                <section class="bg-gradient-to-r from-medical-blue/10 to-healing-green/10 p-8 rounded-2xl animate-slide-up">
+                    <div class="text-center">
+                        <h2 class="font-serif text-2xl text-medical-blue-dark mb-4">Ready to Take the Next Step?</h2>
+                        <p class="text-text-medium mb-6 max-w-2xl mx-auto">
+                            If you're struggling with anxiety symptoms, our team at Lakesyde Behavioral Health is here to help. We offer comprehensive assessments and personalized treatment plans tailored to your unique needs.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="contact.html" class="btn-primary px-8 py-4 rounded-xl inline-block">
+                                <i data-lucide="calendar" class="h-5 w-5 inline mr-2"></i>
+                                Schedule a Consultation
+                            </a>
+                            <!-- <a href="tel:+1234567890" class="px-8 py-4 border-2 border-medical-blue text-medical-blue rounded-xl inline-block hover:bg-medical-blue/10 transition-colors">
+                                <i data-lucide="phone" class="h-5 w-5 inline mr-2"></i>
+                                Call Now: (555) 123-4567
+                            </a> -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-medical-blue-dark text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                     <a href="index.html" class="flex items-center gap-2">
+                        <img style="width: 100px; background-color: #f8f9fa;" src="WhatsApp_Image_2025-12-16_at_09.05.19-removebg-preview.png" alt="Lakesyde Behavioral Health Logo">
+                    </a>
+                    <p class="text-white/80 mt-3 text-sm">
+                        Compassionate, evidence-based mental health care for individuals and families in Pennsylvania and beyond.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="service.html" class="text-white/70 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="blog.html" class="text-white hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="About.html" class="text-white/70 hover:text-white transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-white/70 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div>
+                    <h4 class="font-serif text-lg mb-4">Emergency Resources</h4>
+                    <div class="space-y-2">
+                        <p class="text-white/70 text-sm">
+                            If you're experiencing a crisis, please contact:
+                        </p>
+                        <div class="bg-white/10 p-3 rounded-lg">
+                            <p class="font-semibold">Crisis Text Line</p>
+                            <p class="text-white/80 text-lg">Text HOME to 741741</p>
+                        </div>
+                        <p class="text-white/70 text-sm mt-2">
+                            Available 24/7 for immediate support
+                        </p>
+                    </div>
+                </div> -->
+                
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Get Professional Help</h4>
+                    <p class="text-white/70 mb-4 text-sm">
+                        Insurance accepted through Headway. Private pay options also available.
+                    </p>
+                    <a href="contact.html" class="btn-primary px-6 py-3 rounded-xl inline-block w-full text-center">
+                        <i data-lucide="calendar" class="h-4 w-4 inline mr-2"></i>
+                        Book Consultation
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-sm">
+                    © <span id="currentYear"></span> Lakesyde Behavioral Health. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="privacy.html" class="text-white/50 hover:text-white transition-colors">
+                        Privacy Policy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isMobileMenuOpen = false;
+
+        // Simple toggle function
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            
+            // Update aria attributes
+            mobileMenuButton.setAttribute('aria-expanded', isMobileMenuOpen);
+            
+            if (isMobileMenuOpen) {
+                // Create mobile menu if it doesn't exist
+                if (!mobileMenu) {
+                    const menuHTML = `
+                        <div id="mobileMenu" class="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 z-50">
+                            <div class="container mx-auto px-4 py-6 space-y-1">
+                                <a href="index.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">Home</span>
+                                </a>
+                                <a href="service.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">Services</span>
+                                </a>
+                                <a href="About.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">About</span>
+                                </a>
+                                <a href="blog.html" class="flex items-center gap-3 text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">Blog</span>
+                                </a>
+                                <a href="contact.html" class="flex items-center gap-3 text-text-medium hover:text-medical-blue hover:bg-medical-blue/5 transition-colors py-3 px-4 rounded-lg">
+                                    <span class="font-medium">Contact</span>
+                                </a>
+                                <div class="pt-4 border-t border-gray-100 mt-4">
+                                    <a href="contact.html" class="btn-primary w-full py-3 rounded-xl flex items-center justify-center gap-2">
+                                        <i data-lucide="calendar" class="h-4 w-4"></i>
+                                        Book Consultation
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    document.querySelector('nav').insertAdjacentHTML('beforeend', menuHTML);
+                    lucide.createIcons();
+                } else {
+                    mobileMenu.style.display = 'block';
+                }
+                
+                // Change icon to X
+                mobileMenuButton.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
+                lucide.createIcons();
+            } else {
+                if (mobileMenu) {
+                    mobileMenu.style.display = 'none';
+                }
+                
+                // Change back to menu icon
+                mobileMenuButton.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+                lucide.createIcons();
+            }
+        }
+
+        // Add click event to mobile menu button
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Scroll effect for navigation
+        const mainNav = document.getElementById('mainNav');
+        let scrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20 && !scrolled) {
+                mainNav.classList.add('nav-scrolled');
+                scrolled = true;
+            } else if (window.scrollY <= 20 && scrolled) {
+                mainNav.classList.remove('nav-scrolled');
+                scrolled = false;
+            }
+            
+            // Update active tab based on scroll position
+            updateActiveTab();
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // FAQ toggle functionality
+        function toggleFAQ(id) {
+            const answer = document.getElementById(`faq-answer-${id}`);
+            const button = answer.previousElementSibling;
+            const icon = button.querySelector('i');
+            
+            answer.classList.toggle('hidden');
+            
+            if (answer.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'chevron-down');
+            } else {
+                icon.setAttribute('data-lucide', 'chevron-up');
+            }
+            lucide.createIcons();
+        }
+        
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                // Update active tab
+                document.querySelectorAll('.tab-button').forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.textContent.toLowerCase() === sectionId.replace('-', ' ')) {
+                        tab.classList.add('active');
+                    }
+                });
+                
+                // Scroll to section
+                window.scrollTo({
+                    top: section.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // Update active tab based on scroll position
+        function updateActiveTab() {
+            const sections = ['types', 'symptoms', 'causes', 'treatment', 'when-to-seek-help', 'faq'];
+            const scrollPosition = window.scrollY + 150;
+            
+            let currentSection = 'types';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element && scrollPosition >= element.offsetTop) {
+                    currentSection = section;
+                }
+            });
+            
+            document.querySelectorAll('.tab-button').forEach(tab => {
+                tab.classList.remove('active');
+                const tabText = tab.textContent.toLowerCase().replace(' & ', '-').replace(' ', '-');
+                if (tabText === currentSection || (tabText === 'when-to-seek-help' && currentSection === 'when-to-seek-help')) {
+                    tab.classList.add('active');
+                }
+            });
+        }
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ensure all animations trigger
+            const animatedElements = document.querySelectorAll('[class*="animate-"]');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'running';
+            });
+            
+            // Animate progress bars
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+            
+            // Set first tab as active
+            document.querySelector('.tab-button').classList.add('active');
+        });
+    </script>
+</body>
+</html>
