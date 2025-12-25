@@ -177,6 +177,16 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS with YOUR Public Key
+        (function() {
+            emailjs.init({
+                publicKey: "oaLgjF0ugR_6-t6tY", // ← Replace with your actual key
+            });
+        })();
+    </script>
     
     <style>
         body {
@@ -1392,6 +1402,99 @@
         resourceCards.forEach(card => {
             observer.observe(card);
         });
+
+
+                // ========== NEWSLETTER FORM ==========
+document.getElementById('newsletterSubmit').addEventListener('click', function() {
+    const userEmail = document.getElementById('newsletterEmail').value.trim();
+    const userName = document.getElementById('newsletterName').value.trim() || 'Subscriber';
+    const consent = document.getElementById('privacyConsent').checked;
+    
+    // Validation
+    if (!userEmail || !userEmail.includes('@')) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+    
+    if (!consent) {
+        alert('Please agree to the privacy policy.');
+        return;
+    }
+    
+    // Show loading
+    const originalText = this.innerHTML;
+    this.innerHTML = '<i data-lucide="loader" class="h-5 w-5 animate-spin"></i> Subscribing...';
+    this.disabled = true;
+    
+    // Common data
+    const commonData = {
+        subscriber_name: userName,
+        subscriber_email: userEmail,
+        subscription_date: new Date().toLocaleDateString(),
+        current_year: new Date().getFullYear()
+    };
+    
+    // Send to ADMIN
+    const adminData = {
+        ...commonData,
+        email_type: 'admin',
+        email_subject: '🎉 New Newsletter Subscriber: ' + userEmail
+    };
+    
+    // Send to USER
+    const userData = {
+        ...commonData,
+        email_type: 'user',
+        email_subject: 'Welcome to Lakesyde Behavioral Health'
+    };
+    
+    console.log('Sending newsletter admin email:', adminData);
+    console.log('Sending newsletter user email:', userData);
+    
+    // Send to ADMIN
+    emailjs.send('service_76dfsdg', 'template_soqnoik', adminData)
+        .then((adminResponse) => {
+            console.log('✅ Newsletter admin email sent:', adminResponse);
+            
+            // Send to USER
+            return emailjs.send('service_76dfsdg', 'template_soqnoik', userData);
+        })
+        .then((userResponse) => {
+            console.log('✅ Newsletter user email sent:', userResponse);
+            
+            // Hide form, show success
+            document.getElementById('newsletterForm').classList.add('hidden');
+            const successDiv = document.getElementById('newsletterSuccess');
+            successDiv.classList.remove('hidden');
+            
+            // Update message
+            const pElement = successDiv.querySelector('p');
+            if (pElement) {
+                pElement.textContent = `Welcome email sent to ${userEmail}! Check your spam folder.`;
+            }
+            
+            // Reset form
+            document.getElementById('newsletterEmail').value = '';
+            document.getElementById('newsletterName').value = '';
+            document.getElementById('privacyConsent').checked = false;
+            
+            // Reset button
+            this.innerHTML = originalText;
+            this.disabled = false;
+        })
+        .catch((error) => {
+            console.error('❌ Newsletter error:', error);
+            
+            // Still show success on website
+            document.getElementById('newsletterForm').classList.add('hidden');
+            const successDiv = document.getElementById('newsletterSuccess');
+            successDiv.classList.remove('hidden');
+            
+            // Reset button
+            this.innerHTML = originalText;
+            this.disabled = false;
+        });
+});
     </script>
 </body>
 </html>

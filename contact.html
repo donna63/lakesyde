@@ -141,7 +141,7 @@
         // Initialize EmailJS with YOUR Public Key
         (function() {
             emailjs.init({
-                publicKey: "B4f74GLESi6eGGXLQ", // ← Replace with your actual key
+                publicKey: "oaLgjF0ugR_6-t6tY", // ← Replace with your actual key
             });
         })();
     </script>
@@ -633,10 +633,10 @@
                             <i data-lucide="check-circle" class="h-5 w-5 text-healing-green mt-1 flex-shrink-0"></i>
                             <p class="text-text-medium">Private pay link will be going straight to email or phone for direct payment options.</p>
                         </div>
-                        <a href="sms:+1-702-602-7626?body=Hello%20Lakesyde%20Behavioral%20Health%2C%20I'm%20interested%20in%20private%20pay%20options%20for%20mental%20health%20services." 
+                        <a href="mailto:ladedotun@lakesydebh.com?subject=Private%20Pay%20Inquiry&body=Hello%20Lakesyde%20Behavioral%20Health%2C%20I'm%20interested%20in%20private%20pay%20options%20for%20mental%20health%20services." 
                         class="btn-primary px-8 py-4 rounded-xl inline-block pulse-gentle flex items-center justify-center gap-2">
-                            <i data-lucide="message-square" class="h-5 w-5"></i>
-                            Text for Private Pay Info
+                            <i data-lucide="mail" class="h-5 w-5"></i>
+                            Email for Private Pay Info
                         </a>
                     </div>
                 </div>
@@ -1239,7 +1239,7 @@
             
             <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-white/50 text-sm">
-                    © <span id="currentYear"></span> Lakesyde Behavioral Health. All rights reserved.
+                    © <span id="currentYear"></span> Lakesyde Behavioral Health (LLC). All rights reserved.
                 </p>
 
                 
@@ -1261,7 +1261,7 @@
 <script>
 
 // Initialize EmailJS
-emailjs.init("B4f74GLESi6eGGXLQ");
+emailjs.init("oaLgjF0ugR_6-t6tY");
 
 // Initialize Lucide icons
 lucide.createIcons();
@@ -1309,12 +1309,12 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     console.log('Sending user email with data:', userData);
     
     // Send to ADMIN
-    emailjs.send('service_2lxj2rs', 'template_pdb4fyl', adminData)
+    emailjs.send('service_76dfsdg', 'template_pk5xdf9', adminData)
         .then((adminResponse) => {
             console.log('✅ Admin email sent:', adminResponse);
             
             // Send to USER
-            return emailjs.send('service_2lxj2rs', 'template_pdb4fyl', userData);
+            return emailjs.send('service_76dfsdg', 'template_pk5xdf9', userData);
         })
         .then((userResponse) => {
             console.log('✅ User email sent:', userResponse);
@@ -1424,12 +1424,12 @@ document.getElementById('newsletterSubmit').addEventListener('click', function()
     console.log('Sending newsletter user email:', userData);
     
     // Send to ADMIN
-    emailjs.send('service_2lxj2rs', 'template_u9tib33', adminData)
+    emailjs.send('service_76dfsdg', 'template_soqnoik', adminData)
         .then((adminResponse) => {
             console.log('✅ Newsletter admin email sent:', adminResponse);
             
             // Send to USER
-            return emailjs.send('service_2lxj2rs', 'template_u9tib33', userData);
+            return emailjs.send('service_76dfsdg', 'template_soqnoik', userData);
         })
         .then((userResponse) => {
             console.log('✅ Newsletter user email sent:', userResponse);
@@ -1442,7 +1442,7 @@ document.getElementById('newsletterSubmit').addEventListener('click', function()
             // Update message
             const pElement = successDiv.querySelector('p');
             if (pElement) {
-                pElement.textContent = `Welcome email sent to ${userEmail}! Check your spam folder.`;
+                // pElement.textContent = `Welcome email sent to ${userEmail}! Check your spam folder.`;
             }
             
             // Reset form
