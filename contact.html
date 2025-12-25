@@ -343,6 +343,46 @@
                 transform: translateY(-20px);
             }
         }
+
+        /* Emergency Alert Styles */
+.emergency-alert {
+    background: linear-gradient(135deg, #ff6b6b, #ff9a8b);
+    animation: pulseGentle 2s ease-in-out infinite;
+    border: 2px solid #ff6b6b;
+}
+
+/* Red color addition for emergency */
+.text-red-600 {
+    color: #dc2626;
+}
+
+.bg-red-500 {
+    background-color: #ef4444;
+}
+
+.bg-red-600 {
+    background-color: #dc2626;
+}
+
+.bg-red-500\/10 {
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.bg-red-600\/10 {
+    background-color: rgba(220, 38, 38, 0.1);
+}
+
+.border-red-200 {
+    border-color: #fecaca;
+}
+
+.text-red-700 {
+    color: #b91c1c;
+}
+
+.text-red-600\/90 {
+    color: rgba(220, 38, 38, 0.9);
+}
     </style>
 </head>
 <body class="bg-soft-white min-h-screen text-text-dark">
@@ -443,7 +483,7 @@
                     </a>
                     
                     <div class="pt-4 border-t border-gray-100 mt-4">
-                        <a href="tel:+1-800-555-0199" class="flex items-center gap-3 text-text-medium hover:text-medical-blue transition-colors py-3 px-4 rounded-lg" role="menuitem">
+                        <a href="tel:+1-702-602-7626" class="flex items-center gap-3 text-text-medium hover:text-medical-blue transition-colors py-3 px-4 rounded-lg" role="menuitem">
                             <!-- <i data-lucide="phone" class="h-5 w-5"></i>
                             <div>
                                 <div class="font-medium">Emergency Hotline</div>
@@ -520,27 +560,29 @@
                 <h2 class="font-serif text-3xl md:text-4xl text-medical-blue-dark text-center mb-12 animate-fade-in-up">
                     Multiple Ways to Connect
                 </h2>
+
+                <!-- Emergency Alert Banner -->
+
                 
-                <div class="grid md:grid-cols-2 gap-8 mb-12">
-                    
-                    <div class="bg-gradient-to-br from-soft-white to-medical-blue/5 p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-100">
-                        <div class="w-16 h-16 rounded-full bg-medical-blue/10 flex items-center justify-center mb-6 floating-element">
-                            <i data-lucide="phone" class="h-8 w-8 text-medical-blue"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-4">Call Us</h3>
-                        <p class="text-text-light mb-4">Speak directly with our compassionate intake team</p>
-                        <div class="space-y-3">
-                            <div>
-                                <p class="text-sm text-text-light mb-1">General Inquiries & Appointments</p>
-                                <a href="tel:+1-800-555-0199" class="text-medical-blue text-xl font-semibold hover:underline">1-702-602-7626</a>
-                            </div>
-                            <!-- <div class="pt-2 border-t border-gray-100">
-                                <p class="text-sm text-text-light mb-1">Emergency Support</p>
-                                <a href="tel:+1-800-555-0199" class="text-soft-coral text-xl font-semibold hover:underline">1-702-602-7626</a>
-                            </div> -->
-                        </div>
-                        <p class="text-sm text-text-light mt-4">Available 24/7 for emergencies</p>
+              <!-- Updated Call Us Card with Fax -->
+                <div class="bg-gradient-to-br from-soft-white to-medical-blue/5 p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-100">
+                    <div class="w-16 h-16 rounded-full bg-medical-blue/10 flex items-center justify-center mb-6 floating-element">
+                        <i data-lucide="phone" class="h-8 w-8 text-medical-blue"></i>
                     </div>
+                    <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-4">Call Us</h3>
+                    <p class="text-text-light mb-4">Speak directly with our compassionate intake team</p>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm text-text-light mb-1">General Inquiries & Appointments</p>
+                            <a href="tel:+1-702-602-7626" class="text-medical-blue text-xl font-semibold hover:underline">(702) 602-7626</a>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100">
+                            <p class="text-sm text-text-light mb-1">Fax Number</p>
+                            <p class="text-medical-blue text-lg font-semibold">(702) 329-2844</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-light mt-4">Response within 24 hours for non-urgent matters</p>
+                </div>
 
                     
                     <div class="bg-gradient-to-br from-soft-white to-healing-green/5 p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-200">
@@ -565,27 +607,36 @@
                     </div>
 
                    
-                    <!-- <div class="bg-gradient-to-br from-soft-white to-calm-teal/5 p-8 rounded-2xl shadow-lg card-hover animate-fade-in-up delay-300">
-                        <div class="w-16 h-16 rounded-full bg-calm-teal/10 flex items-center justify-center mb-6 floating-element" style="animation-delay: 0.6s">
-                            <i data-lucide="map-pin" class="h-8 w-8 text-calm-teal"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-semibold text-medical-blue-dark mb-4">Visit Our Clinic</h3>
-                        <p class="text-text-light mb-4">Schedule an in-person consultation</p>
-                        <address class="not-italic text-text-medium mb-6">
-                            <p class="mb-1">123 Wellness Avenue</p>
-                            <p class="mb-1">San Francisco, CA 94107</p>
-                            <p>United States</p>
-                        </address>
-                        <div class="mt-4">
-                            <h4 class="font-semibold text-medical-blue-dark mb-2">Hours</h4>
-                            <p class="text-text-light text-sm">Monday-Friday: 8am-8pm</p>
-                            <p class="text-text-light text-sm">Saturday: 9am-3pm</p>
-                            <p class="text-text-light text-sm">Sunday: Emergency only</p>
-                        </div>
-                    </div> -->
+                    <div class="mb-8 animate-fade-in-up">
+    <div class="emergency-alert rounded-2xl p-6 md:p-8 text-center shadow-lg">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+                <i data-lucide="alert-triangle" class="h-8 w-8 text-white"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-2">In Case of Emergency</h3>
+                <p class="text-white/90 mb-4 max-w-2xl mx-auto">
+                    If you are experiencing a life-threatening emergency, please call 911 or 988 immediately or go to the nearest emergency room.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:911" class="bg-white text-red-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="h-5 w-5"></i>
+                        Call 911
+                    </a>
+                    <!-- <a href="tel:+1-702-602-7626" class="bg-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/30 transition-colors inline-flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="h-5 w-5"></i>
+                        Our Office: (702) 602-7626
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                 </div>
             </div>
         </section>
+
+        
 
         <!-- Insurance Information Section -->
 <section class="py-16 bg-gradient-to-b from-white to-medical-blue/5">
