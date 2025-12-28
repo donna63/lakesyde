@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# GitHub Pages specific
+User-agent: GPTBot
+Disallow: /
+
+# Crawl delay
+Crawl-delay: 2
+
+# Sitemap
+Sitemap: https://www.lakesydebehavioral.com/sitemap.xml

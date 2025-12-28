@@ -1779,12 +1779,12 @@ document.getElementById('newsletterSubmit').addEventListener('click', function()
     console.log('Sending newsletter user email:', userData);
     
     // Send to ADMIN
-    emailjs.send('service_76dfsdg', 'template_soqnoik', adminData)
+    emailjs.send('service_cqr1kw8', 'template_soqnoik', adminData)
         .then((adminResponse) => {
             console.log('✅ Newsletter admin email sent:', adminResponse);
             
             // Send to USER
-            return emailjs.send('service_76dfsdg', 'template_soqnoik', userData);
+            return emailjs.send('service_cqr1kw8', 'template_soqnoik', userData);
         })
         .then((userResponse) => {
             console.log('✅ Newsletter user email sent:', userResponse);
