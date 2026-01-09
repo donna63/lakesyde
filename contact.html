@@ -1105,7 +1105,7 @@ e</p>
 </div> -->
         
 <!-- Keep this reCAPTCHA div -->
-<div class="g-recaptcha" data-sitekey="6Le2NUUsAAAAAPK8_1G3pSxYByj9mQyDb2lazp4c"></div>
+<div class="g-recaptcha" data-sitekey="6LdgTkUsAAAAAA2Drr6YSxZAhmizmCBhnaOTUSeC"></div>
 <div id="captcha-error" class="recaptcha-error mt-2">
     Please complete the CAPTCHA verification
 </div>
@@ -2001,6 +2001,26 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 </script>
+
+<!-- <script>
+    // Auto-switch to real key when on your domain
+    window.addEventListener('load', function() {
+        const isLocalhost = window.location.hostname === 'localhost' || 
+                           window.location.hostname === '127.0.0.1';
+        
+        if (!isLocalhost && window.location.hostname.includes('lakesydebehavioral.com')) {
+            // On your live domain - use your real key
+            const recaptchaDiv = document.querySelector('.g-recaptcha');
+            recaptchaDiv.setAttribute('data-sitekey', '6LdgTkUsAAAAAA2Drr6YSxZAhmizmCBhnaOTUSeC');
+            
+            // Optional: Show production message
+            console.log('Using production reCAPTCHA key for', window.location.hostname);
+        } else {
+            // On localhost - keep test key
+            console.log('Using test reCAPTCHA key for local development');
+        }
+    });
+</script> -->
 
 <!-- <script>
 
