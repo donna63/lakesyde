@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Lakesyde Behavioral Health | Nevada Telehealth Psychiatry & Online Therapy</title>
+    <title>Lakesyde Behavioral Health | Nevada Telehealth Psychiatry & Physical Therapy</title>
     <meta name="description" content="Lakesyde Behavioral Health provides personalized behavioral health treatment for depression, anxiety, PTSD, and addiction. Nevada-licensed telehealth mental health services. Online therapy & psychiatry for Nevada residents. Serving Las Vegas, Reno, Henderson via secure virtual sessions. Accepting Nevada insurance.">
-    <meta name="keywords" content="Nevada telehealth, Nevada online therapy, Las Vegas psychiatrist, Reno mental health, Nevada virtual therapy, telehealth Nevada, Nevada psychiatry, online counseling Nevada">
+    <meta name="keywords" content="Nevada telehealth, Nevada physical therapy, Las Vegas psychiatrist, Reno mental health, Nevada virtual therapy, telehealth Nevada, Nevada psychiatry, online counseling Nevada">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -230,6 +230,31 @@
                     "issuedBy": "Nevada"
                 }
             }
+
+            // Add this inside the "mainEntity" object in the JSON-LD schema
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "6628 Sky Pointe Drive, Ste 103",
+                "addressLocality": "Las Vegas",
+                "addressRegion": "NV",
+                "postalCode": "89131",
+                "addressCountry": "US"
+            },
+            "hasMap": "https://maps.google.com/?q=6628+Sky+Pointe+Drive+Ste+103+Las+Vegas+NV+89131",
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "08:00",
+                    "closes": "20:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "09:00",
+                    "closes": "15:00"
+                }
+            ]
         }
     </script>
     
@@ -597,10 +622,9 @@
                     </h1>
 
                     <p class="text-lg md:text-xl text-text-medium  leading-relaxed mb-8 max-w-2xl animate-fade-in-up delay-400">
-                    At Lakesyde Behavioral Health, we provide personalized online therapy and virtual psychiatry behavioral health treatment throughout Nevada
+                    At Lakesyde Behavioral Health, we provide personalized in person therapy at our Las Vegas office AND virtual psychiatry services throughout Nevada
                     with compassion and expertise. Our licensed therapists offer evidence based Nevada mental health services
-                    for depression, anxiety, PTSD, addiction and more. Whether you're in Las Vegas, Reno, or anywhere in Nevada, 
-                    you don't have to face your struggles alone we're here to support you every step of the way.
+                    for depression, anxiety, PTSD, addiction and more. Whether you prefer to visit us at <strong>6628 Sky Pointe Drive, Ste 103</strong> or connect from home via telehealth, you don't have to face your struggles alone we're here to support you every step of the way.
                 </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up delay-500">
@@ -725,7 +749,7 @@
                 Serving All of Nevada
             </h2>
             <p class="text-xl text-text-medium">
-                Our telehealth services reach every corner of Nevada
+                Our services reach every corner of Nevada both telehealth and physical
             </p>
         </div>
         
@@ -786,10 +810,10 @@
                             About Lakesyde Behavioral Health
                         </h2>
                         <p class="text-lg text-text-medium mb-6">
-                            Lakesyde Behavioral Health is a Nevada based telehealth mental health practice founded by Leke Adedotun, MSN, APRN, PMHNP-BC, a Board-Certified Psychiatric Mental Health Nurse Practitioner and U.S. Army Veteran. The practice provides compassionate, high-quality mental health care to individuals ages 6 and older through telehealth.
+                            Lakesyde Behavioral Health is a Nevada based  mental health practice founded by Leke Adedotun, MSN, APRN, PMHNP-BC, a Board Certified Psychiatric Mental Health Nurse Practitioner and U.S. Army Veteran. The practice provides compassionate, high quality mental health care to individuals ages 6 and older through telehealth and physical.
                         </p>
                         <p class="text-lg text-text-medium mb-6">
-                            Mr. Adedotun has extensive experience working with diverse populations throughout Nevada, including veterans, high-achieving professionals, young adults, parents, and individuals navigating trauma or significant life transitions. Lakesyde Behavioral Health was created to be a safe, supportive space where every patient feels seen, heard, and respected.
+                            Mr. Adedotun has extensive experience working with diverse populations throughout Nevada, including veterans, high achieving professionals, young adults, parents, and individuals navigating trauma or significant life transitions. Lakesyde Behavioral Health was created to be a safe, supportive space where every patient feels seen, heard, and respected.
                         </p>
                         <p class="text-lg text-text-medium mb-8">
                             Each session is approached with calm professionalism and genuine care, ensuring treatment is centered on the individual's unique experiences and goals. The mission of Lakesyde Behavioral Health is to help patients develop clarity, balance, and emotional resilience at a pace that feels comfortable and empowering.
@@ -1416,6 +1440,15 @@
                     <li class="text-white/70">
                         <i data-lucide="check-circle" class="h-4 w-4 text-healing-green inline-block mr-2"></i>
                         Serving All Nevada Counties
+                    </li>
+
+                    <li class="text-white/70">
+                        <i data-lucide="map-pin" class="h-4 w-4 text-healing-green inline-block mr-2"></i>
+                        <strong>6628 Sky Pointe Drive, Ste 103</strong>
+                    </li>
+                    <li class="text-white/70">
+                        <i data-lucide="map-pin" class="h-4 w-4 text-healing-green inline-block mr-2"></i>
+                        Las Vegas, Nevada 89131
                     </li>
                 </ul>
             </div>
